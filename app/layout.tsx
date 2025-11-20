@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import CookieConsent from '@/components/CookieConsent'
 import ErrorBoundary from '@/components/ErrorBoundary'
+import Chatbot from '@/components/Chatbot'
 // import PerformanceMonitor from '@/components/PerformanceMonitor'
 // import PreloadResources from '@/components/PreloadResources'
 // import CacheStrategy from '@/components/CacheStrategy'
@@ -84,6 +85,7 @@ export default function RootLayout({
               <Footer />
               <ScrollToTop />
               <CookieConsent />
+              <Chatbot />
             </ErrorBoundary>
           </body>
         </html>
