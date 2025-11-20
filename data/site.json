@@ -1,0 +1,354 @@
+{
+  "brand": {
+    "name": "AI-Group",
+    "tagline": "AI-first organisatie",
+    "logo": "/logo.svg"
+  },
+  "cta": {
+    "primary": "Binnen 48 uur inzicht",
+    "secondary": "Plan verkenning"
+  },
+  "hero": {
+    "title": "Wij leveren wat anderen beloven. Binnen weken.",
+    "subtitle": "AI-first organisatie met meer agents dan personeelsleden. Binnen 48 uur een Proof of Concept. MVP binnen 72 uur. Livegang v1.0 binnen 2 weken. Agents werken 24/7 voor u.",
+    "image": "/hero-image.jpg"
+  },
+  "positioning": {
+    "mission": "Wij versnellen organisaties in alle sectoren door AI-gedreven oplossingen en intelligente agents te bouwen die 24/7 voor u werken. Technologie inzetten waar het maximale rendement oplevert en organisaties helpt direct impact te realiseren.",
+    "vision": "Organisaties kunnen alleen toekomstbestendig zijn als systemen zichzelf kunnen aanpassen. Wij geloven in AI-agents die leren, meebeweegt en anticipeert. Wij bouwen applicaties en agents die slimmer worden naarmate de organisatie groeit.",
+    "coreMessage": "Wij ontwikkelen AI-gedreven applicaties en intelligente agents die sneller, slimmer en flexibeler zijn dan alles wat de huidige IT-markt biedt. Wij hebben nu al meer agents in dienst dan personeelsleden - en deze werken 24/7 voor u."
+  },
+  "benefits": [
+    {
+      "icon": "zap",
+      "title": "AI versnelt het bouwproces",
+      "description": "Waar traditionele IT maanden nodig heeft, draaien wij binnen dagen een werkend prototype."
+    },
+    {
+      "icon": "brain",
+      "title": "AI helpt beslissingen nemen",
+      "description": "Onze oplossingen worden door AI gestuurd op tijd, kosten én kwaliteit tegelijk."
+    },
+    {
+      "icon": "trending-up",
+      "title": "AI maakt applicaties slimmer",
+      "description": "Applicaties die slimmer worden na livegang en zichzelf continu verbeteren."
+    },
+    {
+      "icon": "refresh-cw",
+      "title": "Continue iteratie",
+      "description": "Direct & AI-gestuurd optimaliseren vanaf dag één, geen wachten op project 2."
+    }
+  ],
+  "speedTimeline": {
+    "title": "Hoe snel zijn we?",
+    "subtitle": "Proof of Concept binnen 48 uur. MVP binnen 72 uur. Livegang v1.0 binnen 2 weken.",
+    "stages": [
+      {
+        "phase": "Proof of Concept",
+        "traditional": "4-8 weken",
+        "aifirst": "48 uur",
+        "description": "Werkend prototype dat uw uitdaging direct adresseert"
+      },
+      {
+        "phase": "MVP",
+        "traditional": "3-6 maanden",
+        "aifirst": "72 uur",
+        "description": "Minimal Viable Product met core functionaliteit"
+      },
+      {
+        "phase": "Livegang v1.0",
+        "traditional": "6-12 maanden",
+        "aifirst": "< 2 weken",
+        "description": "Productieklare versie met volledige functionaliteit"
+      },
+      {
+        "phase": "Optimalisatie",
+        "traditional": "Na livegang (project 2)",
+        "aifirst": "Direct & AI-gestuurd",
+        "description": "Continue verbetering vanaf dag één"
+      }
+    ]
+  },
+  "triangleOfPower": {
+    "title": "De duivelse driehoek beheerst met AI",
+    "subtitle": "Traditioneel moet je kiezen tussen tijd, kosten of kwaliteit. Wij niet.",
+    "description": "Onze oplossingen worden door AI gestuurd op tijd, kosten én kwaliteit. Daardoor zijn wij sneller, efficiënter én leveren we hogere kwaliteit dan traditionele IT-trajecten.",
+    "corners": [
+      {
+        "name": "Tijd",
+        "description": "Sneller dan traditionele IT"
+      },
+      {
+        "name": "Kosten",
+        "description": "Efficiënter door AI-automatisering"
+      },
+      {
+        "name": "Kwaliteit",
+        "description": "Hogere kwaliteit door AI-validatie"
+      }
+    ]
+  },
+  "solutions": [
+    {
+      "slug": "workflow-automation",
+      "title": "Workflow Automation",
+      "description": "Automatiseer processen, documenten en goedkeuringen voor efficiënte workflows",
+      "bullets": [
+        "Documentgeneratie & -verwerking",
+        "Geautomatiseerde compliance checks",
+        "Planning en taken met approvals",
+        "Geautomatiseerde rapportage"
+      ],
+      "icon": "workflow",
+      "image": "/workflow-automation.jpg",
+      "isMain": true
+    }
+  ],
+  "applications": [
+    {
+      "slug": "financiele-ai",
+      "title": "Financiële AI",
+      "description": "AI-oplossingen voor de financiële sector: van risicoanalyse tot fraudedetectie en compliance",
+      "bullets": [
+        "Automatische risicoanalyse en scoring",
+        "Fraudedetectie in real-time",
+        "Compliance monitoring en rapportage",
+        "Geautomatiseerde financiële rapportage",
+        "Voorspellende cashflow analyses"
+      ],
+      "icon": "trending-up",
+      "image": "/financial-ai.jpg",
+      "sector": "Financieel"
+    },
+    {
+      "slug": "zorg-ai",
+      "title": "Zorg AI",
+      "description": "Intelligente oplossingen voor de zorgsector: patiëntmonitoring, planning en administratie",
+      "bullets": [
+        "Patiëntmonitoring en early warning systemen",
+        "Geautomatiseerde zorgplanning",
+        "Administratieve automatisering",
+        "Medische documentatie en rapportage",
+        "Voorspellende zorganalyses"
+      ],
+      "icon": "heart",
+      "image": "/healthcare-ai.jpg",
+      "sector": "Zorg"
+    },
+    {
+      "slug": "klantcontact-ai",
+      "title": "Klantcontact AI",
+      "description": "24/7 klantenservice met intelligente agents voor contactcentra en customer service",
+      "bullets": [
+        "AI-agents voor 24/7 klantenservice",
+        "Geautomatiseerde vraagbeantwoording",
+        "Sentimentanalyse en escalatie",
+        "Multi-channel ondersteuning",
+        "Persoonlijke klantinteracties"
+      ],
+      "icon": "headphones",
+      "image": "/customer-service-ai.jpg",
+      "sector": "Customer Service"
+    },
+    {
+      "slug": "engineering-ai",
+      "title": "Engineering AI",
+      "description": "AI voor engineering: ontwerpoptimalisatie, simulaties en kwaliteitscontrole",
+      "bullets": [
+        "Ontwerpoptimalisatie met AI",
+        "Geautomatiseerde simulaties en analyses",
+        "Kwaliteitscontrole en validatie",
+        "Technische documentatie generatie",
+        "Voorspellend onderhoud"
+      ],
+      "icon": "settings",
+      "image": "/engineering-ai.jpg",
+      "sector": "Engineering"
+    },
+    {
+      "slug": "planning-ai",
+      "title": "Planning AI",
+      "description": "Intelligente planning en resource management voor optimale efficiency",
+      "bullets": [
+        "Geautomatiseerde resource planning",
+        "Optimalisatie van planningen",
+        "Voorspellende capaciteitsplanning",
+        "Real-time planning aanpassingen",
+        "Multi-project planning en coördinatie"
+      ],
+      "icon": "calendar",
+      "image": "/planning-ai.jpg",
+      "sector": "Planning"
+    },
+    {
+      "slug": "logistiek-ai",
+      "title": "Logistiek AI",
+      "description": "Slimme logistieke oplossingen: route-optimalisatie, voorraadbeheer en tracking",
+      "bullets": [
+        "Route-optimalisatie en planning",
+        "Voorspellend voorraadbeheer",
+        "Real-time tracking en monitoring",
+        "Geautomatiseerde orderafhandeling",
+        "Supply chain optimalisatie"
+      ],
+      "icon": "truck",
+      "image": "/logistics-ai.jpg",
+      "sector": "Logistiek"
+    }
+  ],
+  "platform": {
+    "title": "AI Platform & Dashboard",
+    "subtitle": "Eén platform. Eén dashboard. Eén waarheid voor alle stakeholders.",
+    "description": "Ons AI Platform integreert alle oplossingen in een centraal dashboard met realtime inzicht, analytics en voorspellingen.",
+    "modules": [
+      {
+        "name": "Kaart & Geo-lagen",
+        "description": "Interactieve kaarten met projectlocaties en realtime data"
+      },
+      {
+        "name": "Status & KPI-tegelset",
+        "description": "Overzichtelijke dashboards met key performance indicators"
+      },
+      {
+        "name": "Incidenten & Alerts",
+        "description": "Realtime meldingen en incidentenbeheer"
+      },
+      {
+        "name": "Taken & Approvals",
+        "description": "Geautomatiseerde workflow en goedkeuringsprocessen"
+      },
+      {
+        "name": "Documenthub & Auditlog",
+        "description": "Centrale documentenopslag met volledige audittrail"
+      },
+      {
+        "name": "Integraties",
+        "description": "Koppelingen met GIS, SharePoint, e-mail en ticketing-systemen"
+      }
+    ],
+    "features": [
+      "Rollen-gebaseerde toegang",
+      "API-koppelingen",
+      "ISO-ready databeveiliging",
+      "Real-time synchronisatie",
+      "Mobile-first design"
+    ]
+  },
+  "process": {
+    "title": "Ons AI-first proces",
+    "subtitle": "Van idee tot livegang in weken, niet maanden",
+    "steps": [
+      {
+        "number": "48u",
+        "title": "Proof of Concept",
+        "description": "Binnen 48 uur een werkend prototype dat uw uitdaging direct adresseert. Geen maanden wachten op een eerste inzicht."
+      },
+      {
+        "number": "72u",
+        "title": "MVP",
+        "description": "Minimal Viable Product met core functionaliteit binnen 72 uur. Klaar voor validatie met echte gebruikers."
+      },
+      {
+        "number": "2w",
+        "title": "Livegang v1.0",
+        "description": "Productieklare versie binnen 2 weken. Volledige functionaliteit, klaar voor gebruik."
+      },
+      {
+        "number": "∞",
+        "title": "Continue iteratie",
+        "description": "Direct & AI-gestuurd optimaliseren vanaf dag één. Oplossingen die slimmer worden naarmate ze gebruikt worden."
+      }
+    ]
+  },
+  "cases": [
+    {
+      "slug": "tax-wealth-hub",
+      "title": "Tax & Wealth HUB",
+      "sector": "Financieel",
+      "challenge": "Ondernemers hebben behoefte aan inzicht in financiële groei en belastingoptimalisatie",
+      "solution": "AI-gedreven applicatie voor financiële groei en belastingadvies voor ondernemers",
+      "impact": [
+        "Real-time inzicht in financiële gezondheid",
+        "Geautomatiseerde belastingoptimalisatie",
+        "Proactieve groeistrategieën"
+      ],
+      "image": "/case-tax-wealth.jpg",
+      "client": "Ondernemers",
+      "timeline": "2 weken"
+    },
+    {
+      "slug": "landelijk-veiligheidsconcept",
+      "title": "Landelijk veiligheidsconcept",
+      "sector": "Veiligheid",
+      "challenge": "Landelijke veiligheidsstandaarden implementeren en monitoren",
+      "solution": "AI-gestuurd veiligheidsplatform met real-time monitoring en compliance",
+      "impact": [
+        "Landelijke dekking en schaalbaarheid",
+        "Real-time veiligheidsmonitoring",
+        "Automatische compliance checks"
+      ],
+      "image": "/case-safety.jpg",
+      "client": "Landelijke organisatie",
+      "timeline": "3 weken"
+    },
+    {
+      "slug": "contractbot-raamcontracten",
+      "title": "Contractbot voor raamcontracten",
+      "sector": "Juridisch",
+      "challenge": "Snelle toegang tot raamcontracten en aanverwante documenten nodig",
+      "solution": "AI-agent voor het raadplegen van raamcontracten en gerelateerde documenten",
+      "impact": [
+        "Instant toegang tot contractinformatie",
+        "Intelligente documentanalyse",
+        "24/7 beschikbaarheid via AI-agent"
+      ],
+      "image": "/case-contractbot.jpg",
+      "client": "Organisaties met raamcontracten",
+      "timeline": "1 week"
+    },
+    {
+      "slug": "klant-communicatie-agent",
+      "title": "Klant communicatie agent",
+      "sector": "Customer Service",
+      "challenge": "Efficiënte en persoonlijke klantcommunicatie op schaal",
+      "solution": "AI-agent die 24/7 klantvragen beantwoordt en proactief communiceert",
+      "impact": [
+        "24/7 beschikbare klantenservice",
+        "Geautomatiseerde persoonlijke communicatie",
+        "Significante tijd- en kostenbesparing"
+      ],
+      "image": "/case-communication.jpg",
+      "client": "Organisaties met klantcontact",
+      "timeline": "2 weken"
+    }
+  ],
+  "aiComponents": {
+    "title": "Real-time Data Prediction & AI-componenten",
+    "subtitle": "Mogelijkheden voor integratie in uw oplossing",
+    "components": [
+      "Capaciteitsplanning",
+      "Risico- & kosteninschatting",
+      "Incidentdetectie",
+      "Contractanalyse",
+      "Forecasting & besluitvorming",
+      "Automatische rapportage",
+      "Digitale procesregie",
+      "Slimme workflows",
+      "AI-assistent/chatfunctionaliteit"
+    ]
+  },
+  "contact": {
+    "email": "info@ai-group.nl",
+    "phone": "06-82551718",
+    "address": "Enschede/Zwolle, Nederland"
+  },
+  "navigation": [
+    { "name": "Home", "href": "/" },
+    { "name": "Oplossingen", "href": "/oplossingen" },
+    { "name": "Platform", "href": "/platform" },
+    { "name": "Cases", "href": "/cases" },
+    { "name": "Over Ons", "href": "/over-ons" },
+    { "name": "Contact", "href": "/contact" }
+  ]
+}
