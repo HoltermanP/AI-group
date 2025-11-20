@@ -60,16 +60,16 @@ export default function Hero() {
                       AI-first organisatie
                     </span>
                   </div>
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                     {data.hero.title}
                   </h1>
-                  <p className="text-2xl md:text-3xl text-blue-100 leading-relaxed font-light">
+                  <p className="text-lg md:text-xl text-blue-100 leading-relaxed font-light">
                     {data.hero.subtitle}
                   </p>
                   <div className="flex flex-wrap gap-4 pt-4">
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
                       <div className="text-sm text-blue-200 mb-1">Proof of Concept</div>
-                      <div className="text-2xl font-bold text-white">48 uur</div>
+                      <div className="text-xl font-bold text-white">48 uur</div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
                       <div className="text-sm text-blue-200 mb-1">MVP</div>

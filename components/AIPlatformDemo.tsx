@@ -188,10 +188,10 @@ export default function AIPlatformDemo() {
     <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             AI Platform Live Demo
           </h2>
-          <p className="text-3xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Bekijk hoe ons AI Platform real-time werkt voor uw organisatie
           </p>
         </div>

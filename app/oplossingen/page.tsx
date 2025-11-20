@@ -16,10 +16,10 @@ export default function SolutionsPage() {
       <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-8xl md:text-9xl lg:text-10xl font-bold text-gray-900 dark:text-white mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               AI-oplossingen voor elke organisatie
             </h1>
-            <p className="text-4xl md:text-5xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               Van workflow automation tot intelligente agents - wij bouwen AI-oplossingen die 24/7 voor u werken. 
               Alles geïntegreerd in één krachtig AI Platform.
             </p>
@@ -33,10 +33,10 @@ export default function SolutionsPage() {
       <section className="section-padding bg-white dark:bg-gray-950">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Alles in één AI Platform
             </h2>
-            <p className="text-3xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Alle oplossingen werken naadloos samen in ons centrale AI Platform met realtime dashboard.
             </p>
           </div>
@@ -44,10 +44,10 @@ export default function SolutionsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.platform.modules.map((module, index) => (
               <div key={index} className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border-2 border-gray-300 dark:border-gray-700">
-                <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-2xl">
+                <h3 className="font-bold text-gray-900 dark:text-white mb-3 text-lg">
                   {module.name}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                   {module.description}
                 </p>
               </div>

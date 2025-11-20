@@ -1,12 +1,15 @@
 import Link from 'next/link'
-import { ArrowRight, ShieldCheck, Workflow, Search, Monitor } from 'lucide-react'
+import { ArrowRight, Workflow, TrendingUp, Heart, Headphones, Settings, Calendar, Truck } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 
 const iconMap = {
-  'shield-check': ShieldCheck,
   workflow: Workflow,
-  search: Search,
-  monitor: Monitor,
+  'trending-up': TrendingUp,
+  heart: Heart,
+  headphones: Headphones,
+  settings: Settings,
+  calendar: Calendar,
+  truck: Truck,
 }
 
 export default function SolutionsGrid() {
@@ -15,12 +18,12 @@ export default function SolutionsGrid() {
   return (
     <section className="section-padding bg-gray-50 dark:bg-gray-900">
       <div className="container-custom">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             Onze AI-oplossingen
           </h2>
-          <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Workflow Automation met drie gespecialiseerde AI-applicaties.
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Van workflow automation tot sector-specifieke AI-applicaties. Ontdek hoe AI waarde toevoegt aan uw organisatie.
           </p>
         </div>
 
@@ -32,19 +35,19 @@ export default function SolutionsGrid() {
                 <Workflow className="w-10 h-10 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-4xl font-bold mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">
                   {data.solutions[0].title}
                 </h3>
-                <p className="text-xl text-white/90 leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-white/90 leading-relaxed mb-4">
                   {data.solutions[0].description}
                 </p>
               </div>
             </div>
 
-            <ul className="grid md:grid-cols-2 gap-4 mb-8">
+            <ul className="grid md:grid-cols-2 gap-3 mb-6">
               {data.solutions[0].bullets.map((bullet, bulletIndex) => (
-                <li key={bulletIndex} className="flex items-center space-x-3 text-lg text-white/90">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                <li key={bulletIndex} className="flex items-start space-x-3 text-sm md:text-base text-white/90">
+                  <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 flex-shrink-0"></div>
                   <span>{bullet}</span>
                 </li>
               ))}
@@ -62,12 +65,15 @@ export default function SolutionsGrid() {
 
         {/* Applications */}
         <div className="mb-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Gespecialiseerde AI-applicaties
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+            Sector-specifieke AI-applicaties
           </h3>
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 text-center">
+            Ontdek onze AI-oplossingen voor verschillende sectoren. Elke applicatie is specifiek ontwikkeld voor de unieke uitdagingen van uw sector.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.applications.map((application, index) => {
             const IconComponent = iconMap[application.icon as keyof typeof iconMap]
             
@@ -76,25 +82,30 @@ export default function SolutionsGrid() {
                 key={index}
                 className="group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
               >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300">
-                    <IconComponent className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div className="flex items-start space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors duration-300 flex-shrink-0">
+                    <IconComponent className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                       {application.title}
                     </h4>
+                    {application.sector && (
+                      <span className="text-xs text-primary-600 dark:text-primary-400 font-medium">
+                        {application.sector}
+                      </span>
+                    )}
                   </div>
                 </div>
 
-                <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                   {application.description}
                 </p>
 
-                <ul className="space-y-2 mb-6">
-                  {application.bullets.slice(0, 2).map((bullet, bulletIndex) => (
-                    <li key={bulletIndex} className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
-                      <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
+                <ul className="space-y-1.5 mb-4">
+                  {application.bullets.slice(0, 3).map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="flex items-start space-x-2 text-xs text-gray-600 dark:text-gray-300">
+                      <div className="w-1 h-1 bg-primary-500 rounded-full mt-1.5 flex-shrink-0"></div>
                       <span>{bullet}</span>
                     </li>
                   ))}

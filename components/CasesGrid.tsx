@@ -9,10 +9,10 @@ export default function CasesGrid() {
     <section className="section-padding bg-gray-50 dark:bg-gray-900">
       <div className="container-custom">
         <div className="text-center mb-20">
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Trackrecord
           </h2>
-          <p className="text-3xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Wat voor anderen onmogelijk lijkt binnen die tijd, hebben wij al gedaan. Meerdere keren.
           </p>
         </div>
@@ -48,10 +48,10 @@ export default function CasesGrid() {
                       ⚡ {caseItem.timeline}
                     </div>
                   )}
-                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     {caseItem.title}
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                     {caseItem.solution}
                   </p>
                 </div>
@@ -61,7 +61,7 @@ export default function CasesGrid() {
                   {caseItem.impact.map((impact, impactIndex) => (
                     <div key={impactIndex} className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-lg text-gray-700 dark:text-gray-300 font-bold">{impact}</span>
+                      <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">{impact}</span>
                     </div>
                   ))}
                 </div>

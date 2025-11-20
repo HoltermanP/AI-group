@@ -62,13 +62,13 @@ export default function AgentsSection() {
                 AI Agents
               </span>
             </div>
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Wij bouwen agents. Veel agents.
             </h2>
-            <p className="text-3xl md:text-4xl text-blue-100 max-w-5xl mx-auto leading-relaxed mb-4">
+            <p className="text-base md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed mb-3">
               Wij zijn sterk in het bouwen van AI-agents. Zo sterk dat we nu al meer agents in dienst hebben dan personeelsleden.
             </p>
-            <p className="text-2xl md:text-3xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-blue-200 max-w-2xl mx-auto leading-relaxed">
               Deze agents werken 24/7 voor ons. En dus voor u.
             </p>
           </motion.div>
@@ -90,10 +90,10 @@ export default function AgentsSection() {
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 border border-white/30">
                   <IconComponent className={`w-8 h-8 ${agent.color}`} />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-lg font-bold text-white mb-3">
                   {agent.title}
                 </h3>
-                <p className="text-lg text-blue-100 leading-relaxed">
+                <p className="text-sm text-blue-100 leading-relaxed">
                   {agent.description}
                 </p>
               </motion.div>
@@ -109,10 +109,10 @@ export default function AgentsSection() {
           className="text-center mt-16"
         >
           <div className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Agents werken 24/7. Voor u.
             </h3>
-            <p className="text-2xl md:text-3xl text-blue-100 leading-relaxed">
+            <p className="text-base md:text-lg text-blue-100 leading-relaxed">
               Geen personeelskosten. Geen overhead. Alleen resultaten. Altijd.
             </p>
           </div>

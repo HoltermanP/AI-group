@@ -26,13 +26,13 @@ export default function PlatformPage() {
       <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-8xl md:text-9xl lg:text-10xl font-bold text-gray-900 dark:text-white mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               {data.platform.title}
             </h1>
-            <p className="text-4xl md:text-5xl text-gray-600 dark:text-gray-300 leading-relaxed mb-12">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
               {data.platform.subtitle}
             </p>
-            <p className="text-2xl md:text-3xl text-gray-500 dark:text-gray-400 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-500 dark:text-gray-400 leading-relaxed">
               {data.platform.description}
             </p>
           </div>
@@ -47,10 +47,10 @@ export default function PlatformPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-6xl md:text-7xl font-bold text-gray-900 dark:text-white mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Alles op één plek
               </h2>
-              <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 Ons AI Platform integreert alle oplossingen in een centraal dashboard. 
                 Van realtime monitoring tot documentbeheer - alles wat u nodig heeft voor 
                 efficiënte en slimme bedrijfsvoering.
@@ -102,10 +102,10 @@ export default function PlatformPage() {
       <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Platform modules
             </h2>
-            <p className="text-3xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Krachtige modules die naadloos samenwerken voor optimale efficiency.
             </p>
           </div>
@@ -122,10 +122,10 @@ export default function PlatformPage() {
                   <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-primary-600 dark:text-primary-400" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     {module.name}
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     {module.description}
                   </p>
                 </div>

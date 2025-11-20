@@ -107,43 +107,94 @@
   ],
   "applications": [
     {
-      "slug": "ai-veiligheidsplatform",
-      "title": "AI Veiligheidsplatform",
-      "description": "Realtime monitoring en incidentpreventie met geautomatiseerde compliance-regels",
+      "slug": "financiele-ai",
+      "title": "Financiële AI",
+      "description": "AI-oplossingen voor de financiële sector: van risicoanalyse tot fraudedetectie en compliance",
       "bullets": [
-        "Realtime monitoring met foto/video-analyse",
-        "Compliance-regels geautomatiseerd geborgd",
-        "Incidentpreventie en audittrail",
-        "Live alerts bij risico's"
+        "Automatische risicoanalyse en scoring",
+        "Fraudedetectie in real-time",
+        "Compliance monitoring en rapportage",
+        "Geautomatiseerde financiële rapportage",
+        "Voorspellende cashflow analyses"
       ],
-      "icon": "shield-check",
-      "image": "/safety-platform.jpg"
+      "icon": "trending-up",
+      "image": "/financial-ai.jpg",
+      "sector": "Financieel"
     },
     {
-      "slug": "ai-analyse",
-      "title": "AI Analyse",
-      "description": "Automatische analyse van beelden, documenten en data voor snellere en betere besluitvorming",
+      "slug": "zorg-ai",
+      "title": "Zorg AI",
+      "description": "Intelligente oplossingen voor de zorgsector: patiëntmonitoring, planning en administratie",
       "bullets": [
-        "Automatische analyse van beelden & documenten",
-        "Risicoscores en inzichten",
-        "Rapportage in één klik",
-        "Integraties en validatie"
+        "Patiëntmonitoring en early warning systemen",
+        "Geautomatiseerde zorgplanning",
+        "Administratieve automatisering",
+        "Medische documentatie en rapportage",
+        "Voorspellende zorganalyses"
       ],
-      "icon": "search",
-      "image": "/ai-inspection.jpg"
+      "icon": "heart",
+      "image": "/healthcare-ai.jpg",
+      "sector": "Zorg"
     },
     {
-      "slug": "ai-monitoring",
-      "title": "AI Monitoring",
-      "description": "Proactief toezicht op voortgang, kwaliteit en prestaties met rol-specifieke dashboards",
+      "slug": "klantcontact-ai",
+      "title": "Klantcontact AI",
+      "description": "24/7 klantenservice met intelligente agents voor contactcentra en customer service",
       "bullets": [
-        "Afwijkingsdetectie en voortgang",
-        "Kwaliteitscontroles per proces",
-        "Dashboards per rol",
-        "Voorspellende analyses"
+        "AI-agents voor 24/7 klantenservice",
+        "Geautomatiseerde vraagbeantwoording",
+        "Sentimentanalyse en escalatie",
+        "Multi-channel ondersteuning",
+        "Persoonlijke klantinteracties"
       ],
-      "icon": "monitor",
-      "image": "/ai-monitoring.jpg"
+      "icon": "headphones",
+      "image": "/customer-service-ai.jpg",
+      "sector": "Customer Service"
+    },
+    {
+      "slug": "engineering-ai",
+      "title": "Engineering AI",
+      "description": "AI voor engineering: ontwerpoptimalisatie, simulaties en kwaliteitscontrole",
+      "bullets": [
+        "Ontwerpoptimalisatie met AI",
+        "Geautomatiseerde simulaties en analyses",
+        "Kwaliteitscontrole en validatie",
+        "Technische documentatie generatie",
+        "Voorspellend onderhoud"
+      ],
+      "icon": "settings",
+      "image": "/engineering-ai.jpg",
+      "sector": "Engineering"
+    },
+    {
+      "slug": "planning-ai",
+      "title": "Planning AI",
+      "description": "Intelligente planning en resource management voor optimale efficiency",
+      "bullets": [
+        "Geautomatiseerde resource planning",
+        "Optimalisatie van planningen",
+        "Voorspellende capaciteitsplanning",
+        "Real-time planning aanpassingen",
+        "Multi-project planning en coördinatie"
+      ],
+      "icon": "calendar",
+      "image": "/planning-ai.jpg",
+      "sector": "Planning"
+    },
+    {
+      "slug": "logistiek-ai",
+      "title": "Logistiek AI",
+      "description": "Slimme logistieke oplossingen: route-optimalisatie, voorraadbeheer en tracking",
+      "bullets": [
+        "Route-optimalisatie en planning",
+        "Voorspellend voorraadbeheer",
+        "Real-time tracking en monitoring",
+        "Geautomatiseerde orderafhandeling",
+        "Supply chain optimalisatie"
+      ],
+      "icon": "truck",
+      "image": "/logistics-ai.jpg",
+      "sector": "Logistiek"
     }
   ],
   "platform": {
@@ -297,6 +348,7 @@
     { "name": "Oplossingen", "href": "/oplossingen" },
     { "name": "Platform", "href": "/platform" },
     { "name": "Cases", "href": "/cases" },
+    { "name": "Over Ons", "href": "/over-ons" },
     { "name": "Contact", "href": "/contact" }
   ]
 }
