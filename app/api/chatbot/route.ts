@@ -12,7 +12,7 @@ Belangrijke informatie over AI-Group:
 - Jarenlange ervaring in management, processen, projecten en IT
 - We hebben meer AI-agents in dienst dan personeelsleden
 - Agents werken 24/7 voor ons en voor klanten
-- We leveren: Proof of Concept binnen 48 uur, MVP binnen 72 uur, Livegang v1.0 binnen 2 weken
+- We leveren: Proof of Concept binnen 48 uur, MVP binnen 72 uur, Livegang versie 1.0 binnen 4 weken
 - We bouwen AI-oplossingen voor alle sectoren: financieel, zorg, klantcontact, engineering, planning, logistiek
 - Onze oplossingen: workflow automation, Tax & Wealth HUB, landelijk veiligheidsconcept, contractbot, klant communicatie agent
 - Contact: info@ai-group.nl, 06-82551718

@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Wij leveren wat anderen beloven. Binnen weken.",
-    "subtitle": "AI-first organisatie met meer agents dan personeelsleden. Binnen 48 uur een Proof of Concept. MVP binnen 72 uur. Livegang v1.0 binnen 2 weken. Agents werken 24/7 voor u.",
+    "subtitle": "AI-first organisatie met meer agents dan personeelsleden. Binnen 48 uur een Proof of Concept. MVP binnen 72 uur. Livegang versie 1.0 binnen 4 weken. Agents werken 24/7 voor u.",
     "image": "/hero-image.jpg"
   },
   "positioning": {
@@ -42,7 +42,7 @@
   ],
   "speedTimeline": {
     "title": "Hoe snel zijn we?",
-    "subtitle": "Proof of Concept binnen 48 uur. MVP binnen 72 uur. Livegang v1.0 binnen 2 weken.",
+    "subtitle": "Proof of Concept binnen 48 uur. MVP binnen 72 uur. Livegang versie 1.0 binnen 4 weken.",
     "stages": [
       {
         "phase": "Proof of Concept",
@@ -57,9 +57,9 @@
         "description": "Minimal Viable Product met core functionaliteit"
       },
       {
-        "phase": "Livegang v1.0",
+        "phase": "Livegang versie 1.0",
         "traditional": "6-12 maanden",
-        "aifirst": "< 2 weken",
+        "aifirst": "< 4 weken",
         "description": "Productieklare versie met volledige functionaliteit"
       },
       {
@@ -250,9 +250,9 @@
         "description": "Minimal Viable Product met core functionaliteit binnen 72 uur. Klaar voor validatie met echte gebruikers."
       },
       {
-        "number": "2w",
-        "title": "Livegang v1.0",
-        "description": "Productieklare versie binnen 2 weken. Volledige functionaliteit, klaar voor gebruik."
+        "number": "4w",
+        "title": "Livegang versie 1.0",
+        "description": "Productieklare versie binnen 4 weken. Volledige functionaliteit, klaar voor gebruik."
       },
       {
         "number": "∞",

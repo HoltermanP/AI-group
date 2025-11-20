@@ -76,8 +76,8 @@ export default function Hero() {
                       <div className="text-2xl font-bold text-white">72 uur</div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
-                      <div className="text-sm text-blue-200 mb-1">Livegang v1.0</div>
-                      <div className="text-2xl font-bold text-white">2 weken</div>
+                      <div className="text-sm text-blue-200 mb-1">Livegang versie 1.0</div>
+                      <div className="text-2xl font-bold text-white">4 weken</div>
                     </div>
                   </div>
                 </div>

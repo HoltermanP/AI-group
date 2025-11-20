@@ -19,19 +19,19 @@ export default function HomePage() {
     <>
       <Hero />
       <FeatureGrid />
+      <SolutionsGrid />
+      <AIPlatformDemo />
       <SpeedTimeline />
       <SpeedComparison />
+      <Process />
       <TriangleOfPower />
       <IterationCircle />
       <AIComponents />
       <AgentsSection />
-      <SolutionsGrid />
-      <AIPlatformDemo />
-      <Process />
       <CasesGrid />
       <Testimonials />
-      <Newsletter />
       <CTA />
+      <Newsletter />
     </>
   )
 }

@@ -67,7 +67,7 @@ npm run dev
 ### Wat de chatbot weet:
 - ✅ Over het bedrijf (Luit de Jong en Patrick Holterman)
 - ✅ Over AI-agents (meer agents dan personeelsleden, 24/7)
-- ✅ Over snelheid (48u PoC, 72u MVP, 2 weken livegang)
+- ✅ Over snelheid (48u PoC, 72u MVP, 4 weken livegang versie 1.0)
 - ✅ Over oplossingen (alle sector-specifieke applicaties)
 - ✅ Over cases (Tax & Wealth HUB, veiligheidsconcept, etc.)
 - ✅ Over contactgegevens

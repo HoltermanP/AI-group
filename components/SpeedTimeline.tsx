@@ -6,7 +6,7 @@ import { Clock, Zap, Rocket, RefreshCw } from 'lucide-react'
 const iconMap = {
   'Proof of Concept': Clock,
   'MVP': Zap,
-  'Livegang v1.0': Rocket,
+  'Livegang versie 1.0': Rocket,
   'Optimalisatie': RefreshCw,
 }
 
