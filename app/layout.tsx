@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import WhatsAppButton from '@/components/WhatsAppButton'
 import CookieConsent from '@/components/CookieConsent'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import Chatbot from '@/components/Chatbot'
@@ -84,6 +85,7 @@ export default function RootLayout({
               <main>{children}</main>
               <Footer />
               <ScrollToTop />
+              <WhatsAppButton />
               <CookieConsent />
               <Chatbot />
             </ErrorBoundary>

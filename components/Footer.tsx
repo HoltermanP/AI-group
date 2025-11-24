@@ -1,10 +1,19 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 
 export default function Footer() {
   const data = getSiteData()
+  
+  // WhatsApp nummer formatteren
+  const phoneNumber = data.contact.phone.replace(/[\s-]/g, '')
+  const whatsappNumber = phoneNumber.startsWith('0') 
+    ? `+31${phoneNumber.substring(1)}` 
+    : phoneNumber.startsWith('+') 
+    ? phoneNumber 
+    : `+31${phoneNumber}`
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${encodeURIComponent('Hallo AI-Group, ik heb een vraag.')}`
 
   return (
     <footer className="bg-gray-900 dark:bg-black text-gray-300">
@@ -41,6 +50,17 @@ export default function Footer() {
                   <Phone size={16} className="text-primary-400" />
                   <a href={`tel:${data.contact.phone}`} className="hover:text-white transition-colors duration-200">
                     {data.contact.phone}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MessageCircle size={16} className="text-primary-400" />
+                  <a 
+                    href={whatsappUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors duration-200"
+                  >
+                    WhatsApp
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">

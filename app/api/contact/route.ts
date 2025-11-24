@@ -1,4 +1,110 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
+
+// Initialize SendGrid if available (optional)
+let sgMail: any = null
+if (process.env.SENDGRID_API_KEY) {
+  try {
+    const sendgrid = require('@sendgrid/mail')
+    sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+    sgMail = sendgrid
+  } catch (e) {
+    // SendGrid niet geïnstalleerd, dat is oké
+    sgMail = null
+  }
+}
+
+// Create SMTP transporter voor Strato hosting
+const createSMTPTransporter = () => {
+  // Optie 1: SMTP via Strato hosting
+  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
+    const port = parseInt(process.env.SMTP_PORT || '587')
+    const secure = port === 465 // 465 gebruikt SSL, 587 gebruikt STARTTLS
+    
+    return nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: port,
+      secure: secure, // true voor 465, false voor 587 (gebruikt STARTTLS)
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+      // Strato vereist TLS
+      tls: {
+        rejectUnauthorized: false, // Sommige hosting providers vereisen dit
+        ciphers: 'SSLv3',
+      },
+    })
+  }
+  
+  // Optie 2: Gmail (fallback)
+  if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+    return nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    })
+  }
+  
+  return null
+}
+
+async function sendEmailWithSendGrid(emailData: {
+  to: string
+  from: string
+  subject: string
+  text: string
+  html: string
+}) {
+  if (!sgMail) {
+    throw new Error('SendGrid niet geconfigureerd')
+  }
+  
+  try {
+    await sgMail.send({
+      to: emailData.to,
+      from: emailData.from,
+      subject: emailData.subject,
+      text: emailData.text,
+      html: emailData.html,
+    })
+    return { success: true, method: 'SendGrid' }
+  } catch (error: any) {
+    console.error('SendGrid error:', error)
+    throw new Error(`SendGrid error: ${error.message}`)
+  }
+}
+
+async function sendEmailWithSMTP(emailData: {
+  to: string
+  from: string
+  subject: string
+  text: string
+  html: string
+}) {
+  const transporter = createSMTPTransporter()
+  if (!transporter) {
+    throw new Error('SMTP niet geconfigureerd')
+  }
+
+  try {
+    await transporter.sendMail({
+      from: emailData.from,
+      to: emailData.to,
+      subject: emailData.subject,
+      text: emailData.text,
+      html: emailData.html,
+    })
+    
+    const method = process.env.SMTP_HOST ? 'SMTP (Strato)' : 'Gmail'
+    return { success: true, method }
+  } catch (error: any) {
+    console.error('SMTP error:', error)
+    throw new Error(`SMTP error: ${error.message}`)
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,10 +119,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Eenvoudige email naar info@ai-group.nl
+    const contactEmail = process.env.CONTACT_EMAIL || 'info@ai-group.nl'
+    const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER || 'noreply@ai-group.nl'
+
+    // Email data
     const emailData = {
-      to: 'info@ai-group.nl',
-      from: 'noreply@ai-group.nl',
+      to: contactEmail,
+      from: fromEmail,
       subject: `Contactformulier: ${subject || 'Algemeen'}`,
       text: `
 Naam: ${name}
@@ -58,18 +167,51 @@ Van: AI-Group Website Contactformulier
       `,
     }
 
-    // Log de email (voor nu - later vervangen door echte email service)
-    console.log('=== CONTACTFORMULIER EMAIL ===')
-    console.log(emailData)
-    console.log('==============================')
+    // Try to send email with available service
+    let sendResult
+    try {
+      // Prioriteit 1: SendGrid (als geconfigureerd)
+      if (process.env.SENDGRID_API_KEY && sgMail) {
+        sendResult = await sendEmailWithSendGrid(emailData)
+      }
+      // Prioriteit 2: SMTP via Strato hosting of Gmail
+      else if (createSMTPTransporter()) {
+        sendResult = await sendEmailWithSMTP(emailData)
+      }
+      // Geen email service geconfigureerd
+      else {
+        console.warn('⚠️ Geen email service geconfigureerd!')
+        console.log('=== CONTACTFORMULIER EMAIL (NIET VERSTUURD) ===')
+        console.log(emailData)
+        console.log('===============================================')
+        
+        return NextResponse.json(
+          { 
+            error: 'Email service niet geconfigureerd. Configureer SMTP_HOST/SMTP_USER/SMTP_PASS, SENDGRID_API_KEY, of EMAIL_USER/EMAIL_PASS in .env.local' 
+          },
+          { status: 500 }
+        )
+      }
 
-    // Simuleer email verzending
-    await new Promise(resolve => setTimeout(resolve, 1000))
+      console.log(`✅ Email succesvol verzonden via ${sendResult.method}`)
+      
+      return NextResponse.json(
+        { 
+          message: `Bericht succesvol verzonden naar ${contactEmail}!`,
+          method: sendResult.method
+        },
+        { status: 200 }
+      )
 
-    return NextResponse.json(
-      { message: 'Bericht succesvol verzonden naar info@ai-group.nl!' },
-      { status: 200 }
-    )
+    } catch (emailError: any) {
+      console.error('Email verzending gefaald:', emailError)
+      return NextResponse.json(
+        { 
+          error: `Email verzending gefaald: ${emailError.message}. Probeer het later opnieuw.` 
+        },
+        { status: 500 }
+      )
+    }
 
   } catch (error) {
     console.error('Contact form error:', error)

@@ -5,7 +5,13 @@ export function getSiteData() {
 }
 
 export function getSolution(slug: string) {
-  return siteData.solutions.find(solution => solution.slug === slug)
+  // Zoek eerst in solutions
+  const solution = siteData.solutions.find(solution => solution.slug === slug)
+  if (solution) return solution
+  
+  // Zoek dan in applications
+  const application = siteData.applications.find(app => app.slug === slug)
+  return application || undefined
 }
 
 export function getCase(slug: string) {

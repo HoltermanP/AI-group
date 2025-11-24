@@ -72,7 +72,7 @@ export default function Chatbot() {
   const companyData = {
     name: 'AI-Group',
     email: 'info@ai-group.nl',
-    phone: '06-82551718'
+    phone: '06-30985351'
   }
 
   const scrollToBottom = () => {
@@ -112,7 +112,7 @@ export default function Chatbot() {
       return data.response || 'Sorry, ik kon geen antwoord genereren. Neem contact met ons op via info@ai-group.nl'
     } catch (error) {
       console.error('Chatbot error:', error)
-      return 'Sorry, er ging iets mis. Neem gerust contact met ons op via info@ai-group.nl of bel 06-82551718. We helpen u graag verder!'
+      return 'Sorry, er ging iets mis. Neem gerust contact met ons op via info@ai-group.nl of bel 06-30985351. We helpen u graag verder!'
     }
   }
 
@@ -146,7 +146,7 @@ export default function Chatbot() {
       console.error('Error getting response:', error)
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'Sorry, er ging iets mis. Neem gerust contact met ons op via info@ai-group.nl of bel 06-82551718.',
+        text: 'Sorry, er ging iets mis. Neem gerust contact met ons op via info@ai-group.nl of bel 06-30985351.',
         isUser: false,
         timestamp: new Date()
       }
@@ -161,6 +161,29 @@ export default function Chatbot() {
       e.preventDefault()
       handleSend()
     }
+  }
+
+  // Functie om e-mailadressen clickable te maken
+  const renderMessageWithLinks = (text: string) => {
+    // Regex om e-mailadressen te vinden
+    const emailRegex = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/g
+    const parts = text.split(emailRegex)
+    
+    return parts.map((part, index) => {
+      if (emailRegex.test(part)) {
+        return (
+          <a
+            key={index}
+            href={`mailto:${part}`}
+            className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {part}
+          </a>
+        )
+      }
+      return <span key={index}>{part}</span>
+    })
   }
 
   return (
@@ -239,7 +262,9 @@ export default function Chatbot() {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
                   }`}
                 >
-                  <p className="text-sm leading-relaxed">{message.text}</p>
+                  <p className="text-sm leading-relaxed">
+                    {message.isUser ? message.text : renderMessageWithLinks(message.text)}
+                  </p>
                 </div>
               </div>
             ))}

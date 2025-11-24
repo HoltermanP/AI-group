@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import SolutionsGrid from '@/components/SolutionsGrid'
 import { getSiteData } from '@/lib/getData'
 
@@ -55,9 +56,9 @@ export default function SolutionsPage() {
           </div>
 
           <div className="text-center mt-12">
-            <a href="/platform" className="btn-primary">
+            <Link href="/platform" className="btn-primary">
               Bekijk het AI Platform
-            </a>
+            </Link>
           </div>
         </div>
       </section>

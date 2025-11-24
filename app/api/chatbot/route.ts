@@ -15,7 +15,7 @@ Belangrijke informatie over AI-Group:
 - We leveren: Proof of Concept binnen 48 uur, MVP binnen 72 uur, Livegang versie 1.0 binnen 4 weken
 - We bouwen AI-oplossingen voor alle sectoren: financieel, zorg, klantcontact, engineering, planning, logistiek
 - Onze oplossingen: workflow automation, Tax & Wealth HUB, landelijk veiligheidsconcept, contractbot, klant communicatie agent
-- Contact: info@ai-group.nl, 06-82551718
+- Contact: info@ai-group.nl, 06-30985351
 - Locatie: Enschede/Zwolle, Nederland
 - We bieden gratis verkenning zonder verplichtingen
 - Binnen 24 uur reactie op vragen
@@ -28,7 +28,7 @@ Geef korte, vriendelijke en professionele antwoorden in het Nederlands. Wees ent
     if (!apiKey) {
       // Fallback naar een eenvoudige response als er geen API key is
       return NextResponse.json({ 
-        response: 'Ik ben momenteel in onderhoud. Neem gerust contact met ons op via info@ai-group.nl of bel 06-82551718. We helpen u graag verder!'
+        response: 'Ik ben momenteel in onderhoud. Neem gerust contact met ons op via info@ai-group.nl of bel 06-30985351. We helpen u graag verder!'
       })
     }
 
@@ -64,7 +64,7 @@ Geef korte, vriendelijke en professionele antwoorden in het Nederlands. Wees ent
     
     // Fallback response
     return NextResponse.json({ 
-      response: 'Sorry, er ging iets mis. Neem gerust contact met ons op via info@ai-group.nl of bel 06-82551718. We helpen u graag verder!'
+      response: 'Sorry, er ging iets mis. Neem gerust contact met ons op via info@ai-group.nl of bel 06-30985351. We helpen u graag verder!'
     })
   }
 }

@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import ContactForm from '@/components/ContactForm'
 
@@ -10,6 +10,15 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const data = getSiteData()
+  
+  // WhatsApp nummer formatteren
+  const phoneNumber = data.contact.phone.replace(/[\s-]/g, '')
+  const whatsappNumber = phoneNumber.startsWith('0') 
+    ? `+31${phoneNumber.substring(1)}` 
+    : phoneNumber.startsWith('+') 
+    ? phoneNumber 
+    : `+31${phoneNumber}`
+  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${encodeURIComponent('Hallo AI-Group, ik heb een vraag over jullie AI-oplossingen.')}`
 
   return (
     <div className="pt-16">
@@ -70,6 +79,23 @@ export default function ContactPage() {
                       className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                     >
                       {data.contact.phone}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#25D366] rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp</h3>
+                    <a 
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 dark:text-gray-300 hover:text-[#25D366] transition-colors duration-200"
+                    >
+                      Stuur een bericht via WhatsApp
                     </a>
                   </div>
                 </div>

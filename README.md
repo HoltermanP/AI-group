@@ -87,7 +87,7 @@ npm start
 ## 📞 Contact
 
 - **E-mail:** info@ai-group.nl
-- **Telefoon:** 06-82551718
+- **Telefoon:** 06-30985351
 - **Locatie:** Enschede/Zwolle, Nederland
 
 ## 📄 Licentie
