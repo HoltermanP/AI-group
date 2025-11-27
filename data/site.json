@@ -74,18 +74,19 @@
     "title": "De duivelse driehoek beheerst met AI",
     "subtitle": "Traditioneel moet je kiezen tussen tijd, kosten of kwaliteit. Wij niet.",
     "description": "Onze oplossingen worden door AI gestuurd op tijd, kosten én kwaliteit. Daardoor zijn wij sneller, efficiënter én leveren we hogere kwaliteit dan traditionele IT-trajecten.",
+    "explanation": "In traditionele IT-projecten is er altijd een trade-off: sneller betekent duurder of lagere kwaliteit. Met AI hoeven we niet te kiezen. Onze AI-gedreven aanpak zorgt ervoor dat we alle drie de aspecten tegelijkertijd optimaliseren: projecten worden sneller afgerond, kosten blijven lager door automatisering, en de kwaliteit stijgt door continue AI-validatie en optimalisatie.",
     "corners": [
       {
         "name": "Tijd",
-        "description": "Sneller dan traditionele IT"
+        "description": "Korter door AI-versnelling"
       },
       {
         "name": "Kosten",
-        "description": "Efficiënter door AI-automatisering"
+        "description": "Lager door AI-automatisering"
       },
       {
         "name": "Kwaliteit",
-        "description": "Hogere kwaliteit door AI-validatie"
+        "description": "Hoger door AI-validatie"
       }
     ]
   },
@@ -354,7 +355,7 @@
     }
   ],
   "aiComponents": {
-    "title": "Datalakes, rapportages en voorspellingen met AI",
+    "title": "Grip op data, inzicht in prestaties, zicht op de toekomst",
     "subtitle": "Beyond Power BI. Wij koppelen big data en maken gebruik van AI om het tot ongekende rapportages te maken",
     "components": [
       {

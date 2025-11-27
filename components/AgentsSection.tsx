@@ -1,81 +1,78 @@
 'use client'
 
-import { MessageSquare, FileText, TrendingUp, Brain, Coffee, Activity, Briefcase, Zap, Target, Heart, BarChart3, Shield } from 'lucide-react'
+import { MessageSquare, FileText, TrendingUp, Coffee, Activity, Briefcase, Zap, Target, Heart, BarChart3, Shield } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function AgentsSection() {
   const agents = [
     {
       icon: MessageSquare,
-      name: 'Chatbot Agent',
-      description: 'Onze eerste agent die klantvragen beantwoordt en 24/7 beschikbaar is. Altijd vriendelijk, altijd accuraat.',
+      name: 'Klantenservice Agent',
+      description: 'Beantwoordt klantvragen 24/7, verwerkt bestellingen en lost problemen op. Altijd beschikbaar, altijd accuraat.',
       color: 'text-blue-400'
     },
     {
       icon: FileText,
-      name: 'HR Agent',
-      description: 'Helpt bij personeelszaken, contracten en administratie. Zorgt dat we niets vergeten en alles op tijd geregeld is.',
+      name: 'Documentatie Agent',
+      description: 'Genereert en beheert documenten automatisch. Contracten, offertes, rapporten - alles wordt bijgewerkt en georganiseerd.',
       color: 'text-purple-400'
     },
     {
       icon: TrendingUp,
       name: 'Procesoptimalisatie Agent',
-      description: 'Analyseert onze workflows en suggereert continu verbeteringen. Altijd op zoek naar efficiëntere manieren van werken.',
+      description: 'Analyseert workflows en identificeert bottlenecks. Suggereert continu verbeteringen voor efficiëntere processen.',
       color: 'text-green-400'
-    },
-    {
-      icon: Brain,
-      name: 'Brainstorm Agent',
-      description: 'Onze creatieve partner die nieuwe ideeën genereert en out-of-the-box denkt. Perfect voor het oplossen van complexe uitdagingen.',
-      color: 'text-yellow-400'
-    },
-    {
-      icon: Coffee,
-      name: 'Koffie Agent',
-      description: 'Zorgt ervoor dat we op de juiste momenten even pauze nemen. Herinnert ons aan het belang van mentale rust.',
-      color: 'text-orange-400'
-    },
-    {
-      icon: Activity,
-      name: 'Fitness Agent',
-      description: 'Moedigt ons aan om te bewegen en gezond te blijven. Plan regelmatig hardloopsessies en workout reminders.',
-      color: 'text-red-400'
     },
     {
       icon: Briefcase,
       name: 'Project Management Agent',
-      description: 'Houdt overzicht over alle projecten, deadlines en milestones. Zorgt dat we gefocust blijven op wat belangrijk is.',
+      description: 'Houdt overzicht over projecten, deadlines en resources. Zorgt dat teams gefocust blijven op wat belangrijk is.',
       color: 'text-indigo-400'
-    },
-    {
-      icon: Zap,
-      name: 'Efficiency Agent',
-      description: 'Identificeert tijdverspilling en automatiseert repetitieve taken. Helpt ons om meer gedaan te krijgen in minder tijd.',
-      color: 'text-cyan-400'
-    },
-    {
-      icon: Target,
-      name: 'Strategie Agent',
-      description: 'Helpt bij het formuleren van lange-termijn doelen en strategieën. Analyseert markttrends en kansen.',
-      color: 'text-pink-400'
-    },
-    {
-      icon: Heart,
-      name: 'Work-Life Balance Agent',
-      description: 'Zorgt voor een gezonde balans tussen werk en privé. Herinnert ons aan het belang van quality time met familie en vrienden.',
-      color: 'text-rose-400'
     },
     {
       icon: BarChart3,
       name: 'Data Analytics Agent',
-      description: 'Analyseert data en trends om inzichten te genereren. Helpt bij datagedreven besluitvorming en het identificeren van kansen.',
+      description: 'Analyseert bedrijfsdata en genereert inzichten. Helpt bij datagedreven besluitvorming en het identificeren van kansen.',
       color: 'text-emerald-400'
     },
     {
       icon: Shield,
-      name: 'Security Agent',
-      description: 'Waakt over onze digitale veiligheid en privacy. Controleert systemen en waarschuwt bij potentiële risico\'s.',
+      name: 'Security & Compliance Agent',
+      description: 'Waakt over digitale veiligheid en compliance. Controleert systemen, detecteert risico\'s en waarschuwt proactief.',
       color: 'text-amber-400'
+    },
+    {
+      icon: Zap,
+      name: 'Automatisering Agent',
+      description: 'Identificeert repetitieve taken en automatiseert deze. Vrijt tijd op voor strategisch werk en innovatie.',
+      color: 'text-cyan-400'
+    },
+    {
+      icon: Target,
+      name: 'Strategie & Planning Agent',
+      description: 'Helpt bij het formuleren van doelen en strategieën. Analyseert markttrends en adviseert over kansen.',
+      color: 'text-pink-400'
+    }
+  ]
+
+  const wellbeingAgents = [
+    {
+      icon: Coffee,
+      name: 'Pauze & Rust Agent',
+      description: 'Herinnert aan het belang van mentale rust en pauzes. Zorgt dat we op de juiste momenten even stoppen om op te laden.',
+      color: 'text-orange-400'
+    },
+    {
+      icon: Activity,
+      name: 'Gezondheid & Beweging Agent',
+      description: 'Moedigt aan om te bewegen en gezond te blijven. Plan reminders voor beweging en helpt bij het behouden van een gezonde levensstijl.',
+      color: 'text-red-400'
+    },
+    {
+      icon: Heart,
+      name: 'Work-Life Balance Agent',
+      description: 'Zorgt voor een gezonde balans tussen werk en privé. Herinnert aan het belang van quality time en persoonlijke ontwikkeling.',
+      color: 'text-rose-400'
     }
   ]
 
@@ -143,11 +140,58 @@ export default function AgentsSection() {
           )}
         </div>
 
+        {/* Work-Life Balance Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16"
+          style={{ opacity: 1 }}
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Meer dan alleen apps bouwen
+            </h3>
+            <p className="text-base md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              AI-agents helpen niet alleen bij het bouwen van applicaties en het behalen van targets. Ze zorgen ook voor een gezonde balans en ondersteunen ons in alle aspecten van ons werk en welzijn.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {wellbeingAgents.map((agent, index) => {
+              const IconComponent = agent.icon
+              
+              return (
+                <motion.div
+                  key={`wellbeing-${index}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl p-8 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
+                  style={{ opacity: 1 }}
+                >
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 border border-white/30">
+                    <IconComponent className={`w-8 h-8 ${agent.color}`} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3">
+                    {agent.name}
+                  </h3>
+                  <p className="text-sm text-blue-100 leading-relaxed">
+                    {agent.description}
+                  </p>
+                </motion.div>
+              )
+            })}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 1 }}
           className="text-center mt-16"
           style={{ opacity: 1 }}
         >
