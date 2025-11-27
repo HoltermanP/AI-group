@@ -31,7 +31,7 @@ export default function CookieConsent() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
-          className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-t-2 border-gray-200 dark:border-gray-700 shadow-2xl"
+          className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-slate-700 border-t-2 border-gray-200 dark:border-gray-700 shadow-2xl"
         >
           <div className="container-custom py-6">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">

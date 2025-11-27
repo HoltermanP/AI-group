@@ -34,7 +34,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       {/* Modal container */}
       <div className="flex min-h-full items-center justify-center p-4">
         <div 
-          className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform animate-modal-enter"
+          className="relative bg-white dark:bg-slate-700 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform animate-modal-enter"
         >
           {/* Sparkle effects */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden rounded-2xl">

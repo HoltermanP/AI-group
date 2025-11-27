@@ -13,7 +13,7 @@ export default function TermsPage() {
 
   return (
     <div className="pt-16">
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <Link 
@@ -29,7 +29,7 @@ export default function TermsPage() {
             </h1>
 
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-8">
+              <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-6 mb-8">
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   <strong>Titel:</strong> Algemene Voorwaarden AI-Group
                 </p>
@@ -294,7 +294,7 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   16. Contact
                 </h2>
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-4">
+                <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-6 mb-4">
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Holterman Interim Management B.V. – AI-Group</strong>
                   </p>

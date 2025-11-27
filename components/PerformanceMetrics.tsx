@@ -44,7 +44,7 @@ export default function PerformanceMetrics() {
   }, [])
 
   return (
-    <section className="section-padding bg-gray-50 dark:bg-gray-900">
+    <section className="section-padding bg-gray-50 dark:bg-slate-700">
       <div className="container-custom">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-8">
@@ -137,7 +137,7 @@ export default function PerformanceMetrics() {
 
           <div className="space-y-3">
             {liveActivities.map((activity) => (
-              <div key={activity.id} className="flex items-center space-x-3 bg-white dark:bg-gray-950 p-3 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+              <div key={activity.id} className="flex items-center space-x-3 bg-white dark:bg-slate-700 p-3 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
                 <div className={`w-2 h-2 rounded-full ${activity.status === 'success' ? 'bg-green-500' : activity.status === 'warning' ? 'bg-yellow-500' : activity.status === 'info' ? 'bg-blue-500' : 'bg-gray-400'} animate-pulse`}></div>
                 <div className="flex-1">
                   <p className="text-base font-medium text-gray-800 dark:text-white">{activity.type}</p>

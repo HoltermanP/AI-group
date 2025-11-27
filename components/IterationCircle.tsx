@@ -27,13 +27,13 @@ export default function IterationCircle() {
   ]
 
   return (
-    <section className="section-padding bg-white dark:bg-gray-950">
-      <div className="container-custom">
+    <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400 mb-4">
             AI-first. Brain powered by AI.
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
             Ons ontwikkelproces is slim, snel en volledig AI-gedreven.
           </p>
         </div>
@@ -76,15 +76,15 @@ export default function IterationCircle() {
                     top: `${y}%`,
                   }}
                 >
-                  <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border-2 border-primary-300 dark:border-primary-700 shadow-xl min-w-[200px] max-w-[250px] hover:scale-110 transition-transform duration-300 group">
+                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-xl p-6 border-2 border-primary-500/50 shadow-xl min-w-[200px] max-w-[250px] hover:scale-110 transition-transform duration-300 group hover:shadow-primary-500/20">
                     <div className="flex flex-col items-center text-center space-y-3">
-                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
-                        <IconComponent className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                      <div className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center group-hover:bg-primary-500/30 transition-colors border border-primary-500/30">
+                        <IconComponent className="w-6 h-6 text-primary-400" />
                       </div>
-                      <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                      <h3 className="font-bold text-lg text-white">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                      <p className="text-sm text-gray-300">
                         {item.description}
                       </p>
                     </div>
@@ -111,7 +111,7 @@ export default function IterationCircle() {
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeDasharray="4 4"
-                    className="text-primary-300 dark:text-primary-700"
+                    className="text-primary-700"
                   />
                 )
               })}
@@ -212,7 +212,7 @@ export default function IterationCircle() {
 
         {/* Additional text */}
         <div className="mt-16 text-center max-w-3xl mx-auto">
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-xl text-gray-300 leading-relaxed">
             Onze oplossingen worden slimmer na livegang. Niet omdat we harder werken, maar omdat wij AI geïntegreerd hebben in onze manier van denken, bouwen en leveren.
           </p>
         </div>

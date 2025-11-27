@@ -4,7 +4,7 @@ export default function Process() {
   const data = getSiteData()
 
   return (
-    <section className="section-padding bg-white dark:bg-gray-950">
+    <section className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
         <div className="text-center mb-20">
           <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-8">
@@ -23,7 +23,7 @@ export default function Process() {
                 <div className="hidden lg:block absolute top-16 left-full w-full h-1 bg-gradient-to-r from-primary-200 to-primary-400 dark:from-primary-800 dark:to-primary-600 z-0"></div>
               )}
               
-              <div className="relative z-10 bg-white dark:bg-gray-900 p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:shadow-xl hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300 group">
+              <div className="relative z-10 bg-white dark:bg-slate-700 p-8 rounded-2xl border-2 border-gray-200 dark:border-slate-600 hover:shadow-xl hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 group">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-xl flex items-center justify-center font-bold text-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   {step.number}
                 </div>

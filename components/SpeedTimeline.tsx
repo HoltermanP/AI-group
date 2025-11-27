@@ -46,13 +46,13 @@ export default function SpeedTimeline() {
   }
 
   return (
-    <section id="proces" className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
-      <div className="container-custom">
+    <section id="proces" className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400 mb-4">
             Start, speed, deliver
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-8">
             Zodra jij je ambitie deelt, gaat onze AI-motor draaien en zie je binnen dagen resultaat.
           </p>
           
@@ -62,8 +62,8 @@ export default function SpeedTimeline() {
             disabled={isAnimating}
             className={`inline-flex items-center space-x-3 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
               isAnimating
-                ? 'bg-gray-400 dark:bg-gray-600 text-white cursor-not-allowed'
-                : 'bg-primary-600 hover:bg-primary-700 text-white hover:scale-105 hover:shadow-2xl'
+                ? 'bg-gray-600 text-white cursor-not-allowed'
+                : 'bg-primary-600 hover:bg-primary-700 text-white hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/50'
             }`}
           >
             <Play className="w-6 h-6" />
@@ -73,7 +73,7 @@ export default function SpeedTimeline() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-600 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 transform -translate-y-1/2 z-0">
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-800 via-primary-600 to-primary-400 transform -translate-y-1/2 z-0">
             {/* Animated progress line */}
             {hasStarted && (
               <div 
@@ -104,24 +104,25 @@ export default function SpeedTimeline() {
               return (
                 <div
                   key={index}
-                  className={`relative bg-white dark:bg-gray-900 rounded-2xl p-6 md:p-8 border-2 transition-all duration-500 group flex flex-col h-full ${
+                  className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border-2 transition-all duration-500 group flex flex-col ${
                     isActive
-                      ? 'border-primary-500 dark:border-primary-400 shadow-2xl scale-105 z-20'
+                      ? 'border-primary-500 shadow-2xl shadow-primary-500/20 scale-105 z-20'
                       : isPast
-                      ? 'border-green-400 dark:border-green-600 shadow-lg'
+                      ? 'border-green-500/50 shadow-lg'
                       : hasStarted
-                      ? 'border-gray-200 dark:border-gray-800 opacity-30'
-                      : 'border-gray-200 dark:border-gray-800 hover:border-primary-400 dark:hover:border-primary-600 hover:shadow-2xl'
+                      ? 'border-gray-700/50 opacity-30'
+                      : 'border-gray-700/50 hover:border-primary-500/50 hover:shadow-2xl hover:shadow-primary-500/20'
                   }`}
                   style={{
                     opacity: isVisible ? 1 : 0.3,
                     transform: isActive ? 'scale(1.05)' : 'scale(1)',
+                    height: '100%',
                   }}
                 >
                   <div className="flex flex-col items-center text-center h-full">
                     {/* Icon - Fixed height section */}
                     <div className="mb-6 flex-shrink-0">
-                      <div className={`w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center transition-all duration-500 shadow-lg ${
+                      <div className={`w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center transition-all duration-500 shadow-lg mx-auto ${
                         isActive ? 'scale-125 ring-4 ring-primary-300 dark:ring-primary-700 animate-pulse' : 'group-hover:scale-110'
                       }`}>
                         <IconComponent className={`w-10 h-10 text-white transition-transform duration-500 ${
@@ -138,34 +139,34 @@ export default function SpeedTimeline() {
                     </div>
                     
                     {/* Title and Description - Fixed height section */}
-                    <div className="mb-6 flex-shrink-0 min-h-[100px] flex flex-col justify-center">
-                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    <div className="mb-6 flex-shrink-0 h-[120px] flex flex-col justify-center">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                         {stage.phase}
                       </h3>
-                      <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                      <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
                         {stage.description}
                       </p>
                     </div>
 
                     {/* Comparison boxes - Fixed height, pushed to bottom */}
                     <div className="w-full space-y-3 mt-auto">
-                      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 min-h-[90px] flex flex-col justify-center">
-                        <div className="text-xs text-red-600 dark:text-red-400 font-semibold mb-2">
+                      <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 h-[100px] flex flex-col justify-center">
+                        <div className="text-xs text-red-400 font-semibold mb-2">
                           Traditionele IT
                         </div>
-                        <div className="text-lg md:text-xl font-bold text-red-700 dark:text-red-300 leading-tight">
+                        <div className="text-lg md:text-xl font-bold text-red-300 leading-tight">
                           {stage.traditional}
                         </div>
                       </div>
                       
-                      <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-600 rounded-lg p-4 relative min-h-[90px] flex flex-col justify-center">
+                      <div className="bg-green-900/20 border-2 border-green-500/50 rounded-lg p-4 relative h-[100px] flex flex-col justify-center">
                         <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                           WIJ
                         </div>
-                        <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">
+                        <div className="text-xs text-green-400 font-semibold mb-2">
                           AI-first
                         </div>
-                        <div className="text-xl md:text-2xl font-bold text-green-700 dark:text-green-300 leading-tight">
+                        <div className="text-xl md:text-2xl font-bold text-green-300 leading-tight">
                           {stage.aifirst}
                         </div>
                       </div>
@@ -179,7 +180,7 @@ export default function SpeedTimeline() {
 
         {/* Subtitle onder de cards */}
         <div className="text-center mt-16 max-w-4xl mx-auto">
-          <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-600 dark:text-primary-400 leading-relaxed">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-400 leading-relaxed">
             {data.speedTimeline.subtitle}
           </p>
         </div>

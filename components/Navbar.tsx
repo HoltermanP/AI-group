@@ -22,7 +22,7 @@ export default function Navbar() {
   const data = getSiteData()
 
   return (
-        <nav className="bg-white/95 dark:bg-gray-950/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-gray-200 dark:border-gray-800">
+        <nav className="bg-slate-700/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-slate-600/50">
           <div className="container-custom">
             <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -34,7 +34,7 @@ export default function Navbar() {
                   height={40}
                   className="w-10 h-10 animate-logo-rotate"
                 />
-            <span className="font-bold text-xl text-gray-900 dark:text-white whitespace-nowrap">
+            <span className="font-bold text-xl text-white whitespace-nowrap">
               {data.brand.name}
             </span>
           </Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center space-x-2 text-base text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 font-semibold px-4 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap group"
+                      className="flex items-center space-x-2 text-base text-slate-300 hover:text-primary-400 transition-all duration-200 font-semibold px-4 py-2 rounded-xl hover:bg-slate-700/50 whitespace-nowrap group"
                     >
                       <Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
                       <span>{item.name}</span>
@@ -60,7 +60,7 @@ export default function Navbar() {
               <div className="hidden md:flex items-center space-x-4">
                 <button
                   onClick={() => setIsSearchOpen(true)}
-                  className="p-3 text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="p-3 text-slate-300 hover:text-primary-400 transition-colors duration-200 rounded-xl hover:bg-slate-700/50"
                 >
                   <Search className="w-6 h-6" />
                 </button>
@@ -75,7 +75,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300"
+            className="md:hidden p-2 rounded-md text-gray-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -84,14 +84,14 @@ export default function Navbar() {
             {/* Mobile Navigation */}
             {isOpen && (
               <div className="md:hidden">
-                <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 dark:bg-gray-950/95 backdrop-blur-md border-t-2 border-gray-200 dark:border-gray-800">
+                <div className="px-4 pt-4 pb-6 space-y-2 bg-slate-700/95 backdrop-blur-md border-t-2 border-slate-600/50">
                   {data.navigation.map((item) => {
                     const Icon = iconMap[item.name] || Home
                     return (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="flex items-center space-x-3 px-4 py-3 text-lg font-semibold text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl transition-all duration-200"
+                        className="flex items-center space-x-3 px-4 py-3 text-lg font-semibold text-slate-300 hover:text-primary-400 hover:bg-slate-700/50 rounded-xl transition-all duration-200"
                         onClick={() => setIsOpen(false)}
                       >
                         <Icon className="w-5 h-5" />

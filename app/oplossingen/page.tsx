@@ -31,7 +31,7 @@ export default function SolutionsPage() {
       <SolutionsGrid />
 
       {/* Platform integration */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -44,7 +44,7 @@ export default function SolutionsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.platform.modules.map((module, index) => (
-              <div key={index} className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border-2 border-gray-300 dark:border-gray-700">
+              <div key={index} className="bg-gray-50 dark:bg-slate-700 p-8 rounded-2xl border-2 border-gray-300 dark:border-gray-700">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-3 text-lg">
                   {module.name}
                 </h3>

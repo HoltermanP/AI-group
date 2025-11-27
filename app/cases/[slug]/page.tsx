@@ -67,11 +67,11 @@ export default function CaseDetailPage({ params }: Props) {
       </section>
 
       {/* Challenge & Solution */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-8">
+              <div className="bg-gray-50 dark:bg-slate-700 rounded-xl p-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
                   <span className="text-red-500">⚠️</span>
                   <span>De Uitdaging</span>
@@ -114,7 +114,7 @@ export default function CaseDetailPage({ params }: Props) {
       </section>
 
       {/* Case Visual */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gray-50 dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
@@ -133,7 +133,7 @@ export default function CaseDetailPage({ params }: Props) {
 
       {/* Client Info */}
       {caseItem.client && (
-        <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <section className="section-padding bg-gray-50 dark:bg-slate-700">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white dark:bg-gray-800 rounded-xl p-8">

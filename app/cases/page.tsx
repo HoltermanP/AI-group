@@ -15,13 +15,13 @@ export default function CasesPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
+      <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Bewezen resultaten
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
               Echte cases met meetbare impact voor organisaties in alle sectoren. 
               Van financiële groei tot klantcommunicatie - zie hoe AI waarde toevoegt aan uw organisatie.
             </p>
@@ -30,17 +30,17 @@ export default function CasesPage() {
       </section>
 
       {/* Cases Grid */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
         <div className="container-custom">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.cases.map((caseItem, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 border border-gray-700/50 hover:border-primary-500/50"
               >
                 {/* Screenshot */}
                 {caseItem.image ? (
-                  <div className="h-40 relative overflow-hidden bg-gray-100 dark:bg-gray-900">
+                  <div className="h-40 relative overflow-hidden bg-gray-100 dark:bg-slate-700">
                     <Image
                       src={caseItem.image}
                       alt={`Screenshot van ${caseItem.title}`}
@@ -68,34 +68,34 @@ export default function CasesPage() {
 
                 <div className="p-5">
                   <div className="mb-3">
-                    <span className="inline-block px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-xs font-medium rounded-full mb-2">
+                    <span className="inline-block px-2 py-1 bg-primary-500/20 text-primary-300 text-xs font-medium rounded-full mb-2 border border-primary-500/30">
                       {caseItem.sector}
                     </span>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-lg font-semibold text-white mb-2">
                       {caseItem.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-xs mb-2 line-clamp-2">
+                    <p className="text-gray-300 text-xs mb-2 line-clamp-2">
                       <strong>Uitdaging:</strong> {caseItem.challenge}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-xs mb-3 line-clamp-2">
+                    <p className="text-gray-300 text-xs mb-3 line-clamp-2">
                       <strong>Oplossing:</strong> {caseItem.solution}
                     </p>
                   </div>
 
                   {/* Impact metrics */}
                   <div className="space-y-1.5 mb-4">
-                    <h4 className="font-medium text-gray-900 dark:text-white text-xs">Resultaten:</h4>
+                    <h4 className="font-medium text-white text-xs">Resultaten:</h4>
                     {caseItem.impact.slice(0, 2).map((impact, impactIndex) => (
                       <div key={impactIndex} className="flex items-center space-x-2 text-xs">
                         <div className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0"></div>
-                        <span className="text-gray-700 dark:text-gray-300 font-medium line-clamp-1">{impact}</span>
+                        <span className="text-gray-300 font-medium line-clamp-1">{impact}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link
                     href={`/cases/${caseItem.slug}`}
-                    className="inline-flex items-center space-x-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors duration-200 text-sm"
+                    className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 font-medium transition-colors duration-200 text-sm"
                   >
                     <span>Lees meer</span>
                     <ArrowRight size={14} />
@@ -108,13 +108,13 @@ export default function CasesPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Interesse in uw eigen AI-case?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Laten we samen kijken hoe AI waarde kan toevoegen aan uw organisatie. 
               Plan een verkenning en ontdek de mogelijkheden.
             </p>

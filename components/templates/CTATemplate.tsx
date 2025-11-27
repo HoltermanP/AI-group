@@ -21,9 +21,9 @@ export function CTATemplate({
   className
 }: CTATemplateProps) {
   const variantClasses = {
-    default: 'bg-white dark:bg-gray-950',
-    gradient: 'bg-gradient-to-br from-primary-600 via-primary-700 to-purple-700',
-    dark: 'bg-gray-900'
+    default: 'bg-white dark:bg-slate-800',
+    gradient: 'bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-700',
+    dark: 'bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 relative overflow-hidden'
   }
 
   const textColor = variant === 'gradient' || variant === 'dark' ? 'text-white' : 'text-gray-900 dark:text-white'
@@ -31,6 +31,9 @@ export function CTATemplate({
 
   return (
     <section className={cn('section-padding relative overflow-hidden', variantClasses[variant], className)}>
+      {variant === 'dark' && (
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/10 via-transparent to-indigo-600/10 pointer-events-none z-0"></div>
+      )}
       <div className="container-custom relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className={cn('text-3xl md:text-4xl lg:text-5xl font-bold mb-6', textColor)}>

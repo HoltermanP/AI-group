@@ -23,8 +23,8 @@ export function HeroTemplate({
   className
 }: HeroTemplateProps) {
   const backgroundClasses = {
-    default: 'bg-white dark:bg-gray-950',
-    gradient: 'bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800',
+    default: 'bg-white dark:bg-slate-800',
+    gradient: 'bg-gradient-to-br from-primary-50 to-primary-100 dark:from-slate-700 dark:to-slate-600',
     dark: 'ai-background'
   }
 

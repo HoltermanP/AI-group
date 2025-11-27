@@ -106,7 +106,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
             className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-2xl mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="bg-white dark:bg-slate-700 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
               {/* Search Input */}
               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex items-center space-x-4">

@@ -8,21 +8,21 @@ export default function TriangleOfPower() {
   const data = getSiteData()
 
   return (
-    <section className="section-padding bg-white dark:bg-gray-950 relative overflow-hidden">
-      <div className="container-custom">
+    <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+      <div className="container-custom relative z-10">
         <div className="text-center mb-12 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400 mb-4">
             {data.triangleOfPower.title}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
             {data.triangleOfPower.subtitle}
           </p>
-          <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+          <p className="text-base text-gray-400 leading-relaxed mb-6">
             {data.triangleOfPower.description}
           </p>
           {data.triangleOfPower.explanation && (
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 md:p-8 border border-gray-200 dark:border-gray-800">
-              <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-gray-700/50">
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed">
                 {data.triangleOfPower.explanation}
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function TriangleOfPower() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="3"
-                className="text-gray-300 dark:text-gray-700"
+                className="text-gray-700"
               />
               
               {/* Logo background circle with pulsing effect */}
@@ -86,38 +86,38 @@ export default function TriangleOfPower() {
 
             {/* Corner labels positioned absolutely */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 md:-translate-y-4">
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-3 md:p-6 border-2 border-primary-300 dark:border-primary-700 shadow-xl text-center min-w-[140px] md:min-w-[200px] max-w-[160px] md:max-w-none">
-                <Clock className="w-5 h-5 md:w-8 md:h-8 text-primary-600 dark:text-primary-400 mx-auto mb-1 md:mb-2" />
-                <h3 className="text-base md:text-2xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-xl p-3 md:p-6 border-2 border-primary-500/50 shadow-xl text-center min-w-[140px] md:min-w-[200px] max-w-[160px] md:max-w-none">
+                <Clock className="w-5 h-5 md:w-8 md:h-8 text-primary-400 mx-auto mb-1 md:mb-2" />
+                <h3 className="text-base md:text-2xl font-bold text-white mb-1 md:mb-2">
                   {data.triangleOfPower.corners[0].name}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-xs md:text-sm text-gray-300">
                   {data.triangleOfPower.corners[0].description}
                 </p>
               </div>
             </div>
 
             <div className="absolute bottom-0 left-0 transform translate-y-2 md:translate-y-4 -translate-x-2 md:translate-x-0">
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-3 md:p-6 border-2 border-primary-300 dark:border-primary-700 shadow-xl text-center min-w-[140px] md:min-w-[200px] max-w-[160px] md:max-w-none">
-                <div className="w-5 h-5 md:w-8 md:h-8 text-primary-600 dark:text-primary-400 mx-auto mb-1 md:mb-2 flex items-center justify-center">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-xl p-3 md:p-6 border-2 border-primary-500/50 shadow-xl text-center min-w-[140px] md:min-w-[200px] max-w-[160px] md:max-w-none">
+                <div className="w-5 h-5 md:w-8 md:h-8 text-primary-400 mx-auto mb-1 md:mb-2 flex items-center justify-center">
                   <span className="text-2xl md:text-4xl font-bold">€</span>
                 </div>
-                <h3 className="text-base md:text-2xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
+                <h3 className="text-base md:text-2xl font-bold text-white mb-1 md:mb-2">
                   {data.triangleOfPower.corners[1].name}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-xs md:text-sm text-gray-300">
                   {data.triangleOfPower.corners[1].description}
                 </p>
               </div>
             </div>
 
             <div className="absolute bottom-0 right-0 transform translate-y-2 md:translate-y-4 translate-x-2 md:translate-x-0">
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-3 md:p-6 border-2 border-primary-300 dark:border-primary-700 shadow-xl text-center min-w-[140px] md:min-w-[200px] max-w-[160px] md:max-w-none">
-                <Award className="w-5 h-5 md:w-8 md:h-8 text-primary-600 dark:text-primary-400 mx-auto mb-1 md:mb-2" />
-                <h3 className="text-base md:text-2xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
+              <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-xl p-3 md:p-6 border-2 border-primary-500/50 shadow-xl text-center min-w-[140px] md:min-w-[200px] max-w-[160px] md:max-w-none">
+                <Award className="w-5 h-5 md:w-8 md:h-8 text-primary-400 mx-auto mb-1 md:mb-2" />
+                <h3 className="text-base md:text-2xl font-bold text-white mb-1 md:mb-2">
                   {data.triangleOfPower.corners[2].name}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-xs md:text-sm text-gray-300">
                   {data.triangleOfPower.corners[2].description}
                 </p>
               </div>

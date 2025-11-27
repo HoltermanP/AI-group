@@ -16,7 +16,7 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${encodeURIComponent('Hallo AI-Group, ik heb een vraag.')}`
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-gray-300">
+    <footer className="bg-slate-700 dark:bg-slate-800 text-slate-200">
       <div className="container-custom">
         <div className="py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-800 py-6">
+        <div className="border-t border-slate-700 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2025 {data.brand.name}. Alle rechten voorbehouden.

@@ -31,7 +31,7 @@ export function TestimonialTemplate({
     const testimonial = testimonials[0]
     
     return (
-      <section className={cn('section-padding bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800', className)}>
+      <section className={cn('section-padding bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-700 dark:to-slate-600', className)}>
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -72,7 +72,7 @@ export function TestimonialTemplate({
   }
 
   return (
-    <section className={cn('section-padding bg-white dark:bg-gray-950', className)}>
+    <section className={cn('section-padding bg-white dark:bg-slate-800', className)}>
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">

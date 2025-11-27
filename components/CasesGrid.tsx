@@ -7,13 +7,13 @@ export default function CasesGrid() {
   const data = getSiteData()
 
   return (
-    <section id="cases" className="section-padding bg-gray-50 dark:bg-gray-900">
-      <div className="container-custom">
+    <section id="cases" className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400 mb-4">
             Track record
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
             Onze cases tonen het: altijd on-track en snel opgeleverd.
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function CasesGrid() {
           {data.cases.map((caseItem, index) => (
             <div
               key={index}
-              className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-gray-300 dark:border-gray-600 hover:scale-105"
+              className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-300 border-2 border-gray-700/50 hover:border-primary-500/50 hover:scale-105"
             >
               {/* Case Icon */}
               <div className="h-40 bg-gradient-to-br from-primary-500 to-primary-700 relative overflow-hidden">
@@ -45,14 +45,14 @@ export default function CasesGrid() {
               <div className="p-5">
                 <div className="mb-4">
                   {caseItem.timeline && (
-                    <div className="mb-3 inline-block bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="mb-3 inline-block bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-bold border border-green-500/30">
                       ⚡ {caseItem.timeline}
                     </div>
                   )}
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-bold text-white mb-2">
                     {caseItem.title}
                   </h3>
-                  <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-3 line-clamp-3">
+                  <p className="text-xs text-gray-300 leading-relaxed mb-3 line-clamp-3">
                     {caseItem.solution}
                   </p>
                 </div>
@@ -62,7 +62,7 @@ export default function CasesGrid() {
                   {caseItem.impact.slice(0, 2).map((impact, impactIndex) => (
                     <div key={impactIndex} className="flex items-center space-x-2">
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse flex-shrink-0"></div>
-                      <span className="text-xs text-gray-700 dark:text-gray-300 font-medium line-clamp-1">{impact}</span>
+                      <span className="text-xs text-gray-300 font-medium line-clamp-1">{impact}</span>
                     </div>
                   ))}
                 </div>

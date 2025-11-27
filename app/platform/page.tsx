@@ -43,7 +43,7 @@ export default function PlatformPage() {
       <AIPlatformDemo />
 
       {/* Platform Overview */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -99,7 +99,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Modules */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gray-50 dark:bg-slate-700">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">

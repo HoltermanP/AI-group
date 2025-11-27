@@ -130,7 +130,7 @@ export default function OverOnsPage() {
       </section>
 
       {/* Founders */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-8 border-2 border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 hover:shadow-xl">
@@ -291,7 +291,7 @@ export default function OverOnsPage() {
       </section>
 
       {/* Our Agents */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gray-50 dark:bg-slate-700">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">

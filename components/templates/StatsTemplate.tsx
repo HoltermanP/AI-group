@@ -25,7 +25,7 @@ export function StatsTemplate({
   }
 
   return (
-    <section className={cn('section-padding bg-gray-50 dark:bg-gray-900', className)}>
+    <section className={cn('section-padding bg-gray-50 dark:bg-slate-700', className)}>
       <div className="container-custom">
         <div className={cn('grid gap-6', gridCols[columns])}>
           {stats.map((stat, index) => (
