@@ -11,29 +11,23 @@ interface Message {
 }
 
 // Avatar component voor vrouwelijke assistent
-const AssistantAvatar = ({ size = 40, className = '' }: { size?: number; className?: string }) => (
-  <div className={`relative rounded-full overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-800 dark:to-primary-900 flex-shrink-0 border-2 border-primary-300 dark:border-primary-600 ${className}`} style={{ width: size, height: size }}>
-    <svg
-      viewBox="0 0 100 100"
-      className="w-full h-full"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Gezicht */}
-      <circle cx="50" cy="50" r="45" fill="#fbbf24" />
-      {/* Haar */}
-      <path d="M 30 30 Q 30 15, 50 20 Q 70 15, 70 30 Q 70 25, 65 20 Q 50 10, 35 20 Q 30 25, 30 30" fill="#2c1810" />
-      {/* Ogen */}
-      <circle cx="40" cy="45" r="4" fill="#1f2937" />
-      <circle cx="60" cy="45" r="4" fill="#1f2937" />
-      {/* Bril */}
-      <ellipse cx="40" cy="45" rx="8" ry="6" fill="none" stroke="#1f2937" strokeWidth="1.5" />
-      <ellipse cx="60" cy="45" rx="8" ry="6" fill="none" stroke="#1f2937" strokeWidth="1.5" />
-      <line x1="48" y1="45" x2="52" y2="45" stroke="#1f2937" strokeWidth="1.5" />
-      {/* Mond */}
-      <path d="M 40 60 Q 50 70, 60 60" stroke="#1f2937" strokeWidth="2" fill="none" strokeLinecap="round" />
-    </svg>
-  </div>
-)
+const AssistantAvatar = ({ size = 40, className = '' }: { size?: number; className?: string }) => {
+  // URL-encode de bestandsnaam om speciale karakters en spaties te hanteren
+  const imagePath = encodeURI('/images/Scherm­afbeelding 2025-11-27 om 20.10.06.png')
+  
+  return (
+    <div className={`relative rounded-full overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-800 dark:to-primary-900 flex-shrink-0 border-2 border-primary-300 dark:border-primary-600 ${className}`} style={{ width: size, height: size }}>
+      <img
+        src={imagePath}
+        alt="Aimy"
+        width={size}
+        height={size}
+        className="w-full h-full object-cover"
+        style={{ width: '100%', height: '100%' }}
+      />
+    </div>
+  )
+}
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -56,7 +50,7 @@ export default function Chatbot() {
           setMessages([
             {
               id: '1',
-              text: 'Hallo! Ik ben de AI-Group assistent. Hoe kan ik u helpen? Stel gerust vragen over ons bedrijf, onze oplossingen of wat we voor u kunnen betekenen.',
+              text: 'Hallo! Ik ben Aimy, de AI-assistent van AI-Group. Hoe kan ik u helpen? Stel gerust vragen over ons bedrijf, onze oplossingen of wat we voor u kunnen betekenen.',
               isUser: false,
               timestamp: new Date()
             }
@@ -204,7 +198,7 @@ export default function Chatbot() {
                 {/* Tekst */}
                 <div className="flex-1 min-w-0 pt-1">
                   <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1 leading-tight">
-                    Hallo! Ik ben er om te helpen
+                    Hallo! Ik ben Aimy
                   </p>
                   <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                     Klik hier om te beginnen
@@ -239,7 +233,7 @@ export default function Chatbot() {
             <div className="flex items-center space-x-3">
               <AssistantAvatar size={40} className="border-white/30" />
               <div>
-                <h3 className="font-bold text-lg">AI-Group Assistent</h3>
+                <h3 className="font-bold text-lg">Aimy</h3>
                 <p className="text-xs text-primary-100">Online • Antwoordt direct</p>
               </div>
             </div>
