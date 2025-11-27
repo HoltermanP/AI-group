@@ -12,13 +12,13 @@ export default function FeatureGrid() {
   const data = getSiteData()
 
   return (
-    <section className="section-padding bg-white dark:bg-gray-950">
+    <section id="waarom-ai" className="section-padding bg-white dark:bg-gray-950">
       <div className="container-custom">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4">
             Waarom AI-first?
           </h2>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             Wij zijn een AI-first organisatie met een bewezen trackrecord in het extreem snel ontwikkelen van slimme applicaties.
           </p>
         </div>

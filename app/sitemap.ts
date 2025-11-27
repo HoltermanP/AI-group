@@ -15,21 +15,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/oplossingen`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/platform`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/cases`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/over-ons`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
@@ -40,14 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Dynamic solution pages
-  const solutionPages = data.solutions.map((solution) => ({
-    url: `${baseUrl}/oplossingen/${solution.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
-
   // Dynamic case pages
   const casePages = data.cases.map((caseItem) => ({
     url: `${baseUrl}/cases/${caseItem.slug}`,
@@ -56,5 +42,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...solutionPages, ...casePages]
+  return [...staticPages, ...casePages]
 }

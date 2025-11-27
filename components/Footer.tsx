@@ -70,42 +70,20 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Solutions */}
+            {/* Navigation */}
             <div>
-              <h3 className="font-semibold text-white mb-4">Oplossingen</h3>
+              <h3 className="font-semibold text-white mb-4">Navigatie</h3>
               <ul className="space-y-2">
-                {data.solutions.map((solution, index) => (
-                  <li key={index}>
-                    <Link
-                      href={`/oplossingen/${solution.slug}`}
+                {data.navigation.map((item) => (
+                  <li key={item.name}>
+                    <Link 
+                      href={item.href} 
                       className="hover:text-white transition-colors duration-200"
                     >
-                      {solution.title}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h3 className="font-semibold text-white mb-4">Bedrijf</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/cases" className="hover:text-white transition-colors duration-200">
-                    Cases
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/platform" className="hover:text-white transition-colors duration-200">
-                    Platform
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-white transition-colors duration-200">
-                    Contact
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>

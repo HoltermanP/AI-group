@@ -1,13 +1,9 @@
 import Hero from '@/components/Hero'
 import FeatureGrid from '@/components/FeatureGrid'
 import SpeedTimeline from '@/components/SpeedTimeline'
-import SpeedComparison from '@/components/SpeedComparison'
 import TriangleOfPower from '@/components/TriangleOfPower'
 import IterationCircle from '@/components/IterationCircle'
 import AIComponents from '@/components/AIComponents'
-import SolutionsGrid from '@/components/SolutionsGrid'
-import AIPlatformDemo from '@/components/AIPlatformDemo'
-import Process from '@/components/Process'
 import AgentsSection from '@/components/AgentsSection'
 import CasesGrid from '@/components/CasesGrid'
 import Testimonials from '@/components/Testimonials'
@@ -19,11 +15,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FeatureGrid />
-      <SolutionsGrid />
-      <AIPlatformDemo />
       <SpeedTimeline />
-      <SpeedComparison />
-      <Process />
       <TriangleOfPower />
       <IterationCircle />
       <AIComponents />

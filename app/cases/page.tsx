@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, TrendingUp } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 
 export const metadata: Metadata = {
-  title: 'Cases - AI-Group',
+  title: 'Track Record - AI-Group',
   description: 'Bekijk onze succesvolle AI-implementaties voor organisaties in alle sectoren. Meetbare resultaten en bewezen impact.',
 }
 
@@ -37,16 +38,33 @@ export default function CasesPage() {
                 key={index}
                 className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
               >
-                {/* Image placeholder */}
-                <div className="h-40 bg-gradient-to-br from-primary-500 to-primary-700 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 opacity-90"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <TrendingUp className="w-10 h-10 mx-auto mb-2" />
-                      <span className="text-xs font-medium">{caseItem.sector}</span>
+                {/* Screenshot */}
+                {caseItem.image ? (
+                  <div className="h-40 relative overflow-hidden bg-gray-100 dark:bg-gray-900">
+                    <Image
+                      src={caseItem.image}
+                      alt={`Screenshot van ${caseItem.title}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute top-2 right-2">
+                      <span className="px-2 py-1 bg-primary-600/90 backdrop-blur-sm text-white text-xs font-bold rounded-full">
+                        {caseItem.sector}
+                      </span>
                     </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="h-40 bg-gradient-to-br from-primary-500 to-primary-700 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 opacity-90"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <TrendingUp className="w-10 h-10 mx-auto mb-2" />
+                        <span className="text-xs font-medium">{caseItem.sector}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <div className="p-5">
                   <div className="mb-3">

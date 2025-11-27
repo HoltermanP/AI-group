@@ -40,10 +40,10 @@ export default function Newsletter() {
             <Mail className="w-10 h-10 text-white" />
           </div>
           
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Blijf op de hoogte
           </h2>
-          <p className="text-2xl md:text-3xl text-blue-100 mb-12 leading-relaxed">
+          <p className="text-base md:text-lg text-blue-100 mb-12 leading-relaxed">
             Ontvang de nieuwste updates over AI-oplossingen en intelligente agents direct in uw inbox.
           </p>
 

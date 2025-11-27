@@ -23,7 +23,7 @@ export default function Navbar() {
                   alt={`${data.brand.name} logo`}
                   width={40}
                   height={40}
-                  className="w-10 h-10"
+                  className="w-10 h-10 animate-logo-rotate"
                 />
             <span className="font-bold text-xl text-gray-900 dark:text-white">
               {data.brand.name}
