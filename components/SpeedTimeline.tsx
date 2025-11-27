@@ -50,7 +50,7 @@ export default function SpeedTimeline() {
       <div className="container-custom">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-600 dark:text-primary-400 mb-4">
-            Jij drukt op start. Wij rammen op vooruit.
+            Start, speed, deliver
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
             Zodra jij je ambitie deelt, gaat onze AI-motor draaien en zie je binnen dagen resultaat.
