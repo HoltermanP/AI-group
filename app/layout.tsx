@@ -73,8 +73,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-        <html lang="nl" className="scroll-smooth">
-          <body className={inter.className}>
+        <html lang="nl" className="scroll-smooth dark">
+          <body className={`${inter.className} dark`}>
             <ErrorBoundary>
               {/* <PerformanceMonitor />
               <PreloadResources />

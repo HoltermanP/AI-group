@@ -19,7 +19,7 @@ export default function SpeedComparison() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-800">
+          <div className="bg-white dark:bg-slate-700 rounded-2xl shadow-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-800">
             {/* Header */}
             <div className="grid grid-cols-3 gap-4 p-6 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 border-b-2 border-gray-300 dark:border-gray-600">
               <div className="font-bold text-lg text-gray-700 dark:text-gray-300">Fase</div>

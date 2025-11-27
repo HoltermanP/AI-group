@@ -23,13 +23,13 @@ export default function ContactPage() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-950 dark:to-gray-900">
+      <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Neem contact op
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
               Klaar om AI in te zetten voor uw organisatie? Plan een verkenning of vraag een demo aan. 
               We helpen u graag verder met AI-oplossingen en intelligente agents voor uw organisatie.
             </p>
@@ -38,7 +38,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -48,20 +48,20 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Contactgegevens
               </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center border border-primary-500/30">
+                    <Mail className="w-6 h-6 text-primary-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">E-mail</h3>
+                    <h3 className="font-semibold text-white">E-mail</h3>
                     <a 
                       href={`mailto:${data.contact.email}`}
-                      className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                      className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
                     >
                       {data.contact.email}
                     </a>
@@ -69,14 +69,14 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center border border-primary-500/30">
+                    <Phone className="w-6 h-6 text-primary-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Telefoon</h3>
+                    <h3 className="font-semibold text-white">Telefoon</h3>
                     <a 
                       href={`tel:${data.contact.phone}`}
-                      className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                      className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
                     >
                       {data.contact.phone}
                     </a>
@@ -88,12 +88,12 @@ export default function ContactPage() {
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">WhatsApp</h3>
+                    <h3 className="font-semibold text-white">WhatsApp</h3>
                     <a 
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-[#25D366] transition-colors duration-200"
+                      className="text-gray-300 hover:text-[#25D366] transition-colors duration-200"
                     >
                       Stuur een bericht via WhatsApp
                     </a>
@@ -101,23 +101,23 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center border border-primary-500/30">
+                    <MapPin className="w-6 h-6 text-primary-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Locatie</h3>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <h3 className="font-semibold text-white">Locatie</h3>
+                    <p className="text-gray-300">
                       {data.contact.address}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
+              <div className="mt-8 p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-700/50">
+                <h3 className="font-semibold text-white mb-3">
                   Wat kunt u verwachten?
                 </h3>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                     <span>Binnen 24 uur reactie</span>

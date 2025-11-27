@@ -33,23 +33,6 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
 
     const searchResults: SearchResult[] = []
 
-    // Search in solutions
-    data.solutions.forEach(solution => {
-      if (
-        solution.title.toLowerCase().includes(query.toLowerCase()) ||
-        solution.description.toLowerCase().includes(query.toLowerCase()) ||
-        solution.bullets.some(bullet => bullet.toLowerCase().includes(query.toLowerCase()))
-      ) {
-        searchResults.push({
-          id: `solution-${solution.slug}`,
-          title: solution.title,
-          description: solution.description,
-          type: 'solution',
-          href: `/oplossingen/${solution.slug}`
-        })
-      }
-    })
-
     // Search in cases
     data.cases.forEach(caseItem => {
       if (
@@ -70,9 +53,8 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
     // Search in pages
     const pages = [
       { title: 'Home', description: 'Welkom bij AI-Group', href: '/' },
-      { title: 'Oplossingen', description: 'Bekijk alle AI-oplossingen', href: '/oplossingen' },
-      { title: 'Platform', description: 'AI Platform & Dashboard', href: '/platform' },
-      { title: 'Cases', description: 'Bewezen resultaten', href: '/cases' },
+      { title: 'Track Record', description: 'Bewezen resultaten', href: '/#cases' },
+      { title: 'Over Ons', description: 'Meer over AI-Group', href: '/over-ons' },
       { title: 'Contact', description: 'Neem contact op', href: '/contact' }
     ]
 
@@ -124,7 +106,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
             className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-2xl mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="bg-white dark:bg-slate-700 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
               {/* Search Input */}
               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex items-center space-x-4">
@@ -134,7 +116,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Zoek oplossingen, cases, of pagina's..."
+                    placeholder="Zoek cases of pagina's..."
                     className="flex-1 text-lg bg-transparent border-none outline-none text-gray-900 dark:text-white placeholder-gray-500"
                   />
                   <button

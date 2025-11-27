@@ -16,7 +16,7 @@ export default function SolutionsGrid() {
   const data = getSiteData()
 
   return (
-    <section className="section-padding bg-gray-50 dark:bg-gray-900">
+    <section className="section-padding bg-gray-50 dark:bg-slate-700">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">

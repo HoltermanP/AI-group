@@ -197,7 +197,7 @@ export default function AIPlatformDemo() {
         </div>
 
         {/* Platform Dashboard */}
-        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-slate-700 rounded-3xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-primary-600 to-primary-700 px-8 py-6">
             <div className="flex items-center justify-between">

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react'
 import { getSiteData, getCase } from '@/lib/getData'
+import CaseIcon from '@/components/CaseIcon'
 
 type Props = {
   params: { slug: string }
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${caseItem.title} - Cases - AI-Group`,
+    title: `${caseItem.title} - Track Record - AI-Group`,
     description: caseItem.solution,
   }
 }
@@ -66,11 +67,11 @@ export default function CaseDetailPage({ params }: Props) {
       </section>
 
       {/* Challenge & Solution */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-8">
+              <div className="bg-gray-50 dark:bg-slate-700 rounded-xl p-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
                   <span className="text-red-500">⚠️</span>
                   <span>De Uitdaging</span>
@@ -112,9 +113,27 @@ export default function CaseDetailPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Case Visual */}
+      <section className="section-padding bg-gray-50 dark:bg-slate-700">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              Visuele weergave
+            </h2>
+            <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-12 md:p-16 shadow-xl border-2 border-primary-400 dark:border-primary-600">
+              <div className="flex items-center justify-center">
+                <div className="transform hover:scale-110 transition-transform duration-300">
+                  <CaseIcon slug={caseItem.slug} sector={caseItem.sector} className="w-32 h-32 md:w-40 md:h-40" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Client Info */}
       {caseItem.client && (
-        <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <section className="section-padding bg-gray-50 dark:bg-slate-700">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white dark:bg-gray-800 rounded-xl p-8">
@@ -130,35 +149,6 @@ export default function CaseDetailPage({ params }: Props) {
         </section>
       )}
 
-      {/* CTA */}
-      <section className="section-padding bg-primary-600">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Interesse in een vergelijkbare oplossing?
-            </h2>
-            <p className="text-xl text-primary-100 mb-8">
-              Laten we samen kijken hoe AI waarde kan toevoegen aan uw organisatie. 
-              Plan een verkenning en ontdek de mogelijkheden.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-primary-600 hover:bg-gray-50 px-8 py-4 rounded-lg font-medium transition-colors duration-200 inline-flex items-center justify-center space-x-2"
-              >
-                <span>{data.cta.primary}</span>
-                <ArrowRight size={20} />
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center space-x-2"
-              >
-                <span>{data.cta.secondary}</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

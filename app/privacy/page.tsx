@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
   return (
     <div className="pt-16">
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <Link 
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                   Voor vragen over dit privacybeleid of uw gegevens kunt u contact met ons opnemen:
                 </p>
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-4">
+                <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-6 mb-4">
                   <p className="text-gray-700 dark:text-gray-300">
                     <strong>E-mail:</strong> <a href={`mailto:${data.contact.email}`} className="text-primary-600 dark:text-primary-400 hover:underline">{data.contact.email}</a><br />
                     <strong>Telefoon:</strong> <a href={`tel:${data.contact.phone}`} className="text-primary-600 dark:text-primary-400 hover:underline">{data.contact.phone}</a><br />

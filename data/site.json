@@ -74,18 +74,19 @@
     "title": "De duivelse driehoek beheerst met AI",
     "subtitle": "Traditioneel moet je kiezen tussen tijd, kosten of kwaliteit. Wij niet.",
     "description": "Onze oplossingen worden door AI gestuurd op tijd, kosten én kwaliteit. Daardoor zijn wij sneller, efficiënter én leveren we hogere kwaliteit dan traditionele IT-trajecten.",
+    "explanation": "In traditionele IT-projecten is er altijd een trade-off: sneller betekent duurder of lagere kwaliteit. Met AI hoeven we niet te kiezen. Onze AI-gedreven aanpak zorgt ervoor dat we alle drie de aspecten tegelijkertijd optimaliseren: projecten worden sneller afgerond, kosten blijven lager door automatisering, en de kwaliteit stijgt door continue AI-validatie en optimalisatie.",
     "corners": [
       {
         "name": "Tijd",
-        "description": "Sneller dan traditionele IT"
+        "description": "Korter door AI-versnelling"
       },
       {
         "name": "Kosten",
-        "description": "Efficiënter door AI-automatisering"
+        "description": "Lager door AI-automatisering"
       },
       {
         "name": "Kwaliteit",
-        "description": "Hogere kwaliteit door AI-validatie"
+        "description": "Hoger door AI-validatie"
       }
     ]
   },
@@ -267,10 +268,10 @@
       "title": "Tax & Wealth HUB",
       "sector": "Financieel",
       "challenge": "Ondernemers hebben behoefte aan inzicht in financiële groei en belastingoptimalisatie",
-      "solution": "AI-gedreven applicatie voor financiële groei en belastingadvies voor ondernemers",
+      "solution": "AI-gedreven applicatie voor financiële groei en belastingadvies",
       "impact": [
-        "Real-time inzicht in financiële gezondheid",
-        "Geautomatiseerde belastingoptimalisatie",
+        "Real-time financiële inzicht",
+        "Automatische belastingoptimalisatie",
         "Proactieve groeistrategieën"
       ],
       "image": "/case-tax-wealth.jpg",
@@ -279,14 +280,14 @@
     },
     {
       "slug": "landelijk-veiligheidsconcept",
-      "title": "Landelijk veiligheidsconcept",
+      "title": "Landelijk Veiligheidsconcept",
       "sector": "Veiligheid",
       "challenge": "Landelijke veiligheidsstandaarden implementeren en monitoren",
-      "solution": "AI-gestuurd veiligheidsplatform met real-time monitoring en compliance",
+      "solution": "AI-gestuurd veiligheidsplatform met real-time monitoring",
       "impact": [
-        "Landelijke dekking en schaalbaarheid",
-        "Real-time veiligheidsmonitoring",
-        "Automatische compliance checks"
+        "Landelijke dekking",
+        "Real-time monitoring",
+        "Automatische compliance"
       ],
       "image": "/case-safety.jpg",
       "client": "Landelijke organisatie",
@@ -297,11 +298,11 @@
       "title": "Contractbot voor raamcontracten",
       "sector": "Juridisch",
       "challenge": "Snelle toegang tot raamcontracten en aanverwante documenten nodig",
-      "solution": "AI-agent voor het raadplegen van raamcontracten en gerelateerde documenten",
+      "solution": "AI-agent voor raadplegen van raamcontracten",
       "impact": [
-        "Instant toegang tot contractinformatie",
-        "Intelligente documentanalyse",
-        "24/7 beschikbaarheid via AI-agent"
+        "Instant contracttoegang",
+        "Intelligente analyse",
+        "24/7 beschikbaarheid"
       ],
       "image": "/case-contractbot.jpg",
       "client": "Organisaties met raamcontracten",
@@ -309,33 +310,90 @@
     },
     {
       "slug": "klant-communicatie-agent",
-      "title": "Klant communicatie agent",
+      "title": "Klantcommunicatie-agent",
       "sector": "Customer Service",
       "challenge": "Efficiënte en persoonlijke klantcommunicatie op schaal",
-      "solution": "AI-agent die 24/7 klantvragen beantwoordt en proactief communiceert",
+      "solution": "AI-agent voor 24/7 klantcommunicatie",
       "impact": [
-        "24/7 beschikbare klantenservice",
-        "Geautomatiseerde persoonlijke communicatie",
-        "Significante tijd- en kostenbesparing"
+        "24/7 klantenservice",
+        "Geautomatiseerde communicatie",
+        "Tijd- en kostenbesparing"
       ],
       "image": "/case-communication.jpg",
       "client": "Organisaties met klantcontact",
       "timeline": "2 weken"
+    },
+    {
+      "slug": "easyboek",
+      "title": "EasyBoek",
+      "sector": "Financieel",
+      "challenge": "ZZP'ers verliezen veel tijd aan administratie en boekhouding",
+      "solution": "AI-ondersteund boekhoudpakket voor complete ontzorging",
+      "impact": [
+        "Automatische verwerking",
+        "BTW-berekeningen",
+        "Volledig grootboek"
+      ],
+      "image": "/case-easyboek.jpg",
+      "client": "ZZP'ers",
+      "timeline": "3 weken"
+    },
+    {
+      "slug": "ai-content-creator",
+      "title": "AI Content Creator",
+      "sector": "Marketing",
+      "challenge": "Bedrijven hebben moeite met het consistent creëren en publiceren van zakelijke social media content",
+      "solution": "AI-platform voor automatisch genereren van social media content",
+      "impact": [
+        "Automatische content generatie",
+        "Geplande publicatie",
+        "Content bibliotheek"
+      ],
+      "image": "/case-content-creator.jpg",
+      "client": "Bedrijven met social media presence",
+      "timeline": "2 weken"
     }
   ],
   "aiComponents": {
-    "title": "Real-time Data Prediction & AI-componenten",
-    "subtitle": "Mogelijkheden voor integratie in uw oplossing",
+    "title": "Grip op data, inzicht in prestaties, zicht op de toekomst",
+    "subtitle": "Beyond Power BI. Wij koppelen big data en maken gebruik van AI om het tot ongekende rapportages te maken",
     "components": [
-      "Capaciteitsplanning",
-      "Risico- & kosteninschatting",
-      "Incidentdetectie",
-      "Contractanalyse",
-      "Forecasting & besluitvorming",
-      "Automatische rapportage",
-      "Digitale procesregie",
-      "Slimme workflows",
-      "AI-assistent/chatfunctionaliteit"
+      {
+        "title": "Real-time datalake-integratie",
+        "description": "Koppel alle databronnen in één centrale datalake voor complete data-overzichten"
+      },
+      {
+        "title": "AI-gedreven voorspellingsmodellen",
+        "description": "Voorspel trends en patronen met geavanceerde machine learning algoritmes"
+      },
+      {
+        "title": "Geautomatiseerde big data-analyse",
+        "description": "Analyseer miljoenen datapunten automatisch en ontdek verborgen inzichten"
+      },
+      {
+        "title": "Intelligente dashboardgeneratie",
+        "description": "AI genereert automatisch gepersonaliseerde dashboards op basis van uw data"
+      },
+      {
+        "title": "Multi-source data-aggregatie",
+        "description": "Combineer data uit verschillende systemen tot één coherent beeld"
+      },
+      {
+        "title": "Predictive Analytics",
+        "description": "Voorspel toekomstige scenario's en optimaliseer besluitvorming"
+      },
+      {
+        "title": "Geautomatiseerde insights-generatie",
+        "description": "AI identificeert automatisch belangrijke trends en anomalieën in uw data"
+      },
+      {
+        "title": "Geavanceerde datavisualisatie",
+        "description": "Interactieve visualisaties die complexe data begrijpelijk maken"
+      },
+      {
+        "title": "Machine learning-rapportages",
+        "description": "Rapportages die zichzelf verbeteren en leren van historische data"
+      }
     ]
   },
   "contact": {
@@ -345,9 +403,9 @@
   },
   "navigation": [
     { "name": "Home", "href": "/" },
-    { "name": "Oplossingen", "href": "/oplossingen" },
-    { "name": "Platform", "href": "/platform" },
-    { "name": "Cases", "href": "/cases" },
+    { "name": "Big Data", "href": "/#big-data" },
+    { "name": "Agents", "href": "/#agents" },
+    { "name": "Track Record", "href": "/#cases" },
     { "name": "Over Ons", "href": "/over-ons" },
     { "name": "Contact", "href": "/contact" }
   ]

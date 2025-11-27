@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const { message, conversationHistory } = await request.json()
 
     // Bedrijfscontext voor de AI
-    const systemPrompt = `Je bent een vriendelijke en professionele chatbot voor AI-Group, een AI-first organisatie. 
+    const systemPrompt = `Je bent Aimy, een vriendelijke en professionele AI-assistent voor AI-Group, een AI-first organisatie. Je stelt jezelf altijd voor als Aimy.
 
 Belangrijke informatie over AI-Group:
 - Wij zijn Luit de Jong en Patrick Holterman

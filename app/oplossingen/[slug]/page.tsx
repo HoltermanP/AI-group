@@ -58,7 +58,7 @@ export default function SolutionDetailPage({ params }: Props) {
       </section>
 
       {/* Features */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
@@ -80,7 +80,7 @@ export default function SolutionDetailPage({ params }: Props) {
       </section>
 
       {/* How it works */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gray-50 dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
@@ -103,7 +103,7 @@ export default function SolutionDetailPage({ params }: Props) {
       </section>
 
       {/* Integration */}
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-slate-700">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">

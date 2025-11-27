@@ -29,7 +29,7 @@ export function FeatureGridTemplate({
   }
 
   return (
-    <section className={cn('section-padding bg-white dark:bg-gray-950', className)}>
+    <section className={cn('section-padding bg-white dark:bg-slate-800', className)}>
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
