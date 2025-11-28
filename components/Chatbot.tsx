@@ -183,9 +183,9 @@ export default function Chatbot() {
   return (
     <>
       {/* Floating Chat Button met uitklapanimatie */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-6 z-50" style={{ width: '56px', height: '56px' }}>
         {/* Uitklapende melding bubble */}
-        {isAnnouncing && (
+        {isAnnouncing && !isOpen && (
           <div className="absolute bottom-20 right-0 mb-2 w-72 animate-chatbotAnnounce">
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border-2 border-primary-300 dark:border-primary-600 p-4 relative">
               {/* Pijl naar beneden */}
@@ -209,13 +209,15 @@ export default function Chatbot() {
           </div>
         )}
         
-        {/* Chat Button */}
+        {/* Chat Button - vaste positie, geen transform */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 ${
-            isAnnouncing ? 'animate-pulse scale-110' : ''
-          }`}
-          aria-label="Open chatbot"
+          className="absolute bottom-0 right-0 w-14 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-colors duration-200"
+          style={{ 
+            transform: 'none',
+            willChange: 'auto'
+          }}
+          aria-label={isOpen ? "Sluit chatbot" : "Open chatbot"}
         >
           {isOpen ? (
             <X className="w-6 h-6" />
@@ -227,7 +229,7 @@ export default function Chatbot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-96 h-[600px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 z-50 flex flex-col">
+        <div className="fixed bottom-24 right-6 w-96 h-[600px] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 z-40 flex flex-col">
           {/* Header */}
           <div className="bg-primary-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center space-x-3">
