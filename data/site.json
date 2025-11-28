@@ -267,48 +267,57 @@
       "slug": "tax-wealth-hub",
       "title": "Tax & Wealth HUB",
       "sector": "Financieel",
-      "challenge": "Ondernemers hebben behoefte aan inzicht in financiële groei en belastingoptimalisatie",
-      "solution": "AI-gedreven applicatie voor financiële groei en belastingadvies",
-      "description": "Een geavanceerd AI-platform dat ondernemers helpt bij het optimaliseren van hun financiële positie en belastingstrategieën. Het platform combineert real-time data-analyse met voorspellende modellen voor maximale financiële efficiency.",
-      "detailedChallenge": "Ondernemers worstelen vaak met het gebrek aan overzicht over hun financiële situatie en missen kansen voor belastingoptimalisatie. Traditionele boekhoudsystemen bieden alleen historische data en geen proactieve adviezen. Dit leidt tot gemiste kansen en onnodige belastingafdrachten.",
-      "detailedSolution": "De Tax & Wealth HUB integreert alle financiële databronnen in één centraal dashboard. AI-algoritmes analyseren continu de financiële situatie en identificeren automatisch optimalisatiemogelijkheden. Het systeem biedt real-time inzichten, voorspelt cashflow-scenario's en geeft gepersonaliseerde belastingadviezen.",
+      "challenge": "Ondernemers hebben behoefte aan informatie en inzicht over belastingen, financieel plannen en vermogensopbouw",
+      "solution": "AI-gedreven informatiehub voor belastingen, financieel plannen en vermogensopbouw met voorspellingen en marktinzichten",
+      "description": "Een informatiehub die ondernemers helpt bij het verkrijgen van inzicht in belastingen, financieel plannen en vermogensopbouw. Het platform biedt voorspellingen voor groei in beleggingen en vastgoed, eigen inschattingen en informatie over marktontwikkelingen.",
+      "detailedChallenge": "Ondernemers hebben behoefte aan betrouwbare informatie over belastingen, financieel plannen en vermogensopbouw. Ze willen inzicht in marktontwikkelingen en voorspellingen voor hun beleggingen en vastgoed, maar vinden het moeilijk om deze informatie te vinden en te interpreteren. Ze hebben behoefte aan eigen inschattingen zonder direct advies.",
+      "detailedSolution": "De Tax & Wealth HUB is een informatiehub die toegang biedt tot uitgebreide informatie over belastingen, financieel plannen en vermogensopbouw. Het platform biedt voorspellingen voor groei in beleggingen en vastgoed, gebaseerd op marktdata en trends. Gebruikers krijgen eigen inschattingen en informatie over marktontwikkelingen, zonder dat het platform financieel advies geeft.",
       "features": [
-        "Real-time financiële dashboard met alle accounts en investeringen",
-        "Automatische belastingoptimalisatie suggesties",
-        "Voorspellende cashflow analyses",
-        "Integratie met banken, boekhoudsoftware en belastingdiensten",
-        "Persoonlijke wealth management strategieën"
+        "Informatiehub voor belastingen, financieel plannen en vermogensopbouw",
+        "Voorspellingen voor groei in beleggingen en vastgoed",
+        "Eigen inschattingen op basis van marktdata en trends",
+        "Informatie over marktontwikkelingen en trends",
+        "Overzicht van verschillende financiële strategieën en mogelijkheden"
       ],
       "screenshots": [
         {
           "url": "/screenshots/tax-wealth-dashboard.svg",
-          "alt": "Tax & Wealth HUB Dashboard",
-          "title": "Financieel Overzicht Dashboard"
+          "alt": "Tax & Wealth HUB Informatie Dashboard",
+          "title": "Informatie Dashboard"
         },
         {
           "url": "/screenshots/tax-wealth-tax-optimization.svg",
-          "alt": "Belastingoptimalisatie Module",
-          "title": "Belastingoptimalisatie"
+          "alt": "Belasting Informatie en Inzichten",
+          "title": "Belasting Informatie"
         },
         {
           "url": "/screenshots/tax-wealth-cashflow.svg",
-          "alt": "Cashflow Voorspelling",
-          "title": "Cashflow Analyse"
+          "alt": "Voorspellingen Beleggingen en Vastgoed",
+          "title": "Groei Voorspellingen"
         }
       ],
       "results": [
-        "Gemiddeld 15-25% belastingbesparing per ondernemer",
-        "90% reductie in tijd besteed aan financiële administratie",
-        "Real-time inzicht in financiële gezondheid",
-        "Proactieve waarschuwingen voor cashflow problemen"
+        "Betere informatie over belastingen en financiële mogelijkheden",
+        "Inzicht in marktontwikkelingen en trends",
+        "Voorspellingen voor beleggingen en vastgoed groei",
+        "Eigen inschattingen voor financiële planning"
       ],
       "impact": [
-        "Real-time financiële inzicht",
-        "Automatische belastingoptimalisatie",
-        "Proactieve groeistrategieën"
+        "Toegang tot betrouwbare informatie over belastingen",
+        "Inzicht in vermogensopbouw en financiële planning",
+        "Voorspellingen voor beleggingen en vastgoed"
       ],
       "image": "/case-tax-wealth.jpg",
-      "client": "Ondernemers",
+      "client": {
+        "name": "Ondernemers",
+        "description": "De Tax & Wealth HUB is ontwikkeld voor ondernemers die behoefte hebben aan betrouwbare informatie over belastingen, financieel plannen en vermogensopbouw. Deze ondernemers variëren van startende ZZP'ers tot gevestigde MKB-bedrijven die hun financiële positie willen versterken en beter willen begrijpen hoe ze hun vermogen kunnen laten groeien.",
+        "needs": [
+          "Inzicht in belastingregelgeving en mogelijkheden",
+          "Informatie over vermogensopbouw strategieën",
+          "Voorspellingen voor beleggingen en vastgoed",
+          "Marktinzichten zonder direct financieel advies"
+        ]
+      },
       "timeline": "2 weken"
     },
     {
@@ -356,7 +365,16 @@
         "Automatische compliance"
       ],
       "image": "/case-safety.jpg",
-      "client": "Landelijke organisatie",
+      "client": {
+        "name": "Landelijke organisatie",
+        "description": "Een grote landelijke organisatie met honderden locaties verspreid over heel Nederland. Deze organisatie heeft de uitdaging om veiligheidsstandaarden consistent te implementeren en te monitoren over alle locaties. Ze werken met verschillende teams, leveranciers en stakeholders die allemaal moeten voldoen aan strikte veiligheids- en compliance-eisen.",
+        "needs": [
+          "Centrale monitoring van alle locaties",
+          "Automatische compliance tracking",
+          "Real-time risico detectie en voorspelling",
+          "Geautomatiseerde rapportage en waarschuwingen"
+        ]
+      },
       "timeline": "3 weken"
     },
     {
@@ -404,7 +422,16 @@
         "24/7 beschikbaarheid"
       ],
       "image": "/case-contractbot.jpg",
-      "client": "Organisaties met raamcontracten",
+      "client": {
+        "name": "Organisaties met raamcontracten",
+        "description": "Grote organisaties en overheidsinstellingen die werken met tientallen of honderden raamcontracten. Deze organisaties hebben dagelijks medewerkers die snel toegang nodig hebben tot specifieke contractvoorwaarden, leveranciersinformatie en aanverwante documenten. De complexiteit van het beheren en raadplegen van deze contracten vraagt om een intelligente oplossing.",
+        "needs": [
+          "Snelle toegang tot contractinformatie",
+          "Intelligente zoekfunctie door alle contracten",
+          "24/7 beschikbaarheid voor medewerkers",
+          "Automatische updates bij nieuwe contracten"
+        ]
+      },
       "timeline": "1 week"
     },
     {
@@ -452,7 +479,16 @@
         "Tijd- en kostenbesparing"
       ],
       "image": "/case-communication.jpg",
-      "client": "Organisaties met klantcontact",
+      "client": {
+        "name": "Organisaties met klantcontact",
+        "description": "Bedrijven en organisaties die dagelijks honderden klantvragen ontvangen via verschillende kanalen zoals e-mail, chat en telefoon. Deze organisaties willen consistente, persoonlijke service bieden maar hebben niet altijd de capaciteit om alle vragen handmatig te beantwoorden, vooral buiten kantooruren. Ze zoeken naar een oplossing die de klantervaring verbetert zonder de kosten te laten exploderen.",
+        "needs": [
+          "24/7 klantenservice beschikbaarheid",
+          "Consistente en persoonlijke communicatie",
+          "Automatische escalatie van complexe vragen",
+          "Multi-channel ondersteuning"
+        ]
+      },
       "timeline": "2 weken"
     },
     {
@@ -500,7 +536,16 @@
         "Volledig grootboek"
       ],
       "image": "/case-easyboek.jpg",
-      "client": "ZZP'ers",
+      "client": {
+        "name": "ZZP'ers",
+        "description": "Zelfstandige professionals zonder personeel die veel tijd verliezen aan administratieve taken zoals het invoeren van bonnetjes, categoriseren van uitgaven en BTW-berekeningen. Deze ondernemers willen zich focussen op hun core business maar worden gehinderd door tijdrovende boekhoudtaken. Ze hebben behoefte aan een eenvoudige, geautomatiseerde oplossing die hen ontzorgt.",
+        "needs": [
+          "Automatische verwerking van transacties",
+          "Eenvoudige bonnetjesherkenning",
+          "Automatische BTW-berekeningen",
+          "Volledig grootboek zonder handmatige invoer"
+        ]
+      },
       "timeline": "3 weken"
     },
     {
@@ -548,7 +593,16 @@
         "Content bibliotheek"
       ],
       "image": "/case-content-creator.jpg",
-      "client": "Bedrijven met social media presence",
+      "client": {
+        "name": "Bedrijven met social media presence",
+        "description": "Bedrijven die actief willen zijn op social media maar niet altijd de tijd of expertise hebben om consistente, relevante content te creëren. Deze bedrijven willen hun merk versterken en engagement opbouwen met hun doelgroep, maar worstelen met het vinden van de juiste tone-of-voice, timing en content strategie voor verschillende platforms.",
+        "needs": [
+          "Consistente content creatie",
+          "Platform-specifieke optimalisatie",
+          "Automatische planning en publicatie",
+          "Performance analytics en optimalisatie"
+        ]
+      },
       "timeline": "2 weken"
     }
   ],

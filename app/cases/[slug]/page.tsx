@@ -172,23 +172,6 @@ export default function CaseDetailPage({ params }: Props) {
         </section>
       )}
 
-      {/* Case Visual */}
-      <section className="section-padding bg-white dark:bg-gray-800">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Visuele weergave
-            </h2>
-            <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-12 md:p-16 shadow-xl border-2 border-primary-400 dark:border-primary-600">
-              <div className="flex items-center justify-center">
-                <div className="transform hover:scale-110 transition-transform duration-300">
-                  <CaseIcon slug={caseItem.slug} sector={caseItem.sector} className="w-32 h-32 md:w-40 md:h-40" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Results */}
       {caseItem.results && caseItem.results.length > 0 && (
@@ -219,12 +202,40 @@ export default function CaseDetailPage({ params }: Props) {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white dark:bg-gray-800 rounded-xl p-8">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Over de Klant
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {caseItem.client}
-                </p>
+                
+                {typeof caseItem.client === 'object' ? (
+                  <>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                      {caseItem.client.name}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                      {caseItem.client.description}
+                    </p>
+                    
+                    {caseItem.client.needs && caseItem.client.needs.length > 0 && (
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                          Belangrijkste Behoeften
+                        </h4>
+                        <ul className="space-y-2">
+                          {caseItem.client.needs.map((need: string, index: number) => (
+                            <li key={index} className="flex items-start space-x-3">
+                              <CheckCircle className="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5" />
+                              <span className="text-gray-600 dark:text-gray-300">{need}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {caseItem.client}
+                  </p>
+                )}
               </div>
             </div>
           </div>
