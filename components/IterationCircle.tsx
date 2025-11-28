@@ -38,20 +38,20 @@ export default function IterationCircle() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4">
           {/* Circular iteration visualization */}
           <div className="relative w-full aspect-square max-w-2xl mx-auto">
             {/* Outer circle */}
-            <div className="absolute inset-0 rounded-full border-4 border-primary-200 dark:border-primary-800 animate-spin-slow">
-              <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary-400 dark:border-t-primary-600"></div>
+            <div className="absolute inset-0 rounded-full border-2 md:border-4 border-primary-200 dark:border-primary-800 animate-spin-slow">
+              <div className="absolute inset-0 rounded-full border-2 md:border-4 border-transparent border-t-primary-400 dark:border-t-primary-600"></div>
             </div>
 
             {/* Center circle with AI */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-48 h-48 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-2xl relative z-10 animate-pulse">
+              <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-2xl relative z-10 animate-pulse">
                 <div className="text-center text-white">
-                  <Brain className="w-16 h-16 mx-auto mb-2 animate-pulse" />
-                  <div className="text-2xl font-bold">AI-first</div>
+                  <Brain className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 mx-auto mb-1 md:mb-2 animate-pulse" />
+                  <div className="text-lg md:text-xl lg:text-2xl font-bold">AI-first</div>
                 </div>
                 {/* Pulsing rings around center */}
                 <div className="absolute inset-0 rounded-full border-2 border-primary-400 opacity-75 animate-ping"></div>
@@ -76,15 +76,15 @@ export default function IterationCircle() {
                     top: `${y}%`,
                   }}
                 >
-                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-xl p-6 border-2 border-primary-500/50 shadow-xl min-w-[200px] max-w-[250px] hover:scale-110 transition-transform duration-300 group hover:shadow-primary-500/20">
-                    <div className="flex flex-col items-center text-center space-y-3">
-                      <div className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center group-hover:bg-primary-500/30 transition-colors border border-primary-500/30">
-                        <IconComponent className="w-6 h-6 text-primary-400" />
+                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-lg md:rounded-xl p-3 md:p-4 lg:p-6 border-2 border-primary-500/50 shadow-xl w-[140px] sm:w-[160px] md:min-w-[180px] md:max-w-[220px] lg:min-w-[200px] lg:max-w-[250px] hover:scale-110 transition-transform duration-300 group hover:shadow-primary-500/20">
+                    <div className="flex flex-col items-center text-center space-y-2 md:space-y-3">
+                      <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-primary-500/20 rounded-full flex items-center justify-center group-hover:bg-primary-500/30 transition-colors border border-primary-500/30">
+                        <IconComponent className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-primary-400" />
                       </div>
-                      <h3 className="font-bold text-lg text-white">
+                      <h3 className="font-bold text-sm md:text-base lg:text-lg text-white">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-300">
+                      <p className="text-xs md:text-sm text-gray-300 leading-tight">
                         {item.description}
                       </p>
                     </div>
@@ -97,6 +97,7 @@ export default function IterationCircle() {
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
               {iterations.map((_, index) => {
                 const angle = (index * 90) - 45
+                // Use responsive radius - will be recalculated on resize
                 const radius = 45
                 const x = 50 + radius * Math.cos((angle * Math.PI) / 180)
                 const y = 50 + radius * Math.sin((angle * Math.PI) / 180)
@@ -109,9 +110,9 @@ export default function IterationCircle() {
                     x2={`${x}%`}
                     y2={`${y}%`}
                     stroke="currentColor"
-                    strokeWidth="2"
-                    strokeDasharray="4 4"
-                    className="text-primary-700"
+                    strokeWidth="1"
+                    strokeDasharray="3 3"
+                    className="text-primary-700 md:stroke-[2] md:[stroke-dasharray:4_4]"
                   />
                 )
               })}
