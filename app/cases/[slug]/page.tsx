@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react'
 import { getSiteData, getCase } from '@/lib/getData'
 import CaseIcon from '@/components/CaseIcon'
@@ -55,6 +56,11 @@ export default function CaseDetailPage({ params }: Props) {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 {caseItem.title}
               </h1>
+              {caseItem.description && (
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
+                  {caseItem.description}
+                </p>
+              )}
               {caseItem.timeline && (
                 <div className="inline-flex items-center space-x-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
                   <span>⚡</span>
@@ -77,7 +83,7 @@ export default function CaseDetailPage({ params }: Props) {
                   <span>De Uitdaging</span>
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {caseItem.challenge}
+                  {caseItem.detailedChallenge || caseItem.challenge}
                 </p>
               </div>
 
@@ -87,10 +93,27 @@ export default function CaseDetailPage({ params }: Props) {
                   <span>De Oplossing</span>
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {caseItem.solution}
+                  {caseItem.detailedSolution || caseItem.solution}
                 </p>
               </div>
             </div>
+            
+            {/* Features */}
+            {caseItem.features && caseItem.features.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                  Belangrijkste Functionaliteiten
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {caseItem.features.map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-gray-600 dark:text-gray-300">{feature}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Impact */}
             <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl p-8 text-white">
@@ -113,8 +136,44 @@ export default function CaseDetailPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Screenshots */}
+      {caseItem.screenshots && caseItem.screenshots.length > 0 && (
+        <section className="section-padding bg-gray-50 dark:bg-slate-700">
+          <div className="container-custom">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                Screenshots
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {caseItem.screenshots.map((screenshot, index) => (
+                  <div key={index} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div className="relative w-full h-48 bg-gray-100 dark:bg-gray-700">
+                      <Image
+                        src={screenshot.url}
+                        alt={screenshot.alt}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        {screenshot.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {screenshot.alt}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Case Visual */}
-      <section className="section-padding bg-gray-50 dark:bg-slate-700">
+      <section className="section-padding bg-white dark:bg-gray-800">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
@@ -130,6 +189,29 @@ export default function CaseDetailPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Results */}
+      {caseItem.results && caseItem.results.length > 0 && (
+        <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-700">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+                Bewezen Resultaten
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {caseItem.results.map((result, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="flex items-start space-x-3">
+                      <TrendingUp className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                      <p className="text-white/90 leading-relaxed">{result}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Client Info */}
       {caseItem.client && (

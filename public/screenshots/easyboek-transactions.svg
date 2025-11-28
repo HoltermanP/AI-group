@@ -1,0 +1,69 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg14" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg14)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#075985" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Transactie Beheer</text>
+  
+  <!-- Filters -->
+  <rect x="40" y="120" width="1120" height="80" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0c4a6e">Filters:</text>
+  <rect x="120" y="140" width="100" height="30" rx="4" fill="#0284c7"/>
+  <text x="145" y="158" font-family="Arial, sans-serif" font-size="12" fill="white">Alle</text>
+  <rect x="240" y="140" width="120" height="30" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="265" y="158" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Inkomsten</text>
+  <rect x="380" y="140" width="120" height="30" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="405" y="158" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Uitgaven</text>
+  <rect x="520" y="140" width="120" height="30" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="545" y="158" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Categorie</text>
+  
+  <!-- Transactions List -->
+  <rect x="40" y="230" width="1120" height="530" rx="8" fill="white" opacity="0.95"/>
+  
+  <!-- Transaction Row 1 -->
+  <rect x="60" y="260" width="1080" height="70" rx="4" fill="#f0fdf4"/>
+  <text x="80" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Factuur #2024-001</text>
+  <text x="80" y="310" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">15 maart 2024 | Klant: ABC B.V. | Categorie: Diensten</text>
+  <text x="1000" y="295" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#10b981">+ € 2.500</text>
+  <text x="1000" y="315" font-family="Arial, sans-serif" font-size="12" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Transaction Row 2 -->
+  <rect x="60" y="350" width="1080" height="70" rx="4" fill="#fee2e2"/>
+  <text x="80" y="375" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Kantoorbenodigdheden</text>
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">14 maart 2024 | Office Depot | Categorie: Kantoor | BTW: 21%</text>
+  <text x="1000" y="385" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ef4444">- € 125</text>
+  <text x="1000" y="405" font-family="Arial, sans-serif" font-size="12" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Transaction Row 3 -->
+  <rect x="60" y="440" width="1080" height="70" rx="4" fill="#f0fdf4"/>
+  <text x="80" y="465" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Factuur #2024-002</text>
+  <text x="80" y="490" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">13 maart 2024 | Klant: XYZ B.V. | Categorie: Diensten</text>
+  <text x="1000" y="475" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#10b981">+ € 1.800</text>
+  <text x="1000" y="495" font-family="Arial, sans-serif" font-size="12" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Transaction Row 4 -->
+  <rect x="60" y="530" width="1080" height="70" rx="4" fill="#fef3c7"/>
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Restaurant - Zakelijk</text>
+  <text x="80" y="580" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">12 maart 2024 | Restaurant De Gouden Leeuw | OCR: Bonnetje herkend | Categorie: Zakelijke kosten</text>
+  <text x="1000" y="565" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f59e0b">- € 45</text>
+  <text x="1000" y="585" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">⏳ AI Verwerken</text>
+  
+  <!-- Transaction Row 5 -->
+  <rect x="60" y="620" width="1080" height="70" rx="4" fill="#f0fdf4"/>
+  <text x="80" y="645" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Factuur #2024-003</text>
+  <text x="80" y="670" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">11 maart 2024 | Klant: DEF B.V. | Categorie: Diensten</text>
+  <text x="1000" y="655" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#10b981">+ € 3.200</text>
+  <text x="1000" y="675" font-family="Arial, sans-serif" font-size="12" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Summary -->
+  <rect x="60" y="710" width="1080" height="30" rx="4" fill="#eff6ff"/>
+  <text x="80" y="730" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0c4a6e">Totaal deze maand:</text>
+  <text x="1000" y="730" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0284c7">€ 7.330</text>
+</svg>
+

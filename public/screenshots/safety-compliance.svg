@@ -1,0 +1,88 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg5)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#0f172a" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Compliance Monitoring</text>
+  
+  <!-- Overall Score -->
+  <rect x="40" y="120" width="1120" height="120" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="18" fill="#6b7280">Totale Compliance Score</text>
+  <text x="60" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#10b981">98.5%</text>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="18" fill="#10b981">↑ 2.3% deze maand</text>
+  
+  <!-- Progress Bar -->
+  <rect x="60" y="210" width="1000" height="20" rx="10" fill="#e5e7eb"/>
+  <rect x="60" y="210" width="985" height="20" rx="10" fill="#10b981"/>
+  
+  <!-- Standards List -->
+  <rect x="40" y="270" width="550" height="490" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="310" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Veiligheidsstandaarden</text>
+  
+  <!-- Standard 1 -->
+  <rect x="60" y="340" width="510" height="80" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">ISO 45001 - Arbeidsveiligheid</text>
+  <text x="80" y="395" font-family="Arial, sans-serif" font-size="14" fill="#047857">247/247 locaties compliant</text>
+  <rect x="480" y="360" width="70" height="30" rx="4" fill="#10b981"/>
+  <text x="500" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">100%</text>
+  
+  <!-- Standard 2 -->
+  <rect x="60" y="440" width="510" height="80" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="80" y="470" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">NEN 3140 - Elektrische Installaties</text>
+  <text x="80" y="495" font-family="Arial, sans-serif" font-size="14" fill="#047857">245/247 locaties compliant</text>
+  <rect x="480" y="460" width="70" height="30" rx="4" fill="#f59e0b"/>
+  <text x="495" y="480" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">99.2%</text>
+  
+  <!-- Standard 3 -->
+  <rect x="60" y="540" width="510" height="80" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="80" y="570" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">Arbo-wetgeving</text>
+  <text x="80" y="595" font-family="Arial, sans-serif" font-size="14" fill="#047857">247/247 locaties compliant</text>
+  <rect x="480" y="560" width="70" height="30" rx="4" fill="#10b981"/>
+  <text x="500" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">100%</text>
+  
+  <!-- Standard 4 -->
+  <rect x="60" y="640" width="510" height="80" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="80" y="670" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400e">Brandveiligheid NEN 2654</text>
+  <text x="80" y="695" font-family="Arial, sans-serif" font-size="14" fill="#b45309">243/247 locaties compliant</text>
+  <rect x="480" y="660" width="70" height="30" rx="4" fill="#f59e0b"/>
+  <text x="495" y="680" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">98.4%</text>
+  
+  <!-- Compliance Timeline -->
+  <rect x="620" y="270" width="540" height="490" rx="8" fill="white" opacity="0.95"/>
+  <text x="640" y="310" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Compliance Trend</text>
+  
+  <!-- Chart -->
+  <rect x="640" y="340" width="500" height="300" rx="4" fill="#f8fafc"/>
+  
+  <!-- Trend Line -->
+  <polyline points="660,600 700,580 740,560 780,540 820,520 860,500 900,480 940,460 980,450 1020,440 1060,430 1100,420" 
+            fill="none" stroke="#10b981" stroke-width="4"/>
+  <circle cx="1100" cy="420" r="6" fill="#10b981"/>
+  
+  <!-- Monthly Labels -->
+  <text x="660" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Jan</text>
+  <text x="700" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Feb</text>
+  <text x="740" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Mrt</text>
+  <text x="780" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Apr</text>
+  <text x="820" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Mei</text>
+  <text x="860" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Jun</text>
+  <text x="900" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Jul</text>
+  <text x="940" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Aug</text>
+  <text x="980" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Sep</text>
+  <text x="1020" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Okt</text>
+  <text x="1060" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Nov</text>
+  <text x="1100" y="650" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Dec</text>
+  
+  <!-- Action Items -->
+  <rect x="640" y="660" width="500" height="80" rx="4" fill="#fef3c7"/>
+  <text x="660" y="685" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e">Actie Vereist</text>
+  <text x="660" y="710" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">4 locaties vereisen compliance update</text>
+  <text x="660" y="730" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Deadline: 15 dagen</text>
+</svg>
+

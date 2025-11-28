@@ -1,0 +1,74 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c2d12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg17)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#9a3412" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Content Editor</text>
+  
+  <!-- Editor Area -->
+  <rect x="40" y="120" width="750" height="600" rx="8" fill="white" opacity="0.95"/>
+  
+  <!-- Toolbar -->
+  <rect x="60" y="140" width="710" height="50" rx="4" fill="#f3f4f6"/>
+  <rect x="80" y="155" width="30" height="20" rx="2" fill="#ea580c"/>
+  <text x="88" y="168" font-family="Arial, sans-serif" font-size="10" fill="white">B</text>
+  <rect x="120" y="155" width="30" height="20" rx="2" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="128" y="168" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">I</text>
+  <rect x="160" y="155" width="30" height="20" rx="2" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="168" y="168" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">U</text>
+  <rect x="600" y="155" width="100" height="20" rx="2" fill="#10b981"/>
+  <text x="625" y="168" font-family="Arial, sans-serif" font-size="10" fill="white">AI Verbeter</text>
+  
+  <!-- Content Preview -->
+  <rect x="60" y="210" width="710" height="400" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+  <text x="80" y="240" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c2d12">AI Innovatie: De Toekomst van Bedrijfsvoering</text>
+  <text x="80" y="270" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Ontdek hoe AI-organisaties transformeert en nieuwe mogelijkheden creëert voor bedrijven van alle groottes.</text>
+  <text x="80" y="300" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">✨ Automatisering die tijd bespaart</text>
+  <text x="80" y="325" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">📊 Data-gedreven beslissingen</text>
+  <text x="80" y="350" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">🚀 Snellere time-to-market</text>
+  <text x="80" y="375" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">💡 Innovatie op elke laag</text>
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">#AI #Innovatie #DigitalTransformation</text>
+  
+  <!-- Platform Selector -->
+  <rect x="60" y="630" width="710" height="70" rx="4" fill="#f3f4f6"/>
+  <text x="80" y="655" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7c2d12">Platform:</text>
+  <rect x="150" y="645" width="100" height="30" rx="4" fill="#ea580c"/>
+  <text x="175" y="663" font-family="Arial, sans-serif" font-size="12" fill="white">LinkedIn</text>
+  <rect x="270" y="645" width="100" height="30" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="295" y="663" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Twitter</text>
+  <rect x="390" y="645" width="100" height="30" rx="4" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="415" y="663" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Instagram</text>
+  
+  <!-- Sidebar -->
+  <rect x="820" y="120" width="320" height="600" rx="8" fill="white" opacity="0.95"/>
+  <text x="840" y="160" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#7c2d12">AI Suggesties</text>
+  
+  <rect x="840" y="190" width="280" height="100" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="860" y="215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">💡 Optimalisatie</text>
+  <text x="860" y="240" font-family="Arial, sans-serif" font-size="12" fill="#047857">Hashtags kunnen worden uitgebreid</text>
+  <text x="860" y="260" font-family="Arial, sans-serif" font-size="12" fill="#047857">Voeg #TechTrends toe voor meer bereik</text>
+  <text x="860" y="280" font-family="Arial, sans-serif" font-size="12" fill="#10b981">+15% engagement verwacht</text>
+  
+  <rect x="840" y="310" width="280" height="100" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="860" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">📊 Timing</text>
+  <text x="860" y="360" font-family="Arial, sans-serif" font-size="12" fill="#1e40af">Optimaal publicatietijdstip:</text>
+  <text x="860" y="380" font-family="Arial, sans-serif" font-size="12" fill="#1e40af">Woensdag 10:00 - 11:00</text>
+  <text x="860" y="400" font-family="Arial, sans-serif" font-size="12" fill="#3b82f6">Maximale engagement</text>
+  
+  <rect x="840" y="430" width="280" height="100" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="860" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e">🎯 Doelgroep</text>
+  <text x="860" y="480" font-family="Arial, sans-serif" font-size="12" fill="#b45309">Content matcht doelgroep: 95%</text>
+  <text x="860" y="500" font-family="Arial, sans-serif" font-size="12" fill="#b45309">Tone-of-voice: Professioneel</text>
+  <text x="860" y="520" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">✓ Goed afgestemd</text>
+  
+  <rect x="840" y="550" width="280" height="50" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="860" y="575" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">✅ Klaar voor Publicatie</text>
+  <text x="860" y="595" font-family="Arial, sans-serif" font-size="12" fill="#047857">Alle checks geslaagd</text>
+</svg>
+

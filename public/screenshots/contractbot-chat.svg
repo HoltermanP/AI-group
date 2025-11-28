@@ -1,0 +1,74 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d95;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg7)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#5b21b6" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Contractbot - Chat Interface</text>
+  
+  <!-- Chat Area -->
+  <rect x="40" y="120" width="750" height="600" rx="8" fill="white" opacity="0.95"/>
+  
+  <!-- Bot Message 1 -->
+  <rect x="60" y="160" width="600" height="80" rx="8" fill="#f3f4f6"/>
+  <text x="80" y="190" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4c1d95">Contractbot</text>
+  <text x="80" y="215" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Hallo! Ik kan je helpen met vragen over raamcontracten. Wat wil je weten?</text>
+  
+  <!-- User Message 1 -->
+  <rect x="190" y="260" width="600" height="60" rx="8" fill="#7c3aed"/>
+  <text x="210" y="290" font-family="Arial, sans-serif" font-size="14" fill="white">Wat zijn de leveringsvoorwaarden voor IT-diensten?</text>
+  
+  <!-- Bot Message 2 -->
+  <rect x="60" y="340" width="700" height="120" rx="8" fill="#f3f4f6"/>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4c1d95">Contractbot</text>
+  <text x="80" y="395" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Volgens het IT-diensten raamcontract (contract #2024-IT-001):</text>
+  <text x="80" y="420" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Leveringstermijn: 5-10 werkdagen</text>
+  <text x="80" y="445" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Service Level Agreement: 99.5% uptime</text>
+  
+  <!-- User Message 2 -->
+  <rect x="190" y="480" width="600" height="60" rx="8" fill="#7c3aed"/>
+  <text x="210" y="510" font-family="Arial, sans-serif" font-size="14" fill="white">Welke leveranciers zijn goedgekeurd voor dit contract?</text>
+  
+  <!-- Bot Message 3 -->
+  <rect x="60" y="560" width="700" height="120" rx="8" fill="#f3f4f6"/>
+  <text x="80" y="590" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4c1d95">Contractbot</text>
+  <text x="80" y="615" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Goedgekeurde leveranciers voor IT-diensten:</text>
+  <text x="80" y="640" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">1. TechSolutions BV (ID: TS-2024)</text>
+  <text x="80" y="665" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">2. Digital Services NL (ID: DS-2024)</text>
+  
+  <!-- Input Area -->
+  <rect x="60" y="740" width="600" height="50" rx="8" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+  <text x="80" y="770" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Type je vraag hier...</text>
+  
+  <!-- Sidebar -->
+  <rect x="820" y="120" width="320" height="600" rx="8" fill="white" opacity="0.95"/>
+  <text x="840" y="160" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4c1d95">Contracten Overzicht</text>
+  
+  <rect x="840" y="190" width="280" height="60" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">IT-Diensten</text>
+  <text x="860" y="235" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Contract #2024-IT-001</text>
+  
+  <rect x="840" y="270" width="280" height="60" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="295" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Facilitaire Diensten</text>
+  <text x="860" y="315" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Contract #2024-FD-002</text>
+  
+  <rect x="840" y="350" width="280" height="60" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Marketing Diensten</text>
+  <text x="860" y="395" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Contract #2024-MK-003</text>
+  
+  <rect x="840" y="430" width="280" height="60" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">HR Diensten</text>
+  <text x="860" y="475" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Contract #2024-HR-004</text>
+  
+  <text x="840" y="530" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4c1d95">Veelgestelde Vragen</text>
+  <text x="840" y="560" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">• Leveringsvoorwaarden</text>
+  <text x="840" y="580" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">• Goedgekeurde leveranciers</text>
+  <text x="840" y="600" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">• Prijsafspraken</text>
+  <text x="840" y="620" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">• Contract verlengingen</text>
+</svg>
+

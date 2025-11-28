@@ -1,0 +1,90 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg10)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#047857" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Klantcommunicatie Dashboard</text>
+  <circle cx="1100" cy="40" r="8" fill="#10b981"/>
+  <text x="1120" y="47" font-family="Arial, sans-serif" font-size="14" fill="white">Live</text>
+  
+  <!-- KPI Cards -->
+  <rect x="40" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Vandaag Behandeld</text>
+  <text x="60" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#059669">342</text>
+  <text x="60" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">80% automatisch</text>
+  
+  <rect x="320" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="340" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Wachttijd</text>
+  <text x="340" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">0.8s</text>
+  <text x="340" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">Gemiddeld</text>
+  
+  <rect x="600" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="620" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Tevredenheid</text>
+  <text x="620" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">4.8/5</text>
+  <text x="620" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">↑ 0.3 deze maand</text>
+  
+  <rect x="880" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="900" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Escalaties</text>
+  <text x="900" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#f59e0b">12</text>
+  <text x="900" y="230" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">2.1% van totaal</text>
+  
+  <!-- Active Conversations -->
+  <rect x="40" y="300" width="750" height="440" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">Actieve Gesprekken</text>
+  
+  <!-- Conversation 1 -->
+  <rect x="60" y="370" width="710" height="100" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <circle cx="90" cy="420" r="20" fill="#10b981"/>
+  <text x="85" y="425" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">AI</text>
+  <text x="120" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Klant #1247</text>
+  <text x="120" y="425" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Vraag over orderstatus...</text>
+  <text x="120" y="445" font-family="Arial, sans-serif" font-size="11" fill="#10b981">AI beantwoordt - 2 minuten geleden</text>
+  <text x="700" y="420" font-family="Arial, sans-serif" font-size="12" fill="#10b981">Actief</text>
+  
+  <!-- Conversation 2 -->
+  <rect x="60" y="490" width="710" height="100" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <circle cx="90" cy="540" r="20" fill="#10b981"/>
+  <text x="85" y="545" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">AI</text>
+  <text x="120" y="520" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Klant #1248</text>
+  <text x="120" y="545" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Vraag over retourbeleid...</text>
+  <text x="120" y="565" font-family="Arial, sans-serif" font-size="11" fill="#10b981">AI beantwoordt - 1 minuut geleden</text>
+  <text x="700" y="540" font-family="Arial, sans-serif" font-size="12" fill="#10b981">Actief</text>
+  
+  <!-- Conversation 3 -->
+  <rect x="60" y="610" width="710" height="100" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="90" cy="660" r="20" fill="#f59e0b"/>
+  <text x="85" y="665" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">H</text>
+  <text x="120" y="640" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Klant #1249</text>
+  <text x="120" y="665" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Complexe vraag - geëscaleerd naar medewerker</text>
+  <text x="120" y="685" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b">Wachtend op medewerker - 5 minuten geleden</text>
+  <text x="700" y="660" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">In Wacht</text>
+  
+  <!-- Channels -->
+  <rect x="820" y="300" width="320" height="440" rx="8" fill="white" opacity="0.95"/>
+  <text x="840" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">Kanalen</text>
+  
+  <rect x="840" y="370" width="280" height="80" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="860" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">Chat</text>
+  <text x="860" y="425" font-family="Arial, sans-serif" font-size="14" fill="#047857">245 actieve gesprekken</text>
+  <text x="860" y="445" font-family="Arial, sans-serif" font-size="12" fill="#10b981">98% automatisch opgelost</text>
+  
+  <rect x="840" y="470" width="280" height="80" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="860" y="500" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">E-mail</text>
+  <text x="860" y="525" font-family="Arial, sans-serif" font-size="14" fill="#047857">67 berichten vandaag</text>
+  <text x="860" y="545" font-family="Arial, sans-serif" font-size="12" fill="#10b981">85% automatisch opgelost</text>
+  
+  <rect x="840" y="570" width="280" height="80" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="860" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#065f46">Telefoon</text>
+  <text x="860" y="625" font-family="Arial, sans-serif" font-size="14" fill="#047857">30 gesprekken vandaag</text>
+  <text x="860" y="645" font-family="Arial, sans-serif" font-size="12" fill="#10b981">60% automatisch opgelost</text>
+  
+  <rect x="840" y="670" width="280" height="50" rx="4" fill="#eff6ff" stroke="#059669" stroke-width="2"/>
+  <text x="860" y="695" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#047857">Totaal: 342 interacties</text>
+</svg>
+

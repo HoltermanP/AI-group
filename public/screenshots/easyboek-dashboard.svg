@@ -1,0 +1,90 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg13" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg13)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#075985" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">EasyBoek Dashboard</text>
+  
+  <!-- Summary Cards -->
+  <rect x="40" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Totaal Inkomen</text>
+  <text x="60" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#0284c7">€ 12.450</text>
+  <text x="60" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">deze maand</text>
+  
+  <rect x="320" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="340" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Totaal Uitgaven</text>
+  <text x="340" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ef4444">€ 8.230</text>
+  <text x="340" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">deze maand</text>
+  
+  <rect x="600" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="620" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">BTW Te Betalen</text>
+  <text x="620" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#f59e0b">€ 884</text>
+  <text x="620" y="230" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Q1 2024</text>
+  
+  <rect x="880" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="900" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Winst</text>
+  <text x="900" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">€ 4.220</text>
+  <text x="900" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">deze maand</text>
+  
+  <!-- Recent Transactions -->
+  <rect x="40" y="300" width="750" height="440" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0c4a6e">Recente Transacties</text>
+  
+  <!-- Transaction 1 -->
+  <rect x="60" y="370" width="710" height="60" rx="4" fill="#f0fdf4"/>
+  <text x="80" y="395" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Factuur #2024-001</text>
+  <text x="80" y="415" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">15 maart 2024 | Klant: ABC B.V.</text>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#10b981">+ € 2.500</text>
+  <text x="650" y="415" font-family="Arial, sans-serif" font-size="11" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Transaction 2 -->
+  <rect x="60" y="450" width="710" height="60" rx="4" fill="#fee2e2"/>
+  <text x="80" y="475" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Kantoorbenodigdheden</text>
+  <text x="80" y="495" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">14 maart 2024 | Office Depot</text>
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ef4444">- € 125</text>
+  <text x="650" y="495" font-family="Arial, sans-serif" font-size="11" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Transaction 3 -->
+  <rect x="60" y="530" width="710" height="60" rx="4" fill="#f0fdf4"/>
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Factuur #2024-002</text>
+  <text x="80" y="575" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">13 maart 2024 | Klant: XYZ B.V.</text>
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#10b981">+ € 1.800</text>
+  <text x="650" y="575" font-family="Arial, sans-serif" font-size="11" fill="#10b981">✓ Verwerkt</text>
+  
+  <!-- Transaction 4 -->
+  <rect x="60" y="610" width="710" height="60" rx="4" fill="#fef3c7"/>
+  <text x="80" y="635" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Bonnetje - Restaurants</text>
+  <text x="80" y="655" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">12 maart 2024 | OCR in behandeling...</text>
+  <text x="600" y="640" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f59e0b">- € 45</text>
+  <text x="650" y="655" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b">⏳ Verwerken</text>
+  
+  <!-- Quick Actions -->
+  <rect x="820" y="300" width="320" height="440" rx="8" fill="white" opacity="0.95"/>
+  <text x="840" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0c4a6e">Snelle Acties</text>
+  
+  <rect x="840" y="370" width="280" height="80" rx="4" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="860" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#075985">📷 Bonnetje Scannen</text>
+  <text x="860" y="425" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Automatische verwerking</text>
+  <text x="860" y="445" font-family="Arial, sans-serif" font-size="12" fill="#0284c7">OCR + Categorisatie</text>
+  
+  <rect x="840" y="470" width="280" height="80" rx="4" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="860" y="500" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#075985">📊 BTW Rapport</text>
+  <text x="860" y="525" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Q1 2024 overzicht</text>
+  <text x="860" y="545" font-family="Arial, sans-serif" font-size="12" fill="#0284c7">Klaar voor aangifte</text>
+  
+  <rect x="840" y="570" width="280" height="80" rx="4" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
+  <text x="860" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#075985">💰 Financieel Overzicht</text>
+  <text x="860" y="625" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Maandelijks rapport</text>
+  <text x="860" y="645" font-family="Arial, sans-serif" font-size="12" fill="#0284c7">Real-time inzicht</text>
+  
+  <rect x="840" y="670" width="280" height="50" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="860" y="695" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">✓ Alles up-to-date</text>
+  <text x="860" y="715" font-family="Arial, sans-serif" font-size="12" fill="#047857">90% tijd bespaard</text>
+</svg>
+

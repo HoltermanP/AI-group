@@ -1,0 +1,55 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg1)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#1e40af" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Tax &amp; Wealth HUB</text>
+  <text x="1000" y="50" font-family="Arial, sans-serif" font-size="18" fill="white">€ 1.245.890</text>
+  
+  <!-- Dashboard Cards -->
+  <rect x="40" y="120" width="350" height="200" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e3a8a">Totaal Vermogen</text>
+  <text x="60" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#3b82f6">€ 1.245.890</text>
+  <text x="60" y="230" font-family="Arial, sans-serif" font-size="14" fill="#10b981">↑ 12.5% deze maand</text>
+  
+  <rect x="420" y="120" width="350" height="200" rx="8" fill="white" opacity="0.95"/>
+  <text x="440" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e3a8a">Belasting Optimalisatie</text>
+  <text x="440" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#3b82f6">€ 18.450</text>
+  <text x="440" y="230" font-family="Arial, sans-serif" font-size="14" fill="#10b981">Besparing mogelijk</text>
+  
+  <rect x="800" y="120" width="350" height="200" rx="8" fill="white" opacity="0.95"/>
+  <text x="820" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e3a8a">Cashflow</text>
+  <text x="820" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#3b82f6">€ 45.230</text>
+  <text x="820" y="230" font-family="Arial, sans-serif" font-size="14" fill="#10b981">Verwacht deze maand</text>
+  
+  <!-- Chart Area -->
+  <rect x="40" y="360" width="750" height="400" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="400" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e3a8a">Vermogensgroei</text>
+  
+  <!-- Simple Line Chart -->
+  <polyline points="80,700 180,650 280,600 380,550 480,500 580,480 680,460 780,440" 
+            fill="none" stroke="#3b82f6" stroke-width="4"/>
+  <circle cx="780" cy="440" r="6" fill="#3b82f6"/>
+  
+  <!-- Accounts List -->
+  <rect x="820" y="360" width="330" height="400" rx="8" fill="white" opacity="0.95"/>
+  <text x="840" y="400" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e3a8a">Accounts</text>
+  <rect x="840" y="420" width="290" height="50" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="445" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a">Zakelijke Rekening</text>
+  <text x="860" y="465" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">€ 245.890</text>
+  
+  <rect x="840" y="480" width="290" height="50" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="505" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a">Spaarrekening</text>
+  <text x="860" y="525" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">€ 500.000</text>
+  
+  <rect x="840" y="540" width="290" height="50" rx="4" fill="#f3f4f6"/>
+  <text x="860" y="565" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a">Beleggingen</text>
+  <text x="860" y="585" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">€ 500.000</text>
+</svg>
+

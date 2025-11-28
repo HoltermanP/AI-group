@@ -1,0 +1,82 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg11)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#047857" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Klant Chat Interface</text>
+  
+  <!-- Chat Area -->
+  <rect x="40" y="120" width="750" height="600" rx="8" fill="white" opacity="0.95"/>
+  
+  <!-- Bot Message 1 -->
+  <rect x="60" y="160" width="500" height="60" rx="8" fill="#f0fdf4"/>
+  <circle cx="90" cy="190" r="15" fill="#10b981"/>
+  <text x="85" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">AI</text>
+  <text x="120" y="190" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Hallo! Ik ben je AI-assistent. Hoe kan ik je helpen vandaag?</text>
+  
+  <!-- User Message 1 -->
+  <rect x="250" y="240" width="500" height="60" rx="8" fill="#10b981"/>
+  <text x="270" y="270" font-family="Arial, sans-serif" font-size="14" fill="white">Wat is de status van mijn bestelling #12345?</text>
+  
+  <!-- Bot Message 2 -->
+  <rect x="60" y="320" width="600" height="100" rx="8" fill="#f0fdf4"/>
+  <circle cx="90" cy="350" r="15" fill="#10b981"/>
+  <text x="85" y="355" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">AI</text>
+  <text x="120" y="350" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Ik heb je bestelling opgezocht. Bestelling #12345 heeft de volgende status:</text>
+  <text x="120" y="375" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">✓ Besteld op: 15 maart 2024</text>
+  <text x="120" y="395" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">✓ Verzonden op: 18 maart 2024</text>
+  <text x="120" y="415" font-family="Arial, sans-serif" font-size="14" fill="#10b981">✓ Verwacht: 20 maart 2024 (morgen)</text>
+  
+  <!-- User Message 2 -->
+  <rect x="250" y="440" width="500" height="60" rx="8" fill="#10b981"/>
+  <text x="270" y="470" font-family="Arial, sans-serif" font-size="14" fill="white">Kan ik de bezorgtijd aanpassen?</text>
+  
+  <!-- Bot Message 3 -->
+  <rect x="60" y="520" width="600" height="120" rx="8" fill="#f0fdf4"/>
+  <circle cx="90" cy="550" r="15" fill="#10b981"/>
+  <text x="85" y="555" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">AI</text>
+  <text x="120" y="550" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Ja, dat kan! Ik kan je helpen met het aanpassen van de bezorgtijd.</text>
+  <text x="120" y="575" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Opties:</text>
+  <text x="120" y="595" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Verplaatsen naar later deze week</text>
+  <text x="120" y="615" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Bezorgen op specifiek tijdstip (meerprijs)</text>
+  <text x="120" y="635" font-family="Arial, sans-serif" font-size="14" fill="#10b981">Welke optie heeft je voorkeur?</text>
+  
+  <!-- Input Area -->
+  <rect x="60" y="660" width="600" height="50" rx="8" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+  <text x="80" y="690" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">Type je bericht...</text>
+  
+  <!-- Customer Info -->
+  <rect x="820" y="120" width="320" height="600" rx="8" fill="white" opacity="0.95"/>
+  <text x="840" y="160" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">Klant Informatie</text>
+  
+  <circle cx="960" cy="200" r="40" fill="#10b981"/>
+  <text x="950" y="210" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">JD</text>
+  
+  <text x="840" y="270" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Jan de Vries</text>
+  <text x="840" y="295" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Klant sinds: 2022</text>
+  
+  <rect x="840" y="320" width="280" height="100" rx="4" fill="#f0fdf4"/>
+  <text x="860" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">Recent Bestellingen</text>
+  <text x="860" y="370" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">#12345 - In verzending</text>
+  <text x="860" y="390" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">#12340 - Afgeleverd</text>
+  <text x="860" y="410" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">#12335 - Afgeleverd</text>
+  
+  <rect x="840" y="440" width="280" height="100" rx="4" fill="#eff6ff"/>
+  <text x="860" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">Sentiment Analyse</text>
+  <text x="860" y="490" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Huidige sentiment: Positief</text>
+  <text x="860" y="510" font-family="Arial, sans-serif" font-size="12" fill="#10b981">Tevredenheid: 95%</text>
+  <text x="860" y="530" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Geen escalatie nodig</text>
+  
+  <rect x="840" y="560" width="280" height="100" rx="4" fill="#fef3c7"/>
+  <text x="860" y="585" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e">AI Status</text>
+  <text x="860" y="610" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Confidence: 98%</text>
+  <text x="860" y="630" font-family="Arial, sans-serif" font-size="12" fill="#10b981">Automatisch opgelost</text>
+  <text x="860" y="650" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Geen menselijke interventie</text>
+</svg>
+

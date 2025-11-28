@@ -1,0 +1,110 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg18" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c2d12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg18)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#9a3412" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Publicatie Kalender</text>
+  
+  <!-- Calendar -->
+  <rect x="40" y="120" width="1120" height="600" rx="8" fill="white" opacity="0.95"/>
+  
+  <!-- Month Header -->
+  <rect x="60" y="140" width="1080" height="60" rx="4" fill="#f3f4f6"/>
+  <text x="540" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#7c2d12">Maart 2024</text>
+  
+  <!-- Week Days -->
+  <rect x="60" y="220" width="1080" height="40" rx="4" fill="#f9fafb"/>
+  <text x="120" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Ma</text>
+  <text x="270" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Di</text>
+  <text x="420" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Wo</text>
+  <text x="570" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Do</text>
+  <text x="720" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Vr</text>
+  <text x="870" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Za</text>
+  <text x="1020" y="245" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6b7280">Zo</text>
+  
+  <!-- Week 1 -->
+  <rect x="60" y="280" width="150" height="100" rx="4" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+  <text x="70" y="305" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7c2d12">15</text>
+  <text x="70" y="330" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">LinkedIn Post</text>
+  <text x="70" y="350" font-family="Arial, sans-serif" font-size="11" fill="#ea580c">10:00</text>
+  <text x="70" y="365" font-family="Arial, sans-serif" font-size="11" fill="#10b981">✓ Gepubliceerd</text>
+  
+  <rect x="230" y="280" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="240" y="305" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">16</text>
+  
+  <rect x="400" y="280" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="410" y="305" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">17</text>
+  
+  <rect x="570" y="280" width="150" height="100" rx="4" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+  <text x="580" y="305" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7c2d12">18</text>
+  <text x="580" y="330" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Twitter Thread</text>
+  <text x="580" y="350" font-family="Arial, sans-serif" font-size="11" fill="#ea580c">14:00</text>
+  <text x="580" y="365" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b">⏰ Gepland</text>
+  
+  <rect x="740" y="280" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="750" y="305" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">19</text>
+  
+  <rect x="910" y="280" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="920" y="305" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">20</text>
+  
+  <!-- Week 2 -->
+  <rect x="60" y="400" width="150" height="100" rx="4" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="70" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7c2d12">21</text>
+  <text x="70" y="450" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Instagram Post</text>
+  <text x="70" y="470" font-family="Arial, sans-serif" font-size="11" fill="#ea580c">11:00</text>
+  <text x="70" y="485" font-family="Arial, sans-serif" font-size="11" fill="#ef4444">⚠️ Review</text>
+  
+  <rect x="230" y="400" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="240" y="425" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">22</text>
+  
+  <rect x="400" y="400" width="150" height="100" rx="4" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+  <text x="410" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7c2d12">23</text>
+  <text x="410" y="450" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">LinkedIn Artikel</text>
+  <text x="410" y="470" font-family="Arial, sans-serif" font-size="11" fill="#ea580c">09:00</text>
+  <text x="410" y="485" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b">⏰ Gepland</text>
+  
+  <rect x="570" y="400" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="580" y="425" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">24</text>
+  
+  <rect x="740" y="400" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="750" y="425" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">25</text>
+  
+  <rect x="910" y="400" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="920" y="425" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">26</text>
+  
+  <!-- Week 3 -->
+  <rect x="60" y="520" width="150" height="100" rx="4" fill="#fef3c7" stroke="#ea580c" stroke-width="2"/>
+  <text x="70" y="545" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7c2d12">27</text>
+  <text x="70" y="570" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Twitter Poll</text>
+  <text x="70" y="590" font-family="Arial, sans-serif" font-size="11" fill="#ea580c">16:00</text>
+  <text x="70" y="605" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b">⏰ Gepland</text>
+  
+  <rect x="230" y="520" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="240" y="545" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">28</text>
+  
+  <rect x="400" y="520" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="410" y="545" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">29</text>
+  
+  <rect x="570" y="520" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="580" y="545" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">30</text>
+  
+  <rect x="740" y="520" width="150" height="100" rx="4" fill="#f9fafb"/>
+  <text x="750" y="545" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">31</text>
+  
+  <!-- Legend -->
+  <rect x="60" y="640" width="1080" height="60" rx="4" fill="#f3f4f6"/>
+  <text x="80" y="665" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7c2d12">Legenda:</text>
+  <rect x="200" y="650" width="20" height="20" rx="2" fill="#fef3c7" stroke="#ea580c" stroke-width="1"/>
+  <text x="230" y="665" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Gepland</text>
+  <rect x="320" y="650" width="20" height="20" rx="2" fill="#f0fdf4" stroke="#10b981" stroke-width="1"/>
+  <text x="350" y="665" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Gepubliceerd</text>
+  <rect x="480" y="650" width="20" height="20" rx="2" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="510" y="665" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Review Vereist</text>
+</svg>
+

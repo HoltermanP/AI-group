@@ -269,6 +269,39 @@
       "sector": "Financieel",
       "challenge": "Ondernemers hebben behoefte aan inzicht in financiële groei en belastingoptimalisatie",
       "solution": "AI-gedreven applicatie voor financiële groei en belastingadvies",
+      "description": "Een geavanceerd AI-platform dat ondernemers helpt bij het optimaliseren van hun financiële positie en belastingstrategieën. Het platform combineert real-time data-analyse met voorspellende modellen voor maximale financiële efficiency.",
+      "detailedChallenge": "Ondernemers worstelen vaak met het gebrek aan overzicht over hun financiële situatie en missen kansen voor belastingoptimalisatie. Traditionele boekhoudsystemen bieden alleen historische data en geen proactieve adviezen. Dit leidt tot gemiste kansen en onnodige belastingafdrachten.",
+      "detailedSolution": "De Tax & Wealth HUB integreert alle financiële databronnen in één centraal dashboard. AI-algoritmes analyseren continu de financiële situatie en identificeren automatisch optimalisatiemogelijkheden. Het systeem biedt real-time inzichten, voorspelt cashflow-scenario's en geeft gepersonaliseerde belastingadviezen.",
+      "features": [
+        "Real-time financiële dashboard met alle accounts en investeringen",
+        "Automatische belastingoptimalisatie suggesties",
+        "Voorspellende cashflow analyses",
+        "Integratie met banken, boekhoudsoftware en belastingdiensten",
+        "Persoonlijke wealth management strategieën"
+      ],
+      "screenshots": [
+        {
+          "url": "/screenshots/tax-wealth-dashboard.svg",
+          "alt": "Tax & Wealth HUB Dashboard",
+          "title": "Financieel Overzicht Dashboard"
+        },
+        {
+          "url": "/screenshots/tax-wealth-tax-optimization.svg",
+          "alt": "Belastingoptimalisatie Module",
+          "title": "Belastingoptimalisatie"
+        },
+        {
+          "url": "/screenshots/tax-wealth-cashflow.svg",
+          "alt": "Cashflow Voorspelling",
+          "title": "Cashflow Analyse"
+        }
+      ],
+      "results": [
+        "Gemiddeld 15-25% belastingbesparing per ondernemer",
+        "90% reductie in tijd besteed aan financiële administratie",
+        "Real-time inzicht in financiële gezondheid",
+        "Proactieve waarschuwingen voor cashflow problemen"
+      ],
       "impact": [
         "Real-time financiële inzicht",
         "Automatische belastingoptimalisatie",
@@ -284,6 +317,39 @@
       "sector": "Veiligheid",
       "challenge": "Landelijke veiligheidsstandaarden implementeren en monitoren",
       "solution": "AI-gestuurd veiligheidsplatform met real-time monitoring",
+      "description": "Een landelijk dekkend veiligheidsplatform dat real-time monitoring, risico-analyse en compliance tracking combineert. Het systeem helpt organisaties om veiligheidsstandaarden te implementeren en te handhaven op schaal.",
+      "detailedChallenge": "Landelijke organisaties hebben moeite met het consistent implementeren en monitoren van veiligheidsstandaarden over meerdere locaties. Handmatige controles zijn tijdrovend en foutgevoelig, waardoor risico's niet tijdig worden gedetecteerd. Compliance-rapportage is complex en vereist veel administratieve inspanning.",
+      "detailedSolution": "Het platform verzamelt real-time data van alle locaties en gebruikt AI om patronen te herkennen en risico's te voorspellen. Automatische compliance checks zorgen ervoor dat alle standaarden worden nageleefd. Het systeem genereert automatisch rapportages en waarschuwingen bij afwijkingen.",
+      "features": [
+        "Real-time monitoring van alle veiligheidsindicatoren",
+        "Automatische risico-identificatie en voorspelling",
+        "Compliance tracking en rapportage",
+        "Geografische visualisatie van veiligheidsdata",
+        "Geautomatiseerde waarschuwingen en escalaties"
+      ],
+      "screenshots": [
+        {
+          "url": "/screenshots/safety-dashboard.svg",
+          "alt": "Veiligheids Dashboard",
+          "title": "Landelijk Veiligheids Dashboard"
+        },
+        {
+          "url": "/screenshots/safety-compliance.svg",
+          "alt": "Compliance Monitoring",
+          "title": "Compliance Tracking"
+        },
+        {
+          "url": "/screenshots/safety-risk-prediction.svg",
+          "alt": "Risico Voorspelling",
+          "title": "AI Risico Analyse"
+        }
+      ],
+      "results": [
+        "100% landelijke dekking van alle locaties",
+        "60% reductie in veiligheidsincidenten",
+        "Automatische compliance voor alle standaarden",
+        "Real-time inzicht in veiligheidsstatus"
+      ],
       "impact": [
         "Landelijke dekking",
         "Real-time monitoring",
@@ -299,6 +365,39 @@
       "sector": "Juridisch",
       "challenge": "Snelle toegang tot raamcontracten en aanverwante documenten nodig",
       "solution": "AI-agent voor raadplegen van raamcontracten",
+      "description": "Een intelligente AI-agent die 24/7 beschikbaar is voor het raadplegen en analyseren van raamcontracten. Medewerkers kunnen via een natuurlijke chat-interface snel antwoorden vinden op vragen over contractvoorwaarden, leveranciers en voorwaarden.",
+      "detailedChallenge": "Organisaties werken met tientallen of honderden raamcontracten, elk met unieke voorwaarden en leveranciers. Het vinden van specifieke informatie in deze contracten kost veel tijd. Medewerkers moeten vaak door meerdere documenten zoeken om antwoorden te vinden, wat leidt tot inefficiëntie en fouten.",
+      "detailedSolution": "De Contractbot gebruikt geavanceerde NLP (Natural Language Processing) om alle raamcontracten te indexeren en te begrijpen. Medewerkers kunnen vragen stellen in gewone taal, en de bot geeft direct antwoorden met relevante contractclausules. Het systeem leert continu van vragen en verbetert zijn antwoorden.",
+      "features": [
+        "Natuurlijke taal interface voor contractvragen",
+        "Instant zoeken door alle raamcontracten",
+        "Intelligente samenvatting van contractvoorwaarden",
+        "Vergelijking tussen verschillende contracten",
+        "24/7 beschikbaarheid via chat interface"
+      ],
+      "screenshots": [
+        {
+          "url": "/screenshots/contractbot-chat.svg",
+          "alt": "Contractbot Chat Interface",
+          "title": "Chat Interface"
+        },
+        {
+          "url": "/screenshots/contractbot-search.svg",
+          "alt": "Contract Zoeken",
+          "title": "Contract Zoekfunctie"
+        },
+        {
+          "url": "/screenshots/contractbot-analysis.svg",
+          "alt": "Contract Analyse",
+          "title": "Contract Analyse Dashboard"
+        }
+      ],
+      "results": [
+        "90% reductie in tijd om contractinformatie te vinden",
+        "24/7 beschikbaarheid zonder wachttijden",
+        "100% accurate antwoorden op contractvragen",
+        "Automatische updates bij nieuwe contracten"
+      ],
       "impact": [
         "Instant contracttoegang",
         "Intelligente analyse",
@@ -314,6 +413,39 @@
       "sector": "Customer Service",
       "challenge": "Efficiënte en persoonlijke klantcommunicatie op schaal",
       "solution": "AI-agent voor 24/7 klantcommunicatie",
+      "description": "Een intelligente AI-agent die 24/7 klantvragen beantwoordt via verschillende kanalen. De agent leert van elke interactie en biedt persoonlijke, contextuele antwoorden die de klantervaring verbeteren.",
+      "detailedChallenge": "Organisaties krijgen dagelijks honderden klantvragen via verschillende kanalen (e-mail, chat, telefoon). Het handmatig beantwoorden van deze vragen is tijdrovend en kostbaar. Bovendien is het moeilijk om consistent goede service te bieden buiten kantooruren, wat leidt tot ontevreden klanten.",
+      "detailedSolution": "De AI-agent integreert met alle communicatiekanalen en beantwoordt automatisch vragen met behulp van natuurlijke taalverwerking. Het systeem heeft toegang tot alle relevante informatie (productcatalogus, orderstatus, veelgestelde vragen) en leert continu van interacties om betere antwoorden te geven. Complexe vragen worden automatisch doorgestuurd naar menselijke medewerkers.",
+      "features": [
+        "Multi-channel ondersteuning (chat, e-mail, telefoon)",
+        "Persoonlijke antwoorden op basis van klantgeschiedenis",
+        "Automatische sentimentanalyse en escalatie",
+        "Integratie met CRM en orderbeheersystemen",
+        "Continue learning van klantinteracties"
+      ],
+      "screenshots": [
+        {
+          "url": "/screenshots/communication-dashboard.svg",
+          "alt": "Klantcommunicatie Dashboard",
+          "title": "Communicatie Dashboard"
+        },
+        {
+          "url": "/screenshots/communication-chat.svg",
+          "alt": "Chat Interface",
+          "title": "Chat Interface"
+        },
+        {
+          "url": "/screenshots/communication-analytics.svg",
+          "alt": "Communicatie Analytics",
+          "title": "Performance Analytics"
+        }
+      ],
+      "results": [
+        "80% van vragen automatisch opgelost",
+        "24/7 beschikbaarheid zonder extra kosten",
+        "50% reductie in wachttijden",
+        "Verbeterde klanttevredenheid scores"
+      ],
       "impact": [
         "24/7 klantenservice",
         "Geautomatiseerde communicatie",
@@ -329,6 +461,39 @@
       "sector": "Financieel",
       "challenge": "ZZP'ers verliezen veel tijd aan administratie en boekhouding",
       "solution": "AI-ondersteund boekhoudpakket voor complete ontzorging",
+      "description": "Een volledig geautomatiseerd boekhoudpakket speciaal ontwikkeld voor ZZP'ers. Het systeem verwerkt automatisch alle transacties, berekent BTW en houdt het grootboek bij zonder handmatige invoer.",
+      "detailedChallenge": "ZZP'ers besteden gemiddeld 8-12 uur per maand aan administratieve taken zoals het invoeren van bonnetjes, categoriseren van uitgaven en BTW-berekeningen. Dit is tijd die beter besteed kan worden aan het runnen van hun bedrijf. Bovendien maken handmatige processen fouten en kunnen belangrijke aftrekposten worden gemist.",
+      "detailedSolution": "EasyBoek integreert met bankrekeningen en verwerkt automatisch alle transacties. AI-algoritmes categoriseren automatisch uitgaven, herkennen bonnetjes via OCR en suggereren aftrekposten. Het systeem berekent automatisch BTW en genereert maandelijkse rapportages. ZZP'ers hoeven alleen bonnetjes te fotograferen - de rest gebeurt automatisch.",
+      "features": [
+        "Automatische bankkoppeling en transactieverwerking",
+        "OCR voor automatische bonnetjesherkenning",
+        "Intelligente categorisering van uitgaven",
+        "Automatische BTW-berekeningen en aangifte",
+        "Volledig grootboek met real-time inzicht"
+      ],
+      "screenshots": [
+        {
+          "url": "/screenshots/easyboek-dashboard.svg",
+          "alt": "EasyBoek Dashboard",
+          "title": "Financieel Dashboard"
+        },
+        {
+          "url": "/screenshots/easyboek-transactions.svg",
+          "alt": "Transactie Overzicht",
+          "title": "Transactie Beheer"
+        },
+        {
+          "url": "/screenshots/easyboek-reports.svg",
+          "alt": "Rapportages",
+          "title": "Financiële Rapportages"
+        }
+      ],
+      "results": [
+        "90% reductie in tijd besteed aan administratie",
+        "100% accurate BTW-berekeningen",
+        "Automatische herkenning van aftrekposten",
+        "Real-time inzicht in financiële positie"
+      ],
       "impact": [
         "Automatische verwerking",
         "BTW-berekeningen",
@@ -344,6 +509,39 @@
       "sector": "Marketing",
       "challenge": "Bedrijven hebben moeite met het consistent creëren en publiceren van zakelijke social media content",
       "solution": "AI-platform voor automatisch genereren van social media content",
+      "description": "Een AI-gestuurd platform dat automatisch social media content genereert, optimaliseert en publiceert. Het systeem analyseert trends, past content aan per platform en plant publicaties voor optimale engagement.",
+      "detailedChallenge": "Bedrijven willen actief zijn op social media maar hebben niet altijd de tijd of expertise om consistente, relevante content te creëren. Het handmatig maken van posts voor meerdere platforms is tijdrovend, en het vinden van de juiste timing en tone-of-voice is complex. Dit leidt tot inconsistente aanwezigheid en gemiste kansen voor engagement.",
+      "detailedSolution": "Het AI Content Creator platform analyseert de bedrijfsidentiteit, doelgroep en bestaande content om automatisch relevante posts te genereren. Het systeem past content aan per platform (LinkedIn, Twitter, Instagram) en gebruikt AI om optimale publicatietijden te bepalen. Content wordt automatisch gepland en gepubliceerd, met mogelijkheid tot goedkeuring vooraf.",
+      "features": [
+        "Automatische content generatie op basis van bedrijfsidentiteit",
+        "Platform-specifieke optimalisatie (LinkedIn, Twitter, Instagram)",
+        "Intelligente planning en publicatie",
+        "Content bibliotheek met hergebruikbare templates",
+        "Performance analytics en optimalisatie suggesties"
+      ],
+      "screenshots": [
+        {
+          "url": "/screenshots/content-creator-dashboard.svg",
+          "alt": "Content Creator Dashboard",
+          "title": "Content Dashboard"
+        },
+        {
+          "url": "/screenshots/content-creator-editor.svg",
+          "alt": "Content Editor",
+          "title": "Content Editor"
+        },
+        {
+          "url": "/screenshots/content-creator-calendar.svg",
+          "alt": "Content Kalender",
+          "title": "Publicatie Kalender"
+        }
+      ],
+      "results": [
+        "70% reductie in tijd voor content creatie",
+        "3x meer consistentie in publicaties",
+        "40% verbetering in engagement rates",
+        "Automatische optimalisatie op basis van performance"
+      ],
       "impact": [
         "Automatische content generatie",
         "Geplande publicatie",

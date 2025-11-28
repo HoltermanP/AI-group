@@ -1,0 +1,87 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg12)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="#047857" opacity="0.9"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Performance Analytics</text>
+  
+  <!-- Performance Metrics -->
+  <rect x="40" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Oplossingspercentage</text>
+  <text x="60" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">80%</text>
+  <text x="60" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">Automatisch opgelost</text>
+  
+  <rect x="320" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="340" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Gemiddelde Responstijd</text>
+  <text x="340" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">0.8s</text>
+  <text x="340" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">↓ 50% vs vorige maand</text>
+  
+  <rect x="600" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="620" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Klanttevredenheid</text>
+  <text x="620" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">4.8/5</text>
+  <text x="620" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">↑ 0.3 deze maand</text>
+  
+  <rect x="880" y="120" width="260" height="150" rx="8" fill="white" opacity="0.95"/>
+  <text x="900" y="160" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Kostenbesparing</text>
+  <text x="900" y="200" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#10b981">€ 45K</text>
+  <text x="900" y="230" font-family="Arial, sans-serif" font-size="12" fill="#10b981">per maand</text>
+  
+  <!-- Volume Chart -->
+  <rect x="40" y="300" width="550" height="440" rx="8" fill="white" opacity="0.95"/>
+  <text x="60" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">Volume Over Tijd</text>
+  
+  <!-- Chart -->
+  <rect x="60" y="360" width="500" height="350" rx="4" fill="#f8fafc"/>
+  
+  <!-- Volume Bars -->
+  <rect x="80" y="600" width="40" height="80" fill="#10b981" rx="4"/>
+  <text x="90" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Ma</text>
+  
+  <rect x="140" y="580" width="40" height="100" fill="#10b981" rx="4"/>
+  <text x="150" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Di</text>
+  
+  <rect x="200" y="550" width="40" height="130" fill="#10b981" rx="4"/>
+  <text x="210" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Wo</text>
+  
+  <rect x="260" y="520" width="40" height="160" fill="#10b981" rx="4"/>
+  <text x="270" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Do</text>
+  
+  <rect x="320" y="490" width="40" height="190" fill="#10b981" rx="4"/>
+  <text x="330" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Vr</text>
+  
+  <rect x="380" y="510" width="40" height="170" fill="#10b981" rx="4"/>
+  <text x="390" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Za</text>
+  
+  <rect x="440" y="530" width="40" height="150" fill="#10b981" rx="4"/>
+  <text x="450" y="700" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Zo</text>
+  
+  <!-- Top Topics -->
+  <rect x="620" y="300" width="520" height="440" rx="8" fill="white" opacity="0.95"/>
+  <text x="640" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#059669">Meest Gestelde Vragen</text>
+  
+  <rect x="640" y="370" width="480" height="80" rx="4" fill="#f0fdf4"/>
+  <text x="660" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">1. Orderstatus</text>
+  <text x="660" y="425" font-family="Arial, sans-serif" font-size="12" fill="#047857">342 vragen deze week</text>
+  <text x="660" y="445" font-family="Arial, sans-serif" font-size="12" fill="#10b981">95% automatisch opgelost</text>
+  
+  <rect x="640" y="470" width="480" height="80" rx="4" fill="#f0fdf4"/>
+  <text x="660" y="500" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">2. Retourbeleid</text>
+  <text x="660" y="525" font-family="Arial, sans-serif" font-size="12" fill="#047857">189 vragen deze week</text>
+  <text x="660" y="545" font-family="Arial, sans-serif" font-size="12" fill="#10b981">88% automatisch opgelost</text>
+  
+  <rect x="640" y="570" width="480" height="80" rx="4" fill="#f0fdf4"/>
+  <text x="660" y="600" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46">3. Productinformatie</text>
+  <text x="660" y="625" font-family="Arial, sans-serif" font-size="12" fill="#047857">156 vragen deze week</text>
+  <text x="660" y="645" font-family="Arial, sans-serif" font-size="12" fill="#10b981">92% automatisch opgelost</text>
+  
+  <rect x="640" y="670" width="480" height="50" rx="4" fill="#eff6ff" stroke="#059669" stroke-width="2"/>
+  <text x="660" y="695" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#047857">AI Learning Progress</text>
+  <text x="660" y="715" font-family="Arial, sans-serif" font-size="12" fill="#1e40af">Model nauwkeurigheid: 98.2% (+2.1% deze maand)</text>
+</svg>
+
