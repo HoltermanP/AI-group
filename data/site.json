@@ -265,7 +265,8 @@
   "cases": [
     {
       "slug": "tax-wealth-hub",
-      "title": "Tax & Wealth HUB",
+      "title": "aivermogen.nl",
+      "externalUrl": "https://aivermogen.nl",
       "sector": "Financieel",
       "challenge": "Ondernemers hebben behoefte aan informatie en inzicht over belastingen, financieel plannen en vermogensopbouw",
       "solution": "AI-gedreven informatiehub voor belastingen, financieel plannen en vermogensopbouw met voorspellingen en marktinzichten",
@@ -322,7 +323,7 @@
     },
     {
       "slug": "landelijk-veiligheidsconcept",
-      "title": "Landelijk Veiligheidsconcept",
+      "title": "AI-Safety Hub",
       "sector": "Veiligheid",
       "challenge": "Landelijke veiligheidsstandaarden implementeren en monitoren",
       "solution": "AI-gestuurd veiligheidsplatform met real-time monitoring",

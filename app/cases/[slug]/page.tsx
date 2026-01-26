@@ -67,6 +67,19 @@ export default function CaseDetailPage({ params }: Props) {
                   <span>{caseItem.timeline}</span>
                 </div>
               )}
+              {(caseItem as any).externalUrl && (
+                <div className="mb-4">
+                  <Link
+                    href={(caseItem as any).externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                  >
+                    <span>Bezoek {caseItem.title}</span>
+                    <ArrowRight size={18} />
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>

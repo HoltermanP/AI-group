@@ -19,10 +19,16 @@ export default function CasesGrid() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.cases.map((caseItem, index) => (
+          {data.cases.map((caseItem, index) => {
+            const href = (caseItem as any).externalUrl || `/cases/${caseItem.slug}`
+            const isExternal = !!(caseItem as any).externalUrl
+            
+            return (
             <Link
               key={index}
-              href={`/cases/${caseItem.slug}`}
+              href={href}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
               className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-300 border-2 border-gray-700/50 hover:border-primary-500/50 hover:scale-105 cursor-pointer"
             >
               {/* Case Icon */}
@@ -71,13 +77,13 @@ export default function CasesGrid() {
                 {/* Read more link */}
                 <div className="mt-4 pt-4 border-t border-gray-700/50">
                   <div className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 font-medium transition-colors duration-200 text-sm group-hover:translate-x-1">
-                    <span>Bekijk details</span>
+                    <span>{isExternal ? "Bezoek website" : "Bekijk details"}</span>
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>
             </Link>
-          ))}
+          )})}
         </div>
 
         {/* CTA Section */}

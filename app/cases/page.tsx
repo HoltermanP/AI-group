@@ -94,10 +94,12 @@ export default function CasesPage() {
                   </div>
 
                   <Link
-                    href={`/cases/${caseItem.slug}`}
+                    href={(caseItem as any).externalUrl || `/cases/${caseItem.slug}`}
+                    target={(caseItem as any).externalUrl ? "_blank" : undefined}
+                    rel={(caseItem as any).externalUrl ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 font-medium transition-colors duration-200 text-sm"
                   >
-                    <span>Lees meer</span>
+                    <span>{(caseItem as any).externalUrl ? "Bezoek website" : "Lees meer"}</span>
                     <ArrowRight size={14} />
                   </Link>
                 </div>
