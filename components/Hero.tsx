@@ -194,7 +194,7 @@ export default function Hero() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/cases"
+                  href="/#cases"
                   className="bg-white/10 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white hover:text-primary-600 px-10 py-5 rounded-2xl font-bold transition-all duration-300 inline-flex items-center justify-center space-x-3 text-lg md:text-xl w-full sm:w-auto min-w-[280px] shadow-xl"
                 >
                   <Play size={24} />
