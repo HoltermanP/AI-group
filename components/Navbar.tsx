@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, Search, Home, Database, Bot, Award, Users, Mail } from 'lucide-react'
+import { Menu, X, Search, Home, Database, Bot, Award, Users, Mail, ScanLine } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import SearchModal from './SearchModal'
 
@@ -65,6 +65,15 @@ export default function Navbar() {
                   <Search className="w-6 h-6" />
                 </button>
                 <Link
+                  href="https://www.ai-businessscan.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-200 text-lg shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap flex items-center space-x-2"
+                >
+                  <ScanLine className="w-5 h-5" />
+                  <span>Gratis Bedrijfscan</span>
+                </Link>
+                <Link
                   href="/contact"
                   className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-200 text-lg shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"
                 >
@@ -100,8 +109,18 @@ export default function Navbar() {
                     )
                   })}
                   <Link
+                    href="https://www.ai-businessscan.nl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl hover:from-green-700 hover:to-emerald-700 transition-colors duration-200 mt-4 border-2 border-green-600 whitespace-nowrap"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <ScanLine className="w-5 h-5" />
+                    <span>Gratis Bedrijfscan</span>
+                  </Link>
+                  <Link
                     href="/contact"
-                    className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors duration-200 mt-4 border-2 border-primary-600 whitespace-nowrap"
+                    className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors duration-200 mt-2 border-2 border-primary-600 whitespace-nowrap"
                     onClick={() => setIsOpen(false)}
                   >
                     <Mail className="w-5 h-5" />

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Play, Zap, Rocket, CheckCircle } from 'lucide-react'
+import { ArrowRight, Play, Zap, Rocket, CheckCircle, ScanLine } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import { motion } from 'framer-motion'
 
@@ -179,6 +179,17 @@ export default function Hero() {
                 >
                   <span>{data.cta.primary}</span>
                   <ArrowRight size={24} />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="https://www.ai-businessscan.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 inline-flex items-center justify-center space-x-3 text-lg md:text-xl shadow-2xl hover:shadow-green-200 w-full sm:w-auto min-w-[280px]"
+                >
+                  <ScanLine size={24} />
+                  <span>Gratis Bedrijfscan</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
