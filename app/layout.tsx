@@ -14,7 +14,11 @@ import Chatbot from '@/components/Chatbot'
 // import SEOOptimizer from '@/components/SEOOptimizer'
 // import Analytics from '@/components/Analytics'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: 'AI-Group - AI-applicaties voor elke organisatie',
@@ -73,8 +77,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-        <html lang="nl" className="scroll-smooth dark">
-          <body className={`${inter.className} dark`}>
+        <html lang="nl" className="scroll-smooth dark" suppressHydrationWarning>
+          <body className={`${inter.className} dark`} suppressHydrationWarning>
             <ErrorBoundary>
               {/* <PerformanceMonitor />
               <PreloadResources />

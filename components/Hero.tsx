@@ -4,9 +4,38 @@ import Link from 'next/link'
 import { ArrowRight, Play, Zap, Rocket, CheckCircle, ScanLine } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function Hero() {
   const data = getSiteData()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <section className="relative ai-background section-padding overflow-hidden min-h-screen flex items-center">
+        <div className="container-custom relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center space-y-16">
+              <div className="h-12 w-64 bg-white/20 rounded-full mx-auto animate-pulse" />
+              <div className="space-y-8">
+                <div className="h-24 w-full bg-white/10 rounded-lg mx-auto animate-pulse" />
+                <div className="h-8 w-3/4 bg-white/10 rounded-lg mx-auto animate-pulse" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 max-w-5xl mx-auto">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="h-48 bg-white/10 rounded-3xl animate-pulse" />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section className="relative ai-background section-padding overflow-hidden min-h-screen flex items-center">

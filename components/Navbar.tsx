@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Search, Home, Database, Bot, Award, Users, Mail, ScanLine } from 'lucide-react'
@@ -19,7 +19,28 @@ const iconMap: Record<string, any> = {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const data = getSiteData()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <nav className="bg-slate-700/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-slate-600/50">
+        <div className="container-custom">
+          <div className="flex justify-between items-center h-20">
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-slate-600 rounded animate-pulse" />
+              <div className="h-6 w-24 bg-slate-600 rounded animate-pulse" />
+            </Link>
+            <div className="w-10 h-10 bg-slate-600 rounded animate-pulse" />
+          </div>
+        </div>
+      </nav>
+    )
+  }
 
   return (
         <nav className="bg-slate-700/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-slate-600/50">
