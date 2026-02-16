@@ -659,6 +659,7 @@
     { "name": "Big Data", "href": "/#big-data" },
     { "name": "Agents", "href": "/#agents" },
     { "name": "Track Record", "href": "/#cases" },
+    { "name": "Prompt tips", "href": "/prompt-tips" },
     { "name": "Over Ons", "href": "/over-ons" },
     { "name": "Contact", "href": "/contact" }
   ]

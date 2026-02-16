@@ -54,6 +54,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
     const pages = [
       { title: 'Home', description: 'Welkom bij AI-Group', href: '/' },
       { title: 'Track Record', description: 'Bewezen resultaten', href: '/#cases' },
+      { title: 'Prompt tips', description: 'Tips voor betere AI-prompts', href: '/prompt-tips' },
       { title: 'Over Ons', description: 'Meer over AI-Group', href: '/over-ons' },
       { title: 'Contact', description: 'Neem contact op', href: '/contact' }
     ]

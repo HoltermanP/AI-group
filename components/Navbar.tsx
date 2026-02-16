@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, Search, Home, Database, Bot, Award, Users, Mail, ScanLine } from 'lucide-react'
+import { Menu, X, Search, Home, Database, Bot, Award, Users, Mail, ScanLine, Lightbulb } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import SearchModal from './SearchModal'
 
@@ -12,6 +12,7 @@ const iconMap: Record<string, any> = {
   'Big Data': Database,
   'Agents': Bot,
   'Track Record': Award,
+  'Prompt tips': Lightbulb,
   'Over Ons': Users,
   'Contact': Mail,
 }
