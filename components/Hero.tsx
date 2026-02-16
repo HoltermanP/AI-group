@@ -4,53 +4,30 @@ import Link from 'next/link'
 import { ArrowRight, Play, Zap, Rocket, CheckCircle, ScanLine } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+
+// Deterministische waarden voor floating elements (zelfde op server en client → geen hydration mismatch)
+function seeded(seed: number) {
+  const x = Math.sin(seed * 9999) * 10000
+  return x - Math.floor(x)
+}
 
 export default function Hero() {
   const data = getSiteData()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return (
-      <section className="relative ai-background section-padding overflow-hidden min-h-screen flex items-center">
-        <div className="container-custom relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center space-y-16">
-              <div className="h-12 w-64 bg-white/20 rounded-full mx-auto animate-pulse" />
-              <div className="space-y-8">
-                <div className="h-24 w-full bg-white/10 rounded-lg mx-auto animate-pulse" />
-                <div className="h-8 w-3/4 bg-white/10 rounded-lg mx-auto animate-pulse" />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 max-w-5xl mx-auto">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-48 bg-white/10 rounded-3xl animate-pulse" />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
 
   return (
     <section className="relative ai-background section-padding overflow-hidden min-h-screen flex items-center">
-      {/* Floating Elements */}
+      {/* Floating Elements - deterministische posities/dimensies voor stabiele eerste load */}
       <div className="floating-elements">
         {[...Array(8)].map((_, i) => (
           <div
             key={`circle-${i}`}
             className="floating-circle"
             style={{
-              width: Math.random() * 40 + 20 + 'px',
-              height: Math.random() * 40 + 20 + 'px',
-              left: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 15 + 's',
-              animationDuration: (Math.random() * 10 + 15) + 's'
+              width: seeded(i * 7) * 40 + 20 + 'px',
+              height: seeded(i * 7 + 1) * 40 + 20 + 'px',
+              left: seeded(i * 11) * 100 + '%',
+              animationDelay: seeded(i * 13) * 15 + 's',
+              animationDuration: (seeded(i * 17) * 10 + 15) + 's'
             }}
           />
         ))}
@@ -59,11 +36,11 @@ export default function Hero() {
             key={`square-${i}`}
             className="floating-square"
             style={{
-              width: Math.random() * 30 + 15 + 'px',
-              height: Math.random() * 30 + 15 + 'px',
-              left: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 20 + 's',
-              animationDuration: (Math.random() * 10 + 20) + 's'
+              width: seeded(i * 19 + 100) * 30 + 15 + 'px',
+              height: seeded(i * 19 + 101) * 30 + 15 + 'px',
+              left: seeded(i * 23 + 100) * 100 + '%',
+              animationDelay: seeded(i * 29 + 100) * 20 + 's',
+              animationDuration: (seeded(i * 31 + 100) * 10 + 20) + 's'
             }}
           />
         ))}
@@ -72,9 +49,9 @@ export default function Hero() {
             key={`triangle-${i}`}
             className="floating-triangle"
             style={{
-              left: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 18 + 's',
-              animationDuration: (Math.random() * 8 + 18) + 's'
+              left: seeded(i * 37 + 200) * 100 + '%',
+              animationDelay: seeded(i * 41 + 200) * 18 + 's',
+              animationDuration: (seeded(i * 43 + 200) * 8 + 18) + 's'
             }}
           />
         ))}
