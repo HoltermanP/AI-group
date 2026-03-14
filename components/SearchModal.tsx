@@ -55,6 +55,8 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
       { title: 'Home', description: 'Welkom bij AI-Group', href: '/' },
       { title: 'Track Record', description: 'Bewezen resultaten', href: '/#cases' },
       { title: 'Prompt tips', description: 'Tips voor betere AI-prompts', href: '/prompt-tips' },
+      { title: 'AI-Group Academy', description: 'AI-trainingen & inschrijven', href: '/trainingen' },
+      { title: 'AI-Group Academy (homepage)', description: 'Sectie op de homepage', href: '/#academy' },
       { title: 'Over Ons', description: 'Meer over AI-Group', href: '/over-ons' },
       { title: 'Contact', description: 'Neem contact op', href: '/contact' }
     ]

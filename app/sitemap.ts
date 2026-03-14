@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getSiteData } from '@/lib/getData'
+import { trainings } from '@/lib/trainings'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = getSiteData()
@@ -32,7 +33,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/trainingen`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
   ]
+
+  const trainingPages = trainings.map((t) => ({
+    url: `${baseUrl}/trainingen/${t.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }))
 
   // Dynamic case pages
   const casePages = data.cases.map((caseItem) => ({
@@ -42,5 +56,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...casePages]
+  return [...staticPages, ...trainingPages, ...casePages]
 }

@@ -70,26 +70,6 @@
       }
     ]
   },
-  "triangleOfPower": {
-    "title": "De duivelse driehoek beheerst met AI",
-    "subtitle": "Traditioneel moet je kiezen tussen tijd, kosten of kwaliteit. Wij niet.",
-    "description": "Onze oplossingen worden door AI gestuurd op tijd, kosten én kwaliteit. Daardoor zijn wij sneller, efficiënter én leveren we hogere kwaliteit dan traditionele IT-trajecten.",
-    "explanation": "In traditionele IT-projecten is er altijd een trade-off: sneller betekent duurder of lagere kwaliteit. Met AI hoeven we niet te kiezen. Onze AI-gedreven aanpak zorgt ervoor dat we alle drie de aspecten tegelijkertijd optimaliseren: projecten worden sneller afgerond, kosten blijven lager door automatisering, en de kwaliteit stijgt door continue AI-validatie en optimalisatie.",
-    "corners": [
-      {
-        "name": "Tijd",
-        "description": "Korter door AI-versnelling"
-      },
-      {
-        "name": "Kosten",
-        "description": "Lager door AI-automatisering"
-      },
-      {
-        "name": "Kwaliteit",
-        "description": "Hoger door AI-validatie"
-      }
-    ]
-  },
   "solutions": [
     {
       "slug": "workflow-automation",
@@ -607,48 +587,6 @@
       "timeline": "2 weken"
     }
   ],
-  "aiComponents": {
-    "title": "Grip op data, inzicht in prestaties, zicht op de toekomst",
-    "subtitle": "Beyond Power BI. Wij koppelen big data en maken gebruik van AI om het tot ongekende rapportages te maken",
-    "components": [
-      {
-        "title": "Real-time datalake-integratie",
-        "description": "Koppel alle databronnen in één centrale datalake voor complete data-overzichten"
-      },
-      {
-        "title": "AI-gedreven voorspellingsmodellen",
-        "description": "Voorspel trends en patronen met geavanceerde machine learning algoritmes"
-      },
-      {
-        "title": "Geautomatiseerde big data-analyse",
-        "description": "Analyseer miljoenen datapunten automatisch en ontdek verborgen inzichten"
-      },
-      {
-        "title": "Intelligente dashboardgeneratie",
-        "description": "AI genereert automatisch gepersonaliseerde dashboards op basis van uw data"
-      },
-      {
-        "title": "Multi-source data-aggregatie",
-        "description": "Combineer data uit verschillende systemen tot één coherent beeld"
-      },
-      {
-        "title": "Predictive Analytics",
-        "description": "Voorspel toekomstige scenario's en optimaliseer besluitvorming"
-      },
-      {
-        "title": "Geautomatiseerde insights-generatie",
-        "description": "AI identificeert automatisch belangrijke trends en anomalieën in uw data"
-      },
-      {
-        "title": "Geavanceerde datavisualisatie",
-        "description": "Interactieve visualisaties die complexe data begrijpelijk maken"
-      },
-      {
-        "title": "Machine learning-rapportages",
-        "description": "Rapportages die zichzelf verbeteren en leren van historische data"
-      }
-    ]
-  },
   "contact": {
     "email": "info@ai-group.nl",
     "phone": "06-30985351",
@@ -656,10 +594,10 @@
   },
   "navigation": [
     { "name": "Home", "href": "/" },
-    { "name": "Big Data", "href": "/#big-data" },
     { "name": "Agents", "href": "/#agents" },
     { "name": "Track Record", "href": "/#cases" },
     { "name": "Prompt tips", "href": "/prompt-tips" },
+    { "name": "AI-Group Academy", "href": "/trainingen" },
     { "name": "Notuleren", "href": "/notuleren" },
     { "name": "Over Ons", "href": "/over-ons" },
     { "name": "Contact", "href": "/contact" }

@@ -39,30 +39,25 @@ export default function IterationCircle() {
         </div>
 
         <div className="max-w-4xl mx-auto px-4">
-          {/* Circular iteration visualization */}
           <div className="relative w-full aspect-square max-w-2xl mx-auto">
-            {/* Outer circle */}
             <div className="absolute inset-0 rounded-full border-2 md:border-4 border-primary-200 dark:border-primary-800 animate-spin-slow">
               <div className="absolute inset-0 rounded-full border-2 md:border-4 border-transparent border-t-primary-400 dark:border-t-primary-600"></div>
             </div>
 
-            {/* Center circle with AI */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-2xl relative z-10 animate-pulse">
                 <div className="text-center text-white">
                   <Brain className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 mx-auto mb-1 md:mb-2 animate-pulse" />
                   <div className="text-lg md:text-xl lg:text-2xl font-bold">AI-first</div>
                 </div>
-                {/* Pulsing rings around center */}
                 <div className="absolute inset-0 rounded-full border-2 border-primary-400 opacity-75 animate-ping"></div>
                 <div className="absolute inset-0 rounded-full border-2 border-primary-400 opacity-50 animate-ping" style={{ animationDelay: '0.5s' }}></div>
               </div>
             </div>
 
-            {/* Iteration items positioned around circle */}
             {iterations.map((item, index) => {
-              const angle = (index * 90) - 45 // Start at -45 degrees, then 45, 135, 225
-              const radius = 45 // Percentage from center
+              const angle = (index * 90) - 45
+              const radius = 45
               const x = 50 + radius * Math.cos((angle * Math.PI) / 180)
               const y = 50 + radius * Math.sin((angle * Math.PI) / 180)
               const IconComponent = item.icon
@@ -93,11 +88,9 @@ export default function IterationCircle() {
               )
             })}
 
-            {/* Connecting lines from center to items */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
               {iterations.map((_, index) => {
                 const angle = (index * 90) - 45
-                // Use responsive radius - will be recalculated on resize
                 const radius = 45
                 const x = 50 + radius * Math.cos((angle * Math.PI) / 180)
                 const y = 50 + radius * Math.sin((angle * Math.PI) / 180)
@@ -118,17 +111,15 @@ export default function IterationCircle() {
               })}
             </svg>
 
-            {/* Animated pulse elements moving along lines */}
             <style dangerouslySetInnerHTML={{
               __html: iterations.map((_, index) => {
                 const angle = (index * 90) - 45
                 const radius = 45
                 const x = 50 + radius * Math.cos((angle * Math.PI) / 180)
                 const y = 50 + radius * Math.sin((angle * Math.PI) / 180)
-                // Use left/top percentages directly - these are relative to container
                 const endX = x
                 const endY = y
-                
+
                 return `
                   @keyframes pulseMove${index} {
                     0% {
@@ -200,7 +191,7 @@ export default function IterationCircle() {
                         style={{
                           animation: `pulseMove${index} 2s infinite ease-in-out`,
                           animationDelay: `${pulseDelay}s`,
-                          opacity: 0, // Start hidden to prevent initial flash
+                          opacity: 0,
                         }}
                       />
                     )
@@ -211,7 +202,6 @@ export default function IterationCircle() {
           </div>
         </div>
 
-        {/* Additional text */}
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <p className="text-xl text-gray-300 leading-relaxed">
             Onze oplossingen worden slimmer na livegang. Niet omdat we harder werken, maar omdat wij AI geïntegreerd hebben in onze manier van denken, bouwen en leveren.
@@ -221,5 +211,3 @@ export default function IterationCircle() {
     </section>
   )
 }
-
-

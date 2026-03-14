@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Play, Zap, Rocket, CheckCircle, ScanLine } from 'lucide-react'
+import { ArrowRight, Play, Zap, Rocket, CheckCircle, ScanLine, GraduationCap } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import { motion } from 'framer-motion'
 
@@ -61,16 +61,24 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto">
           {/* Content */}
           <div className="text-center space-y-16">
-            {/* Badge */}
+            {/* Badges: merk + Academy */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex justify-center"
+              className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 md:gap-4 px-4"
             >
-              <span className="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-full text-base md:text-lg font-semibold border-2 border-white/30 shadow-lg">
+              <span className="bg-white/20 backdrop-blur-md text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold border-2 border-white/30 shadow-lg">
                 AI-first organisatie
               </span>
+              <Link
+                href="/trainingen"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-bold border-2 border-amber-400/80 shadow-lg shadow-amber-900/30 hover:from-amber-400 hover:to-amber-500 transition-all"
+              >
+                <GraduationCap className="w-5 h-5 md:w-6 md:h-6 shrink-0" aria-hidden />
+                <span>AI-Group Academy</span>
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 opacity-90 group-hover:translate-x-0.5 transition-transform" aria-hidden />
+              </Link>
             </motion.div>
 
             {/* Main Title */}
@@ -171,7 +179,42 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            {/* CTAs - Symmetrisch */}
+            {/* Academy teaser — volle breedte, direct onder snelheid-kaarten */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.7 }}
+              className="px-4 max-w-4xl mx-auto w-full"
+            >
+              <Link
+                href="/trainingen"
+                className="block w-full rounded-3xl border-2 border-amber-400/50 bg-gradient-to-br from-amber-500/20 via-amber-600/10 to-slate-900/40 backdrop-blur-md p-6 md:p-8 text-left shadow-xl shadow-amber-950/20 hover:border-amber-300/70 hover:from-amber-500/25 transition-all group"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-500 text-slate-950 shadow-lg">
+                      <GraduationCap className="h-8 w-8" aria-hidden />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-amber-200/90 mb-1">
+                        AI-Group Academy
+                      </p>
+                      <p className="text-xl md:text-2xl font-bold text-white leading-tight">
+                        Professionele AI-trainingen voor uw team
+                      </p>
+                      <p className="mt-2 text-sm md:text-base text-blue-100/90 max-w-xl">
+                        Beginner tot gevorderd · certificaat na afronding · trainers uit de implementatiepraktijk
+                      </p>
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center justify-center gap-2 self-start md:self-center rounded-xl bg-white text-primary-700 font-bold px-6 py-3 text-sm md:text-base whitespace-nowrap group-hover:bg-amber-50 transition-colors">
+                    Naar trainingen
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" aria-hidden />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

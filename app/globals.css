@@ -81,6 +81,7 @@
   .ai-background {
     position: relative;
     overflow: hidden;
+    isolation: isolate;
     background: linear-gradient(135deg, #334155 0%, #475569 25%, #64748b 50%, #475569 75%, #334155 100%);
   }
   
@@ -146,10 +147,12 @@
   
   .floating-elements {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 2;
+    z-index: 0;
+    pointer-events: none;
   }
   
   .floating-circle {
@@ -235,30 +238,6 @@
   .animate-chatbotAnnounce {
     animation: chatbotAnnounce 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     transform-origin: bottom right;
-  }
-
-  /* Brain pulse animations for IterationCircle */
-  @keyframes brainPulse {
-    0% {
-      transform: translate(-50%, -50%) translate(0, 0) scale(0.5);
-      opacity: 0;
-    }
-    10% {
-      transform: translate(-50%, -50%) translate(0, 0) scale(1);
-      opacity: 1;
-    }
-    90% {
-      transform: translate(-50%, -50%) translate(var(--pulse-x), var(--pulse-y)) scale(1);
-      opacity: 0.8;
-    }
-    100% {
-      transform: translate(-50%, -50%) translate(var(--pulse-x), var(--pulse-y)) scale(0.8);
-      opacity: 0;
-    }
-  }
-
-  .animate-brain-pulse {
-    animation: brainPulse 2s infinite;
   }
 
   /* Contact Modal Animation */

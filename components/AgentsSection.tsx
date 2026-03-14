@@ -1,211 +1,277 @@
 'use client'
 
-import { MessageSquare, FileText, TrendingUp, Coffee, Activity, Briefcase, Zap, Target, Heart, BarChart3, Shield } from 'lucide-react'
+import Link from 'next/link'
+import {
+  MessageSquare,
+  FileText,
+  TrendingUp,
+  Coffee,
+  Activity,
+  Briefcase,
+  Zap,
+  Target,
+  Heart,
+  BarChart3,
+  Shield,
+  ArrowRight,
+  Award,
+  Bot,
+} from 'lucide-react'
 import { motion } from 'framer-motion'
+import { getSiteData } from '@/lib/getData'
+import CaseIcon from '@/components/CaseIcon'
 
 export default function AgentsSection() {
+  const data = getSiteData()
+
   const agents = [
     {
       icon: MessageSquare,
       name: 'Klantenservice Agent',
-      description: 'Beantwoordt klantvragen 24/7, verwerkt bestellingen en lost problemen op. Altijd beschikbaar, altijd accuraat.',
-      color: 'text-blue-400'
+      description:
+        'Beantwoordt klantvragen 24/7, verwerkt bestellingen en lost problemen op.',
+      color: 'text-blue-400',
     },
     {
       icon: FileText,
       name: 'Documentatie Agent',
-      description: 'Genereert en beheert documenten automatisch. Contracten, offertes, rapporten - alles wordt bijgewerkt en georganiseerd.',
-      color: 'text-purple-400'
+      description: 'Genereert en beheert documenten: contracten, offertes, rapporten.',
+      color: 'text-purple-400',
     },
     {
       icon: TrendingUp,
       name: 'Procesoptimalisatie Agent',
-      description: 'Analyseert workflows en identificeert bottlenecks. Suggereert continu verbeteringen voor efficiëntere processen.',
-      color: 'text-green-400'
+      description: 'Analyseert workflows, bottlenecks en verbetert processen.',
+      color: 'text-green-400',
     },
     {
       icon: Briefcase,
       name: 'Project Management Agent',
-      description: 'Houdt overzicht over projecten, deadlines en resources. Zorgt dat teams gefocust blijven op wat belangrijk is.',
-      color: 'text-indigo-400'
+      description: 'Overzicht over projecten, deadlines en resources.',
+      color: 'text-indigo-400',
     },
     {
       icon: BarChart3,
       name: 'Data Analytics Agent',
-      description: 'Analyseert bedrijfsdata en genereert inzichten. Helpt bij datagedreven besluitvorming en het identificeren van kansen.',
-      color: 'text-emerald-400'
+      description: 'Bedrijfsdata, inzichten en datagedreven besluitvorming.',
+      color: 'text-emerald-400',
     },
     {
       icon: Shield,
       name: 'Security & Compliance Agent',
-      description: 'Waakt over digitale veiligheid en compliance. Controleert systemen, detecteert risico\'s en waarschuwt proactief.',
-      color: 'text-amber-400'
+      description: 'Veiligheid, compliance en proactieve risicodetectie.',
+      color: 'text-amber-400',
     },
     {
       icon: Zap,
       name: 'Automatisering Agent',
-      description: 'Identificeert repetitieve taken en automatiseert deze. Vrijt tijd op voor strategisch werk en innovatie.',
-      color: 'text-cyan-400'
+      description: 'Repetitieve taken automatiseren, tijd voor strategie.',
+      color: 'text-cyan-400',
     },
     {
       icon: Target,
       name: 'Strategie & Planning Agent',
-      description: 'Helpt bij het formuleren van doelen en strategieën. Analyseert markttrends en adviseert over kansen.',
-      color: 'text-pink-400'
-    }
+      description: 'Doelen, strategie en markttrends.',
+      color: 'text-pink-400',
+    },
   ]
 
   const wellbeingAgents = [
     {
       icon: Coffee,
-      name: 'Pauze & Rust Agent',
-      description: 'Herinnert aan het belang van mentale rust en pauzes. Zorgt dat we op de juiste momenten even stoppen om op te laden.',
-      color: 'text-orange-400'
+      name: 'Pauze & Rust',
+      description: 'Rust en pauzes op het juiste moment.',
+      color: 'text-orange-400',
     },
     {
       icon: Activity,
-      name: 'Gezondheid & Beweging Agent',
-      description: 'Moedigt aan om te bewegen en gezond te blijven. Plan reminders voor beweging en helpt bij het behouden van een gezonde levensstijl.',
-      color: 'text-red-400'
+      name: 'Beweging',
+      description: 'Gezond bewegen en reminders.',
+      color: 'text-red-400',
     },
     {
       icon: Heart,
-      name: 'Work-Life Balance Agent',
-      description: 'Zorgt voor een gezonde balans tussen werk en privé. Herinnert aan het belang van quality time en persoonlijke ontwikkeling.',
-      color: 'text-rose-400'
-    }
+      name: 'Work-life balance',
+      description: 'Balans werk en privé.',
+      color: 'text-rose-400',
+    },
   ]
 
-  return (
-    <section id="agents" className="section-padding bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-      
-      <div className="container-custom relative z-10">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            style={{ opacity: 1 }}
-          >
-            <div className="inline-block mb-6">
-              <span className="bg-white/20 text-white px-6 py-2 rounded-full text-lg font-semibold border border-white/30 backdrop-blur-sm">
-                AI Agents
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Wij bouwen agents. Veel agents.
-            </h2>
-            <p className="text-base md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed mb-3">
-              Wij zijn sterk in het bouwen van AI-agents. Zo sterk dat we nu al meer agents in dienst hebben dan personeelsleden.
-            </p>
-            <p className="text-sm md:text-base text-blue-200 max-w-2xl mx-auto leading-relaxed">
-              Deze agents werken 24/7 voor ons. En dus voor u.
-            </p>
-          </motion.div>
-        </div>
+  const cardBase =
+    'rounded-xl border border-white/15 bg-white/[0.06] backdrop-blur-sm p-4 hover:bg-white/[0.1] hover:border-white/25 transition-colors'
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {agents && agents.length > 0 ? agents.map((agent, index) => {
-            const IconComponent = agent.icon
-            
+  return (
+    <section
+      id="agents"
+      className="scroll-mt-24 relative overflow-hidden border-y border-white/10 bg-gradient-to-b from-primary-700/90 via-slate-900 to-slate-950 py-12 md:py-14 lg:py-16"
+      aria-labelledby="agents-track-heading"
+    >
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.18),transparent)]" />
+      <div className="container-custom relative z-10 max-w-6xl">
+        {/* Eén gezamenlijke kop */}
+        <header className="mb-8 md:mb-10 text-center">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90">
+            <Bot className="h-3.5 w-3.5" aria-hidden />
+            Agents &amp; track record
+          </div>
+          <h2
+            id="agents-track-heading"
+            className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl"
+          >
+            Meer agents dan medewerkers — bewezen in de praktijk
+          </h2>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-blue-100/90 md:text-base">
+            AI-agents die 24/7 voor u kunnen werken, en cases die laten zien hoe snel we leveren.
+          </p>
+        </header>
+
+        {/* Agents — compact raster */}
+        <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary-300">
+          <span className="h-px w-8 shrink-0 bg-primary-500/50 sm:flex-1 sm:max-w-[4rem]" aria-hidden />
+          AI-agents
+          <span className="h-px flex-1 bg-primary-500/30" aria-hidden />
+        </div>
+        <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {agents.map((agent, index) => {
+            const Icon = agent.icon
             return (
               <motion.div
                 key={`agent-${index}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl p-8 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
-                style={{ opacity: 1 }}
+                initial={{ opacity: 0.96 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: '-20px' }}
+                transition={{ duration: 0.2 }}
+                className={cardBase}
               >
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 border border-white/30">
-                  <IconComponent className={`w-8 h-8 ${agent.color}`} />
+                <div className="mb-2 flex items-start gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                    <Icon className={`h-4 w-4 ${agent.color}`} aria-hidden />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-sm font-bold leading-tight text-white">{agent.name}</h3>
+                    <p className="mt-1 text-xs leading-snug text-blue-100/80 line-clamp-2">
+                      {agent.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">
-                  {agent.name}
-                </h3>
-                <p className="text-sm text-blue-100 leading-relaxed">
-                  {agent.description}
-                </p>
               </motion.div>
             )
-          }) : (
-            <div className="col-span-full text-center text-white">
-              <p>Geen agents gevonden</p>
-            </div>
-          )}
+          })}
         </div>
 
-        {/* Work-Life Balance Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16"
-          style={{ opacity: 1 }}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Meer dan alleen apps bouwen
-            </h3>
-            <p className="text-base md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              AI-agents helpen niet alleen bij het bouwen van applicaties en het behalen van targets. Ze zorgen ook voor een gezonde balans en ondersteunen ons in alle aspecten van ons werk en welzijn.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {/* Welzijn — één rij */}
+        <div className="mb-10 rounded-xl border border-white/10 bg-black/20 p-3 md:p-4">
+          <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-widest text-white/50">
+            Ook voor team &amp; welzijn
+          </p>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
             {wellbeingAgents.map((agent, index) => {
-              const IconComponent = agent.icon
-              
+              const Icon = agent.icon
               return (
-                <motion.div
-                  key={`wellbeing-${index}`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl p-8 hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
-                  style={{ opacity: 1 }}
+                <div
+                  key={`w-${index}`}
+                  className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2"
                 >
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 border border-white/30">
-                    <IconComponent className={`w-8 h-8 ${agent.color}`} />
+                  <Icon className={`h-4 w-4 shrink-0 ${agent.color}`} aria-hidden />
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold text-white">{agent.name}</p>
+                    <p className="text-[11px] text-blue-100/70">{agent.description}</p>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">
-                    {agent.name}
-                  </h3>
-                  <p className="text-sm text-blue-100 leading-relaxed">
-                    {agent.description}
-                  </p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="text-center mt-16"
-          style={{ opacity: 1 }}
+        {/* Track record — zelfde sectie, geen tweede “pagina” */}
+        <div
+          id="cases"
+          className="scroll-mt-24 border-t border-white/10 pt-8 md:pt-10"
         >
-          <div className="bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Agents werken 24/7. Voor u.
-            </h3>
-            <p className="text-base md:text-lg text-blue-100 leading-relaxed">
-              Geen personeelskosten. Geen overhead. Alleen resultaten. Altijd.
+          <div className="mb-6 flex flex-wrap items-center justify-center gap-2 text-center sm:justify-between sm:text-left">
+            <div className="flex items-center gap-2">
+              <Award className="h-5 w-5 text-amber-400" aria-hidden />
+              <span className="text-sm font-bold text-white">Track record</span>
+              <span className="hidden text-xs text-white/50 sm:inline">— cases</span>
+            </div>
+            <p className="w-full text-xs text-blue-100/80 sm:mt-0 sm:w-auto sm:max-w-md sm:text-right">
+              On-track, snel opgeleverd — dezelfde aanpak als bij onze agents.
             </p>
           </div>
-        </motion.div>
+
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {data.cases.map((caseItem, index) => {
+              const href =
+                'externalUrl' in caseItem && caseItem.externalUrl
+                  ? caseItem.externalUrl
+                  : `/cases/${caseItem.slug}`
+              const isExternal = !!(caseItem as { externalUrl?: string }).externalUrl
+
+              return (
+                <Link
+                  key={index}
+                  href={href}
+                  target={isExternal ? '_blank' : undefined}
+                  rel={isExternal ? 'noopener noreferrer' : undefined}
+                  className={`group ${cardBase} !p-0 overflow-hidden border-white/15 hover:scale-[1.01]`}
+                >
+                  {/* Compacte kop: dun strookje, klein icoon — meer ruimte voor tekst */}
+                  <div className="relative flex items-center gap-2 border-b border-white/10 bg-gradient-to-r from-primary-600 to-primary-800 px-3 py-2">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center opacity-95">
+                      <CaseIcon slug={caseItem.slug} sector={caseItem.sector} size="sm" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <span className="rounded-full bg-black/25 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white">
+                          {caseItem.sector}
+                        </span>
+                        {caseItem.timeline && (
+                          <span className="rounded-full bg-green-500/25 px-1.5 py-0.5 text-[9px] font-bold text-green-200">
+                            {caseItem.timeline}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-3">
+                    <h3 className="text-sm font-bold text-white line-clamp-2">{caseItem.title}</h3>
+                    <p className="mt-1 text-[11px] text-blue-100/70 line-clamp-2">{caseItem.solution}</p>
+                    <span className="mt-2 inline-flex items-center gap-1 text-[11px] font-medium text-primary-300">
+                      {isExternal ? 'Website' : 'Details'}
+                      <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* CTA — compact */}
+        <div className="mt-8 rounded-xl border border-primary-500/30 bg-primary-600/90 p-5 md:p-6">
+          <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
+            <div>
+              <p className="text-sm font-bold text-white md:text-base">Vergelijkbare oplossing?</p>
+              <p className="text-xs text-primary-100/90">Plan een verkenning — we denken graag mee.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-primary-700 hover:bg-blue-50"
+              >
+                {data.cta.primary}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center rounded-lg border border-white/80 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
+              >
+                {data.cta.secondary}
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
-

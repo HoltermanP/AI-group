@@ -6,10 +6,19 @@ interface CaseIconProps {
   slug: string
   sector: string
   className?: string
+  /** sm = compacte tegels (track record) */
+  size?: 'sm' | 'md' | 'lg'
 }
 
-export default function CaseIcon({ slug, sector, className = '' }: CaseIconProps) {
-  const iconClass = "w-16 h-16 text-white"
+const sizeClass = { sm: 'w-8 h-8', md: 'w-12 h-12', lg: 'w-16 h-16' } as const
+
+export default function CaseIcon({
+  slug,
+  sector,
+  className = '',
+  size = 'lg',
+}: CaseIconProps) {
+  const iconClass = `${sizeClass[size]} text-white shrink-0`
   
   // Render custom SVG icons based on case slug
   if (slug === 'tax-wealth-hub') {

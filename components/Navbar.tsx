@@ -3,16 +3,16 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, Search, Home, Database, Bot, Award, Users, Mail, ScanLine, Lightbulb, ClipboardList } from 'lucide-react'
+import { Menu, X, Search, Home, Bot, Award, Users, Mail, ScanLine, Lightbulb, ClipboardList, GraduationCap } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import SearchModal from './SearchModal'
 
 const iconMap: Record<string, unknown> = {
   'Home': Home,
-  'Big Data': Database,
   'Agents': Bot,
   'Track Record': Award,
   'Prompt tips': Lightbulb,
+  'AI-Group Academy': GraduationCap,
   'Notuleren': ClipboardList,
   'Over Ons': Users,
   'Contact': Mail,
