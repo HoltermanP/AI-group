@@ -2,17 +2,19 @@ import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { getTraining } from '@/lib/trainings'
 
+// Initialize SendGrid if available (optional) -zelfde als contact
 let sgMail: any = null
 if (process.env.SENDGRID_API_KEY) {
   try {
     const sendgrid = require('@sendgrid/mail')
     sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
     sgMail = sendgrid
-  } catch {
+  } catch (e) {
     sgMail = null
   }
 }
 
+// Create SMTP transporter -zelfde logica als contact (Strato / Gmail)
 const createSMTPTransporter = () => {
   if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
     const port = parseInt(process.env.SMTP_PORT || '587')
@@ -34,27 +36,56 @@ const createSMTPTransporter = () => {
   return null
 }
 
-async function sendMail(emailData: {
+async function sendEmailWithSendGrid(emailData: {
   to: string
   from: string
   subject: string
   text: string
   html: string
 }) {
-  if (process.env.SENDGRID_API_KEY && sgMail) {
-    await sgMail.send(emailData)
-    return { method: 'SendGrid' }
+  if (!sgMail) {
+    throw new Error('SendGrid niet geconfigureerd')
   }
-  const t = createSMTPTransporter()
-  if (!t) throw new Error('Geen mail geconfigureerd')
-  await t.sendMail({
-    from: emailData.from,
-    to: emailData.to,
-    subject: emailData.subject,
-    text: emailData.text,
-    html: emailData.html,
-  })
-  return { method: process.env.SMTP_HOST ? 'SMTP' : 'Gmail' }
+  try {
+    await sgMail.send({
+      to: emailData.to,
+      from: emailData.from,
+      subject: emailData.subject,
+      text: emailData.text,
+      html: emailData.html,
+    })
+    return { success: true, method: 'SendGrid' }
+  } catch (error: any) {
+    console.error('SendGrid error (training-signup):', error)
+    throw new Error(`SendGrid error: ${error.message}`)
+  }
+}
+
+async function sendEmailWithSMTP(emailData: {
+  to: string
+  from: string
+  subject: string
+  text: string
+  html: string
+}) {
+  const transporter = createSMTPTransporter()
+  if (!transporter) {
+    throw new Error('SMTP niet geconfigureerd')
+  }
+  try {
+    await transporter.sendMail({
+      from: emailData.from,
+      to: emailData.to,
+      subject: emailData.subject,
+      text: emailData.text,
+      html: emailData.html,
+    })
+    const method = process.env.SMTP_HOST ? 'SMTP (Strato)' : 'Gmail'
+    return { success: true, method }
+  } catch (error: any) {
+    console.error('SMTP error (training-signup):', error)
+    throw new Error(`SMTP error: ${error.message}`)
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -109,39 +140,58 @@ ${message || '-'}
 Verstuurd: ${new Date().toLocaleString('nl-NL')}
 `,
       html: `
-        <h2 style="color:#1e40af;">Nieuwe inschrijving training</h2>
-        <p><strong>Training:</strong> ${training.title}</p>
-        <p><strong>Prijs:</strong> € ${training.pricePerPerson} per persoon</p>
-        <hr/>
-        <p><strong>Naam:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Organisatie:</strong> ${organization || '-'}</p>
-        <p><strong>Telefoon:</strong> ${phone || '-'}</p>
-        <p><strong>Aantal deelnemers:</strong> ${participants || '-'}</p>
-        <p><strong>Voorkeursperiode:</strong> ${preferredPeriod || '-'}</p>
-        <h3>Bericht</h3>
-        <p style="white-space:pre-wrap;">${message || '-'}</p>
-        <p style="font-size:12px;color:#64748b;">${new Date().toLocaleString('nl-NL')}</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #1e40af;">Nieuwe inschrijving training</h2>
+          <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <p><strong>Training:</strong> ${training.title}</p>
+            <p><strong>Prijs:</strong> € ${training.pricePerPerson} per persoon</p>
+            <p><strong>Naam:</strong> ${name}</p>
+            <p><strong>E-mail:</strong> ${email}</p>
+            <p><strong>Organisatie:</strong> ${organization || '-'}</p>
+            <p><strong>Telefoon:</strong> ${phone || '-'}</p>
+            <p><strong>Aantal deelnemers:</strong> ${participants || '-'}</p>
+            <p><strong>Voorkeursperiode:</strong> ${preferredPeriod || '-'}</p>
+          </div>
+          <h3 style="color: #374151;">Bericht</h3>
+          <p style="white-space: pre-wrap;">${message || '-'}</p>
+          <p style="font-size: 12px; color: #64748b;">${new Date().toLocaleString('nl-NL')}</p>
+        </div>
       `,
     }
 
-    if (!createSMTPTransporter() && !(process.env.SENDGRID_API_KEY && sgMail)) {
-      console.warn('Training signup (geen mail):', emailData.text)
+    let sendResult
+    try {
+      if (process.env.SENDGRID_API_KEY && sgMail) {
+        sendResult = await sendEmailWithSendGrid(emailData)
+      } else if (createSMTPTransporter()) {
+        sendResult = await sendEmailWithSMTP(emailData)
+      } else {
+        console.warn('⚠️ Geen email service geconfigureerd (training-signup)')
+        return NextResponse.json(
+          {
+            error:
+              'E-mail niet geconfigureerd. Configureer SMTP_HOST/SMTP_USER/SMTP_PASS, SENDGRID_API_KEY, of EMAIL_USER/EMAIL_PASS in .env.local',
+          },
+          { status: 500 }
+        )
+      }
+
+      console.log(`✅ Inschrijving email verzonden via ${sendResult.method}`)
       return NextResponse.json(
-        {
-          error:
-            'E-mail niet geconfigureerd. Neem telefonisch contact op of mail direct naar info@ai-group.nl',
-        },
+        { message: 'Inschrijving ontvangen. We nemen zo snel mogelijk contact op.', method: sendResult.method },
+        { status: 200 }
+      )
+    } catch (emailError: any) {
+      console.error('Email verzending gefaald (training-signup):', emailError)
+      return NextResponse.json(
+        { error: `E-mail verzending mislukt: ${emailError.message}. Probeer het later opnieuw of mail info@ai-group.nl` },
         { status: 500 }
       )
     }
-
-    await sendMail(emailData)
-    return NextResponse.json({ message: 'Inschrijving ontvangen' }, { status: 200 })
-  } catch (e: unknown) {
-    console.error(e)
+  } catch (error) {
+    console.error('Training signup error:', error)
     return NextResponse.json(
-      { error: 'Verzenden mislukt. Probeer later opnieuw of mail info@ai-group.nl' },
+      { error: 'Er is een fout opgetreden bij het verzenden' },
       { status: 500 }
     )
   }

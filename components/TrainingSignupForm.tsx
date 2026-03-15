@@ -51,9 +51,10 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
         preferredPeriod: '',
         message: '',
       })
-    } catch {
+    } catch (err) {
       setStatus('error')
-      setMsg('Verzenden mislukt. Mail gerust direct naar info@ai-group.nl met vermelding van deze training.')
+      const message = err instanceof Error ? err.message : 'Verzenden mislukt. Mail gerust direct naar info@ai-group.nl met vermelding van deze training.'
+      setMsg(message)
     }
   }
 
