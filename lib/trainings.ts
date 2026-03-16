@@ -33,7 +33,8 @@ export const trainings: Training[] = [
     levelLabel: 'Beginner',
     pricePerPerson: 295,
     duration: '1 dag (6 uur)',
-    format: 'Klassikaal of online (live)',
+    format: 'Incompany, groepen van 8–12 deelnemers',
+    priceNote: 'Vast bedrag per persoon',
     shortDescription:
       'Voor iedereen die nog weinig tot geen ervaring heeft met ChatGPT en vergelijkbare tools. Je leert veilig en effectief prompts schrijven en herkent kansen (en risico\'s) in je eigen werk.',
     outcomes: [
@@ -93,7 +94,8 @@ export const trainings: Training[] = [
     levelLabel: 'Halfgevorderd',
     pricePerPerson: 495,
     duration: '2 dagen (2 × 5 uur)',
-    format: 'Klassikaal of online (live)',
+    format: 'Incompany, groepen van 8–12 deelnemers',
+    priceNote: 'Vast bedrag per persoon',
     shortDescription:
       'Voor teams die al met ChatGPT werken en nu structuur willen: herbruikbare workflows, eenvoudige automatisering en introductie tot AI-agents binnen bestaande tools.',
     outcomes: [
@@ -147,9 +149,9 @@ export const trainings: Training[] = [
     level: 'gevorderd',
     levelLabel: 'Gevorderd',
     pricePerPerson: 795,
-    priceNote: 'Incompany mogelijk; vraag offerte bij groepen 8+',
+    priceNote: 'Vast bedrag per persoon',
     duration: '2 dagen (2 × 6 uur)',
-    format: 'Klassikaal (aanbevolen) of online',
+    format: 'Incompany, groepen van 8–12 deelnemers',
     shortDescription:
       'Voor (lead) developers, architecten en data/IT-verantwoordelijken. Diepgaand: RAG-architectuur, API\'s, evaluaties en governance zodat AI productie-klaar en auditeerbaar wordt.',
     outcomes: [
@@ -204,7 +206,8 @@ export const trainings: Training[] = [
     levelLabel: 'Leiderschap',
     pricePerPerson: 695,
     duration: 'Halve dag (3,5 uur)',
-    format: 'Klassikaal of online',
+    format: 'Incompany, groepen van 8–12 deelnemers',
+    priceNote: 'Vast bedrag per persoon',
     shortDescription:
       'Compact programma voor directie en lijnmanagers: portefeuille aan AI-initiatieven, vendorkeuzes, risico\'s en hoe je teams meeneemt zonder hype of stagnatie.',
     outcomes: [

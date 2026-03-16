@@ -5,7 +5,7 @@ const pillars = [
   {
     icon: BookOpen,
     title: "Niveaus & programma's",
-    text: 'Van AI-basics tot RAG en governance — vaste prijs per persoon en uitgewerkt dagprogramma per training.',
+    text: 'Van AI-basics tot RAG en governance — incompany, groepen 8–12 deelnemers, vaste prijs per persoon en uitgewerkt dagprogramma per training.',
   },
   {
     icon: Users,

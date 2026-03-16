@@ -58,9 +58,9 @@ export default function TrainingenPage() {
               organisaties — geen losstaande theorie, maar inhoud direct uit de praktijk.
             </p>
             <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-              Van eerste kennismaking met ChatGPT tot productie-klare RAG en governance: elke training heeft een
-              vast tarief <strong className="text-slate-800 dark:text-slate-200">per persoon</strong>, een
-              uitgewerkt programma en een certificaat na afronding. Klik door voor het volledige programma en
+              Van eerste kennismaking met ChatGPT tot productie-klare RAG en governance: alle trainingen zijn
+              <strong className="text-slate-800 dark:text-slate-200"> incompany</strong> voor groepen van 8–12
+              deelnemers, met een vast tarief per persoon, uitgewerkt programma en certificaat na afronding. Klik door voor het volledige programma en
               inschrijving.
             </p>
             <div className="mx-auto max-w-2xl rounded-2xl border-2 border-amber-400/50 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-500/40 px-6 py-4 flex flex-col sm:flex-row items-center gap-4 text-left shadow-sm">
@@ -109,8 +109,8 @@ export default function TrainingenPage() {
               },
               {
                 icon: Building2,
-                title: 'Open & incompany',
-                text: 'Klassikaal, online of bij u op locatie — maatwerk en groepsgrootte in overleg.',
+                title: 'Incompany',
+                text: 'Bij u op locatie, groepen van 8–12 deelnemers, vast tarief per persoon.',
               },
               {
                 icon: GraduationCap,
