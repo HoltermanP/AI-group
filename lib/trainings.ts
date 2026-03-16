@@ -31,7 +31,7 @@ export const trainings: Training[] = [
     title: 'AI Basics: starten met generatieve AI',
     level: 'beginner',
     levelLabel: 'Beginner',
-    pricePerPerson: 495,
+    pricePerPerson: 295,
     duration: '1 dag (6 uur)',
     format: 'Klassikaal of online (live)',
     shortDescription:
@@ -91,7 +91,7 @@ export const trainings: Training[] = [
     title: 'AI op de werkplek: workflows & agents',
     level: 'halfgevorderd',
     levelLabel: 'Halfgevorderd',
-    pricePerPerson: 795,
+    pricePerPerson: 495,
     duration: '2 dagen (2 × 5 uur)',
     format: 'Klassikaal of online (live)',
     shortDescription:
@@ -146,7 +146,7 @@ export const trainings: Training[] = [
     title: 'Gevorderd: eigen data, RAG & AI-governance',
     level: 'gevorderd',
     levelLabel: 'Gevorderd',
-    pricePerPerson: 1295,
+    pricePerPerson: 795,
     priceNote: 'Incompany mogelijk; vraag offerte bij groepen 8+',
     duration: '2 dagen (2 × 6 uur)',
     format: 'Klassikaal (aanbevolen) of online',
