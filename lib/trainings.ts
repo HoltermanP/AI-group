@@ -34,7 +34,7 @@ export const trainings: Training[] = [
     pricePerPerson: 295,
     duration: '1 dag (6 uur)',
     format: 'Incompany, groepen van 8–12 deelnemers',
-    priceNote: 'Vast bedrag per persoon',
+    priceNote: 'Gemiddeld vast bedrag (10 deelnemers)',
     shortDescription:
       'Voor iedereen die nog weinig tot geen ervaring heeft met ChatGPT en vergelijkbare tools. Je leert veilig en effectief prompts schrijven en herkent kansen (en risico\'s) in je eigen werk.',
     outcomes: [
@@ -95,7 +95,7 @@ export const trainings: Training[] = [
     pricePerPerson: 495,
     duration: '2 dagen (2 × 5 uur)',
     format: 'Incompany, groepen van 8–12 deelnemers',
-    priceNote: 'Vast bedrag per persoon',
+    priceNote: 'Gemiddeld vast bedrag (10 deelnemers)',
     shortDescription:
       'Voor teams die al met ChatGPT werken en nu structuur willen: herbruikbare workflows, eenvoudige automatisering en introductie tot AI-agents binnen bestaande tools.',
     outcomes: [
@@ -149,7 +149,7 @@ export const trainings: Training[] = [
     level: 'gevorderd',
     levelLabel: 'Gevorderd',
     pricePerPerson: 795,
-    priceNote: 'Vast bedrag per persoon',
+    priceNote: 'Gemiddeld vast bedrag (10 deelnemers)',
     duration: '2 dagen (2 × 6 uur)',
     format: 'Incompany, groepen van 8–12 deelnemers',
     shortDescription:
@@ -207,7 +207,7 @@ export const trainings: Training[] = [
     pricePerPerson: 695,
     duration: 'Halve dag (3,5 uur)',
     format: 'Incompany, groepen van 8–12 deelnemers',
-    priceNote: 'Vast bedrag per persoon',
+    priceNote: 'Gemiddeld vast bedrag (10 deelnemers)',
     shortDescription:
       'Compact programma voor directie en lijnmanagers: portefeuille aan AI-initiatieven, vendorkeuzes, risico\'s en hoe je teams meeneemt zonder hype of stagnatie.',
     outcomes: [
@@ -235,6 +235,11 @@ export const trainings: Training[] = [
     ],
   },
 ]
+
+/** Gemiddeld vast totaalbedrag (10 deelnemers, excl. BTW) */
+export function getAverageTotal(t: Training): number {
+  return 10 * t.pricePerPerson
+}
 
 export function getTraining(slug: string): Training | undefined {
   return trainings.find((t) => t.slug === slug)

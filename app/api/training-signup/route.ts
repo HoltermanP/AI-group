@@ -108,11 +108,27 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+    if (participants === undefined || participants === null || participants === '') {
+      return NextResponse.json(
+        { error: 'Aantal deelnemers (8–12) is verplicht' },
+        { status: 400 }
+      )
+    }
 
     const training = getTraining(trainingSlug)
     if (!training) {
       return NextResponse.json({ error: 'Onbekende training' }, { status: 400 })
     }
+
+    const numParticipants = participants != null ? parseInt(String(participants), 10) : NaN
+    if (Number.isNaN(numParticipants) || numParticipants < 8 || numParticipants > 12) {
+      return NextResponse.json(
+        { error: 'Aantal deelnemers moet tussen 8 en 12 liggen' },
+        { status: 400 }
+      )
+    }
+
+    const totalPrice = numParticipants * training.pricePerPerson
 
     const contactEmail = process.env.CONTACT_EMAIL || 'info@ai-group.nl'
     const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER || 'noreply@ai-group.nl'
@@ -122,16 +138,16 @@ export async function POST(request: NextRequest) {
       from: fromEmail,
       subject: `Inschrijving training: ${training.title}`,
       text: `
-Inschrijving AI-training
-------------------------
+Inschrijving AI-training (per groep)
+------------------------------------
 Training: ${training.title} (${training.slug})
-Prijs indicatie: € ${training.pricePerPerson} p.p.
+Aantal deelnemers: ${numParticipants}
+Totaalbedrag: € ${totalPrice.toLocaleString('nl-NL')} (excl. BTW)
 
-Deelnemer / contactpersoon: ${name}
+Contactpersoon: ${name}
 E-mail: ${email}
 Organisatie: ${organization || '-'}
 Telefoon: ${phone || '-'}
-Aantal deelnemers: ${participants || '-'}
 Voorkeursperiode: ${preferredPeriod || '-'}
 
 Bericht:
@@ -144,12 +160,12 @@ Verstuurd: ${new Date().toLocaleString('nl-NL')}
           <h2 style="color: #1e40af;">Nieuwe inschrijving training</h2>
           <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <p><strong>Training:</strong> ${training.title}</p>
-            <p><strong>Prijs:</strong> € ${training.pricePerPerson} per persoon</p>
+            <p><strong>Aantal deelnemers:</strong> ${numParticipants}</p>
+            <p><strong>Totaalbedrag:</strong> € ${totalPrice.toLocaleString('nl-NL')} (excl. BTW)</p>
             <p><strong>Naam:</strong> ${name}</p>
             <p><strong>E-mail:</strong> ${email}</p>
             <p><strong>Organisatie:</strong> ${organization || '-'}</p>
             <p><strong>Telefoon:</strong> ${phone || '-'}</p>
-            <p><strong>Aantal deelnemers:</strong> ${participants || '-'}</p>
             <p><strong>Voorkeursperiode:</strong> ${preferredPeriod || '-'}</p>
           </div>
           <h3 style="color: #374151;">Bericht</h3>

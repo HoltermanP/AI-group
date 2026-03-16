@@ -10,7 +10,7 @@ import {
   Sparkles,
   ShieldCheck,
 } from 'lucide-react'
-import { trainings, CERTIFICATE_STATEMENT } from '@/lib/trainings'
+import { trainings, CERTIFICATE_STATEMENT, getAverageTotal } from '@/lib/trainings'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -60,7 +60,7 @@ export default function TrainingenPage() {
             <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
               Van eerste kennismaking met ChatGPT tot productie-klare RAG en governance: alle trainingen zijn
               <strong className="text-slate-800 dark:text-slate-200"> incompany</strong> voor groepen van 8–12
-              deelnemers, met een vast tarief per persoon, uitgewerkt programma en certificaat na afronding. Klik door voor het volledige programma en
+              deelnemers, met een totaalbedrag per groep, uitgewerkt programma en certificaat na afronding. Klik door voor het volledige programma en
               inschrijving.
             </p>
             <div className="mx-auto max-w-2xl rounded-2xl border-2 border-amber-400/50 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-500/40 px-6 py-4 flex flex-col sm:flex-row items-center gap-4 text-left shadow-sm">
@@ -110,7 +110,7 @@ export default function TrainingenPage() {
               {
                 icon: Building2,
                 title: 'Incompany',
-                text: 'Bij u op locatie, groepen van 8–12 deelnemers, vast tarief per persoon.',
+                text: 'Bij u op locatie, groepen van 8–12 deelnemers, totaalbedrag per groep.',
               },
               {
                 icon: GraduationCap,
@@ -160,12 +160,9 @@ export default function TrainingenPage() {
                 </p>
                 <div className="rounded-xl bg-slate-100 dark:bg-slate-900/80 px-4 py-3 border border-slate-200 dark:border-slate-700">
                   <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                    € {t.pricePerPerson.toLocaleString('nl-NL')}
-                    <span className="text-sm font-semibold text-slate-600 dark:text-slate-400 ml-1">p.p.</span>
+                    € {getAverageTotal(t).toLocaleString('nl-NL')}
                   </div>
-                  {t.priceNote && (
-                    <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">{t.priceNote}</p>
-                  )}
+                  <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">gemiddeld totaal (8–12 deelnemers, excl. BTW)</p>
                   <p className="text-xs text-slate-500 dark:text-slate-500 mt-1 flex items-center gap-1">
                     <Users className="w-3 h-3" />
                     {t.format}

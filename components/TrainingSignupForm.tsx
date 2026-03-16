@@ -17,7 +17,7 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
     email: '',
     organization: '',
     phone: '',
-    participants: '1',
+    participants: '8',
     preferredPeriod: '',
     message: '',
   })
@@ -30,6 +30,12 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const numParticipants = parseInt(formData.participants, 10)
+    if (numParticipants < 8 || numParticipants > 12) {
+      setStatus('error')
+      setMsg('Aantal deelnemers moet tussen 8 en 12 liggen.')
+      return
+    }
     setStatus('loading')
     setMsg('Bezig met verzenden…')
     try {
@@ -47,7 +53,7 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
         email: '',
         organization: '',
         phone: '',
-        participants: '1',
+        participants: '8',
         preferredPeriod: '',
         message: '',
       })
@@ -132,12 +138,16 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
             <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
-              Aantal deelnemers
+              Aantal deelnemers (8–12) *
             </label>
             <Input
               name="participants"
+              type="number"
+              min={8}
+              max={12}
               value={formData.participants}
               onChange={handleChange}
+              required
               className="mt-1 bg-white dark:bg-slate-900"
             />
           </div>

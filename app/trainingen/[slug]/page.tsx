@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, CheckCircle, BookOpen, Award } from 'lucide-react'
-import { CERTIFICATE_STATEMENT, getTraining, getAllTrainingSlugs } from '@/lib/trainings'
+import { CERTIFICATE_STATEMENT, getTraining, getAllTrainingSlugs, getAverageTotal } from '@/lib/trainings'
 import { Badge } from '@/components/ui/badge'
 import TrainingSignupForm from '@/components/TrainingSignupForm'
 
@@ -60,11 +60,11 @@ export default function TrainingDetailPage({ params }: Props) {
             </p>
             <div className="mt-8 flex flex-wrap gap-6 items-baseline">
               <div>
-                <span className="text-sm text-slate-500 dark:text-slate-500 block">Investering per persoon</span>
+                <span className="text-sm text-slate-500 dark:text-slate-500 block">Gemiddeld totaalbedrag (10 deelnemers)</span>
                 <span className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                  € {t.pricePerPerson.toLocaleString('nl-NL')}
+                  € {getAverageTotal(t).toLocaleString('nl-NL')}
                 </span>
-                <span className="text-slate-500 dark:text-slate-500 ml-1">p.p. (excl. BTW)</span>
+                <span className="text-slate-500 dark:text-slate-500 ml-1">excl. BTW</span>
               </div>
               <div className="h-10 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block" />
               <div>
