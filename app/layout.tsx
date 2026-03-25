@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans, IBM_Plex_Mono, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -14,10 +14,25 @@ import Chatbot from '@/components/Chatbot'
 // import SEOOptimizer from '@/components/SEOOptimizer'
 // import Analytics from '@/components/Analytics'
 
-const inter = Inter({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   preload: true,
+  variable: '--font-space-grotesk',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-ibm-plex-mono',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -78,7 +93,7 @@ export default function RootLayout({
 }) {
   return (
         <html lang="nl" className="scroll-smooth dark" suppressHydrationWarning>
-          <body className={`${inter.className} dark`} suppressHydrationWarning>
+          <body className={`${spaceGrotesk.variable} ${dmSans.variable} ${ibmPlexMono.variable} ${spaceGrotesk.className} dark`} suppressHydrationWarning>
             <ErrorBoundary>
               {/* <PerformanceMonitor />
               <PreloadResources />

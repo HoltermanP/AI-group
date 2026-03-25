@@ -120,19 +120,19 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="section-padding bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-brand-black via-brand-navy to-brand-black relative overflow-hidden">
       <div className="container-custom text-center relative z-10">
         <div className="mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-400 mb-4">
             Wat onze klanten zeggen
           </h2>
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-12">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-12">
             Echte verhalen van organisaties die hun processen hebben getransformeerd met AI-Group.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto relative overflow-hidden">
-          <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-primary-500/30 min-h-[300px] md:min-h-[350px]">
+          <div className="bg-gradient-to-br from-brand-surface/90 to-brand-black/90 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-2xl border border-brand-blue/30 min-h-[300px] md:min-h-[350px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -147,12 +147,12 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <blockquote className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-6 italic">
+                <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-6 italic">
                   "{testimonials[currentIndex].content}"
                 </blockquote>
 
                 <div className="flex items-center justify-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-blue to-brand-blueLight rounded-full flex items-center justify-center">
                     <span className="text-lg font-bold text-white">
                       AI
                     </span>
@@ -170,7 +170,7 @@ export default function Testimonials() {
               onClick={handlePrev}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="p-4 rounded-full bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="p-4 rounded-full bg-brand-blue text-white hover:bg-brand-blueLight transition-colors duration-200 shadow-lg hover:shadow-xl"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={24} />
@@ -179,7 +179,7 @@ export default function Testimonials() {
               onClick={handleNext}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="p-4 rounded-full bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="p-4 rounded-full bg-brand-blue text-white hover:bg-brand-blueLight transition-colors duration-200 shadow-lg hover:shadow-xl"
               aria-label="Next testimonial"
             >
               <ChevronRight size={24} />
@@ -201,7 +201,7 @@ export default function Testimonials() {
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? 'w-8 bg-primary-500'
-                    : 'w-2 bg-gray-600 hover:bg-primary-400'
+                    : 'w-2 bg-muted hover:bg-brand-blueLight'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

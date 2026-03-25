@@ -24,7 +24,7 @@ export default function Navbar() {
   const data = getSiteData()
 
   return (
-    <nav className="bg-slate-700/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-slate-600/50 overflow-x-hidden">
+    <nav className="bg-brand-black/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-border overflow-x-hidden">
       <div className="container-custom max-w-full">
         <div className="flex justify-between items-center h-16 sm:h-20 gap-2 sm:gap-3 min-w-0">
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0 min-w-0">
@@ -47,7 +47,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-1.5 text-sm 2xl:text-base text-slate-300 hover:text-primary-400 transition-all duration-200 font-semibold px-2 2xl:px-3 py-2 rounded-xl hover:bg-slate-700/50 whitespace-nowrap group flex-shrink-0"
+                  className="flex items-center space-x-1.5 text-sm 2xl:text-base text-muted-foreground hover:text-brand-blueLight transition-all duration-200 font-semibold px-2 2xl:px-3 py-2 rounded-xl hover:bg-card whitespace-nowrap group flex-shrink-0"
                 >
                   <Icon className="w-4 h-4 2xl:w-5 2xl:h-5 group-hover:scale-110 transition-transform duration-200 flex-shrink-0" />
                   <span>{item.name}</span>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="hidden xl:flex items-center flex-shrink-0 gap-2 2xl:gap-4">
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="p-2.5 2xl:p-3 text-slate-300 hover:text-primary-400 transition-colors duration-200 rounded-xl hover:bg-slate-700/50 flex-shrink-0"
+              className="p-2.5 2xl:p-3 text-muted-foreground hover:text-brand-blueLight transition-colors duration-200 rounded-xl hover:bg-card flex-shrink-0"
             >
               <Search className="w-5 h-5 2xl:w-6 2xl:h-6" />
             </button>
@@ -67,14 +67,14 @@ export default function Navbar() {
               href="https://www.ai-businessscan.nl/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-xl font-bold transition-all duration-200 text-sm 2xl:text-base shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap flex items-center space-x-1.5 2xl:space-x-2 flex-shrink-0"
+              className="bg-brand-red hover:bg-[#ff643a] text-white px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-[6px] font-bold transition-all duration-200 text-sm 2xl:text-base shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap flex items-center space-x-1.5 2xl:space-x-2 flex-shrink-0"
             >
               <ScanLine className="w-4 h-4 2xl:w-5 2xl:h-5 flex-shrink-0" />
               <span>Gratis Bedrijfscan</span>
             </Link>
             <Link
               href="/contact"
-              className="bg-primary-600 hover:bg-primary-700 text-white px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-xl font-bold transition-all duration-200 text-sm 2xl:text-base shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap flex-shrink-0"
+              className="bg-brand-blue hover:bg-brand-blueLight text-white px-4 2xl:px-6 py-2.5 2xl:py-3 rounded-[6px] font-bold transition-all duration-200 text-sm 2xl:text-base shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap flex-shrink-0"
             >
               POC &lt; 48 uur
             </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2 rounded-lg text-gray-300 hover:bg-slate-600/50 transition-colors flex-shrink-0"
+            className="xl:hidden p-2 rounded-[6px] text-muted-foreground hover:bg-card transition-colors flex-shrink-0"
             aria-expanded={isOpen}
             aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'}
           >
@@ -92,14 +92,14 @@ export default function Navbar() {
 
         {isOpen && (
           <div className="xl:hidden">
-            <div className="px-4 pt-4 pb-6 max-h-[calc(100vh-4rem)] overflow-y-auto space-y-2 bg-slate-700/95 backdrop-blur-md border-t-2 border-slate-600/50">
+            <div className="px-4 pt-4 pb-6 max-h-[calc(100vh-4rem)] overflow-y-auto space-y-2 bg-brand-black/95 backdrop-blur-md border-t border-border">
               {data.navigation.map((item) => {
                 const Icon = (iconMap[item.name] as React.ComponentType<{ className?: string }>) || Home
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="flex items-center space-x-3 px-4 py-3 text-lg font-semibold text-slate-300 hover:text-primary-400 hover:bg-slate-700/50 rounded-xl transition-all duration-200"
+                    className="flex items-center space-x-3 px-4 py-3 text-lg font-semibold text-muted-foreground hover:text-brand-blueLight hover:bg-card rounded-xl transition-all duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     <Icon className="w-5 h-5" />
@@ -111,7 +111,7 @@ export default function Navbar() {
                 href="https://www.ai-businessscan.nl/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl hover:from-green-700 hover:to-emerald-700 transition-colors duration-200 mt-4 border-2 border-green-600 whitespace-nowrap"
+                className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-brand-red text-white rounded-[6px] hover:bg-[#ff643a] transition-colors duration-200 mt-4 border border-brand-red whitespace-nowrap"
                 onClick={() => setIsOpen(false)}
               >
                 <ScanLine className="w-5 h-5" />
@@ -119,7 +119,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/contact"
-                className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors duration-200 mt-2 border-2 border-primary-600 whitespace-nowrap"
+                className="flex items-center justify-center space-x-2 px-4 py-3 text-lg font-bold bg-brand-blue text-white rounded-[6px] hover:bg-brand-blueLight transition-colors duration-200 mt-2 border border-brand-blue whitespace-nowrap"
                 onClick={() => setIsOpen(false)}
               >
                 <Mail className="w-5 h-5" />

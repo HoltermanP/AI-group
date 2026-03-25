@@ -16,12 +16,12 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${encodeURIComponent('Hallo AI-Group, ik heb een vraag.')}`
 
   return (
-    <footer className="bg-slate-700 dark:bg-slate-800 text-slate-200">
+    <footer className="bg-brand-black text-foreground">
       <div className="container-custom">
-        <div className="py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-10">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
             {/* Brand */}
-            <div className="lg:col-span-2">
+            <div className="max-w-md">
               <Link href="/" className="flex items-center space-x-3 mb-4">
                 <Image
                   src="/logo.svg"
@@ -34,72 +34,57 @@ export default function Footer() {
                   {data.brand.name}
                 </span>
               </Link>
-              <p className="text-gray-400 mb-6 max-w-md">
+              <p className="font-tagline text-muted-foreground mb-6 max-w-md">
                 {data.brand.tagline}
               </p>
-              
-              {/* Contact info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Mail size={16} className="text-primary-400" />
-                  <a href={`mailto:${data.contact.email}`} className="hover:text-white transition-colors duration-200">
-                    {data.contact.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone size={16} className="text-primary-400" />
-                  <a href={`tel:${data.contact.phone}`} className="hover:text-white transition-colors duration-200">
-                    {data.contact.phone}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MessageCircle size={16} className="text-primary-400" />
-                  <a 
-                    href={whatsappUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    WhatsApp
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin size={16} className="text-primary-400" />
-                  <span>{data.contact.address}</span>
-                </div>
-              </div>
             </div>
 
-            {/* Navigation */}
-            <div>
-              <h3 className="font-semibold text-white mb-4">Navigatie</h3>
-              <ul className="space-y-2">
-                {data.navigation.map((item) => (
-                  <li key={item.name}>
-                    <Link 
-                      href={item.href} 
-                      className="hover:text-white transition-colors duration-200"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            {/* Contact info */}
+            <div className="flex-1">
+              <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+                <a
+                  href={`mailto:${data.contact.email}`}
+                  className="flex items-center space-x-3 rounded-lg border border-border/60 bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors duration-200"
+                >
+                  <Mail size={16} className="text-brand-blueLight shrink-0" />
+                  <span className="truncate">{data.contact.email}</span>
+                </a>
+                <a
+                  href={`tel:${data.contact.phone}`}
+                  className="flex items-center space-x-3 rounded-lg border border-border/60 bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors duration-200"
+                >
+                  <Phone size={16} className="text-brand-blueLight shrink-0" />
+                  <span>{data.contact.phone}</span>
+                </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 rounded-lg border border-border/60 bg-white/5 px-4 py-3 hover:bg-white/10 transition-colors duration-200"
+                >
+                  <MessageCircle size={16} className="text-brand-blueLight shrink-0" />
+                  <span>WhatsApp</span>
+                </a>
+                <div className="flex items-center space-x-3 rounded-lg border border-border/60 bg-white/5 px-4 py-3">
+                  <MapPin size={16} className="text-brand-blueLight shrink-0" />
+                  <span className="truncate">{data.contact.address}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-slate-700 py-6">
+        <div className="border-t border-border py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-muted-foreground text-sm">
               © 2025 {data.brand.name}. Alle rechten voorbehouden.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/privacy" className="text-muted-foreground hover:text-white text-sm transition-colors duration-200">
                 Privacy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/terms" className="text-muted-foreground hover:text-white text-sm transition-colors duration-200">
                 Voorwaarden
               </Link>
             </div>

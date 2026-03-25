@@ -109,24 +109,24 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
             className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-2xl mx-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white dark:bg-slate-700 rounded-2xl shadow-2xl border-2 border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="bg-card rounded-2xl shadow-2xl border border-border overflow-hidden">
               {/* Search Input */}
-              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+              <div className="p-6 border-b border-border">
                 <div className="flex items-center space-x-4">
-                  <Search className="w-6 h-6 text-gray-400" />
+                  <Search className="w-6 h-6 text-muted-foreground" />
                   <input
                     ref={inputRef}
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Zoek cases of pagina's..."
-                    className="flex-1 text-lg bg-transparent border-none outline-none text-gray-900 dark:text-white placeholder-gray-500"
+                    className="flex-1 text-lg bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground"
                   />
                   <button
                     onClick={onClose}
-                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200"
+                    className="p-2 hover:bg-secondary rounded-lg transition-colors duration-200"
                   >
-                    <X className="w-5 h-5 text-gray-500" />
+                    <X className="w-5 h-5 text-muted-foreground" />
                   </button>
                 </div>
               </div>
@@ -134,12 +134,12 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
               {/* Results */}
               <div className="max-h-96 overflow-y-auto">
                 {query.length < 2 ? (
-                  <div className="p-8 text-center text-gray-500 dark:text-gray-400">
+                  <div className="p-8 text-center text-muted-foreground">
                     <Search className="w-12 h-12 mx-auto mb-4 opacity-50" />
                     <p className="text-lg">Type minimaal 2 karakters om te zoeken...</p>
                   </div>
                 ) : results.length === 0 ? (
-                  <div className="p-8 text-center text-gray-500 dark:text-gray-400">
+                  <div className="p-8 text-center text-muted-foreground">
                     <Search className="w-12 h-12 mx-auto mb-4 opacity-50" />
                     <p className="text-lg">Geen resultaten gevonden voor "{query}"</p>
                   </div>
@@ -152,21 +152,21 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
                         onClick={() => handleResultClick(result.href)}
-                        className="w-full p-4 text-left hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 border-b border-gray-100 dark:border-gray-800 last:border-b-0"
+                        className="w-full p-4 text-left hover:bg-secondary transition-colors duration-200 border-b border-border last:border-b-0"
                       >
                         <div className="flex items-center space-x-4">
-                          <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400">
+                          <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
                             {getIcon(result.type)}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white truncate">
+                            <h3 className="text-lg font-semibold text-foreground truncate">
                               {result.title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm truncate">
+                            <p className="text-muted-foreground text-sm truncate">
                               {result.description}
                             </p>
                           </div>
-                          <ArrowRight className="w-5 h-5 text-gray-400" />
+                          <ArrowRight className="w-5 h-5 text-muted-foreground" />
                         </div>
                       </motion.button>
                     ))}

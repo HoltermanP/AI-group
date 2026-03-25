@@ -47,6 +47,16 @@ module.exports = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        brand: {
+          blueLight: '#4B8EFF',
+          blue: '#2D6FE8',
+          red: '#FF4D1C',
+          black: '#0A0A0B',
+          navy: '#0D1428',
+          offWhite: '#F4F6FA',
+          slate: '#6B82A8',
+          surface: '#111116',
+        },
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -67,7 +77,10 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
+        tagline: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-ibm-plex-mono)', 'ui-monospace', 'monospace'],
       },
     },
   },
