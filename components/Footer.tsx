@@ -22,17 +22,14 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12">
             {/* Brand */}
             <div className="max-w-md">
-              <Link href="/" className="flex items-center space-x-3 mb-4">
+              <Link href="/" className="inline-block mb-4 max-w-[min(100%,20rem)]">
                 <Image
-                  src="/logo.svg"
+                  src="/images/logo-dark_2.svg"
                   alt={`${data.brand.name} logo`}
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  width={320}
+                  height={80}
+                  className="h-12 w-auto sm:h-14"
                 />
-                <span className="font-bold text-xl text-white">
-                  {data.brand.name}
-                </span>
               </Link>
               <p className="font-tagline text-muted-foreground mb-6 max-w-md">
                 {data.brand.tagline}

@@ -10,7 +10,7 @@ export default function PreloadResources({ resources = [] }: PreloadResourcesPro
   useEffect(() => {
     // Preload critical resources
     const criticalResources = [
-      '/logo.svg',
+      '/images/logo-dark_2.svg',
       '/favicon.ico',
       ...resources
     ]

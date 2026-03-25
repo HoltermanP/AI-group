@@ -28,7 +28,7 @@ export default function CacheStrategy() {
           // Cache critical resources
           const criticalResources = [
             '/',
-            '/logo.svg',
+            '/images/logo-dark_2.svg',
             '/favicon.ico',
             '/manifest.json'
           ]

@@ -65,7 +65,7 @@ export default function SEOOptimizer({
       "name": "AI-Group",
       "description": description,
       "url": canonical,
-      "logo": `${canonical}/logo.svg`,
+      "logo": `${canonical}/images/logo-dark_2.svg`,
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+31-6-82551718",

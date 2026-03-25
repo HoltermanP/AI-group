@@ -26,37 +26,49 @@ export default function Navbar() {
   return (
     <nav className="bg-brand-black/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-border overflow-x-hidden">
       <div className="container-custom max-w-full">
-        <div className="flex justify-between items-center h-16 sm:h-20 gap-2 sm:gap-3 min-w-0">
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0 min-w-0">
+        <div
+          className="grid h-16 sm:h-20 min-w-0 items-center gap-x-2 sm:gap-x-3 xl:gap-x-3 2xl:gap-x-4
+            grid-cols-[minmax(0,1fr)_auto]
+            xl:grid-cols-[auto_minmax(0,1fr)_auto]"
+        >
+          <Link
+            href="/"
+            className="relative z-20 flex min-w-0 items-center justify-self-start xl:max-w-[min(100%,22rem)] 2xl:max-w-[26rem]"
+          >
             <Image
-              src="/logo.svg"
+              src="/images/logo-dark_2.svg"
               alt={`${data.brand.name} logo`}
-              width={40}
-              height={40}
-              className="w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 animate-logo-rotate flex-shrink-0"
+              width={320}
+              height={80}
+              className="h-10 w-auto max-w-full sm:h-12 xl:h-[2.75rem] 2xl:h-14"
+              priority
             />
-            <span className="font-bold text-base sm:text-lg xl:text-xl text-white whitespace-nowrap truncate">
-              {data.brand.name}
-            </span>
           </Link>
 
-          <div className="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-0.5 2xl:gap-2 max-w-4xl mx-auto">
-            {data.navigation.map((item) => {
-              const Icon = (iconMap[item.name] as React.ComponentType<{ className?: string }>) || Home
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center space-x-1.5 text-sm 2xl:text-base text-muted-foreground hover:text-brand-blueLight transition-all duration-200 font-semibold px-2 2xl:px-3 py-2 rounded-xl hover:bg-card whitespace-nowrap group flex-shrink-0"
-                >
-                  <Icon className="w-4 h-4 2xl:w-5 2xl:h-5 group-hover:scale-110 transition-transform duration-200 flex-shrink-0" />
-                  <span>{item.name}</span>
-                </Link>
-              )
-            })}
-          </div>
+          <nav
+            aria-label="Hoofdnavigatie"
+            className="relative z-0 hidden min-w-0 justify-self-stretch self-center py-1 xl:block"
+          >
+            <div className="max-w-full min-w-0 overflow-x-auto overscroll-x-contain [scrollbar-width:thin]">
+              <div className="mx-auto flex w-max max-w-none flex-nowrap justify-center gap-0.5 2xl:gap-2 px-1">
+                {data.navigation.map((item) => {
+                  const Icon = (iconMap[item.name] as React.ComponentType<{ className?: string }>) || Home
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="flex items-center space-x-1.5 text-sm 2xl:text-base text-muted-foreground hover:text-brand-blueLight transition-all duration-200 font-semibold px-1.5 2xl:px-3 py-2 rounded-xl hover:bg-card whitespace-nowrap group shrink-0"
+                    >
+                      <Icon className="w-4 h-4 2xl:w-5 2xl:h-5 group-hover:scale-110 transition-transform duration-200 shrink-0" />
+                      <span>{item.name}</span>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          </nav>
 
-          <div className="hidden xl:flex items-center flex-shrink-0 gap-2 2xl:gap-4">
+          <div className="hidden xl:flex items-center justify-self-end gap-2 2xl:gap-4 shrink-0">
             <button
               onClick={() => setIsSearchOpen(true)}
               className="p-2.5 2xl:p-3 text-muted-foreground hover:text-brand-blueLight transition-colors duration-200 rounded-xl hover:bg-card flex-shrink-0"
@@ -81,8 +93,9 @@ export default function Navbar() {
           </div>
 
           <button
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2 rounded-[6px] text-muted-foreground hover:bg-card transition-colors flex-shrink-0"
+            className="col-start-2 row-start-1 justify-self-end xl:hidden p-2 rounded-[6px] text-muted-foreground hover:bg-card transition-colors shrink-0"
             aria-expanded={isOpen}
             aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'}
           >

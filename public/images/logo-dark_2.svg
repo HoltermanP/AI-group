@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4B8EFF"/>
+      <stop offset="100%" stop-color="#4B8EFF" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&amp;family=Space+Grotesk:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="320" height="80" fill="#0A0A0B"/>
+  <text font-family="'Space Grotesk', Arial, sans-serif" font-weight="700" font-size="38" letter-spacing="-1.5" y="48" x="16" fill="#F4F6FA">
+    <tspan fill="#4B8EFF">AI</tspan>-Group.nl
+  </text>
+  <rect x="16" y="54" width="240" height="2" fill="url(#bar)" rx="1"/>
+  <text font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-weight="300" font-size="9" letter-spacing="2.8" y="70" x="16" fill="#6B82A8">AI-FIRST  ·  WE SHIP FAST</text>
+</svg>
