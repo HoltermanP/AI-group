@@ -1,5 +1,16 @@
 import type { Metadata } from 'next'
-import { DM_Sans, IBM_Plex_Mono, Space_Grotesk } from 'next/font/google'
+/* Fontsource: fonts zitten in node_modules — geen Google Fonts-fetch tijdens build (Vercel). */
+import '@fontsource/space-grotesk/latin-300.css'
+import '@fontsource/space-grotesk/latin-400.css'
+import '@fontsource/space-grotesk/latin-500.css'
+import '@fontsource/space-grotesk/latin-600.css'
+import '@fontsource/space-grotesk/latin-700.css'
+import '@fontsource/dm-sans/latin-300.css'
+import '@fontsource/dm-sans/latin-400.css'
+import '@fontsource/dm-sans/latin-500.css'
+import '@fontsource/ibm-plex-mono/latin-400.css'
+import '@fontsource/ibm-plex-mono/latin-500.css'
+import '@fontsource/ibm-plex-mono/latin-700.css'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -13,27 +24,6 @@ import Chatbot from '@/components/Chatbot'
 // import CacheStrategy from '@/components/CacheStrategy'
 // import SEOOptimizer from '@/components/SEOOptimizer'
 // import Analytics from '@/components/Analytics'
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true,
-  variable: '--font-space-grotesk',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-ibm-plex-mono',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'AI-Group - AI-applicaties voor elke organisatie',
@@ -93,7 +83,7 @@ export default function RootLayout({
 }) {
   return (
         <html lang="nl" className="scroll-smooth dark" suppressHydrationWarning>
-          <body className={`${spaceGrotesk.variable} ${dmSans.variable} ${ibmPlexMono.variable} ${spaceGrotesk.className} dark`} suppressHydrationWarning>
+          <body className="dark" suppressHydrationWarning>
             <ErrorBoundary>
               {/* <PerformanceMonitor />
               <PreloadResources />
