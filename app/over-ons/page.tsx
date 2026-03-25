@@ -1,13 +1,15 @@
-import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getSiteData } from '@/lib/getData'
 import { Users, Briefcase, Target, Heart, Bot, Coffee, Brain, TrendingUp, MessageSquare, Activity, FileText, Zap, BarChart3, Shield, BookOpen, Rocket, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/over-ons',
   title: 'Over Ons - AI-Group',
-  description: 'Ontmoet Luit de Jong en Patrick Holterman - AI-enthousiastelingen met jarenlange ervaring in management, processen, projecten en IT.',
-}
+  description:
+    'Ontmoet Luit de Jong en Patrick Holterman - AI-enthousiastelingen met jarenlange ervaring in management, processen, projecten en IT.',
+})
 
 const agents = [
   {

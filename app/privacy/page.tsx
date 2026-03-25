@@ -1,12 +1,13 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/privacy',
   title: 'Privacybeleid - AI-Group',
   description: 'Privacybeleid van AI-Group. Lees hoe wij omgaan met uw persoonlijke gegevens.',
-}
+})
 
 export default function PrivacyPage() {
   const data = getSiteData()

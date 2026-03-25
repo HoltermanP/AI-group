@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react'
 import { getSiteData, getSolution } from '@/lib/getData'
+import { pageMetadata } from '@/lib/seo'
 
 type Props = {
   params: { slug: string }
@@ -10,17 +11,19 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const solution = getSolution(params.slug)
-  
+
   if (!solution) {
     return {
-      title: 'Oplossing niet gevonden - AI-Group'
+      title: 'Oplossing niet gevonden - AI-Group',
+      robots: { index: false, follow: false },
     }
   }
 
-  return {
+  return pageMetadata({
+    path: `/oplossingen/${params.slug}`,
     title: `${solution.title} - AI-Group`,
     description: solution.description,
-  }
+  })
 }
 
 export default function SolutionDetailPage({ params }: Props) {

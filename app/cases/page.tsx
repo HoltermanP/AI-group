@@ -1,13 +1,15 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, TrendingUp } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/cases',
   title: 'Track Record - AI-Group',
-  description: 'Bekijk onze succesvolle AI-implementaties voor organisaties in alle sectoren. Meetbare resultaten en bewezen impact.',
-}
+  description:
+    'Bekijk onze succesvolle AI-implementaties voor organisaties in alle sectoren. Meetbare resultaten en bewezen impact.',
+})
 
 export default function CasesPage() {
   const data = getSiteData()

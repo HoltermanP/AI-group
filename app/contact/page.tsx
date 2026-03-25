@@ -1,12 +1,14 @@
-import { Metadata } from 'next'
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import ContactForm from '@/components/ContactForm'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/contact',
   title: 'Contact - AI-Group',
-  description: 'Neem contact op met AI-Group voor een demo of verkenning van AI-oplossingen voor uw organisatie.',
-}
+  description:
+    'Neem contact op met AI-Group voor een demo of verkenning van AI-oplossingen voor uw organisatie.',
+})
 
 export default function ContactPage() {
   const data = getSiteData()

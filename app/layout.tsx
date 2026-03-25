@@ -19,6 +19,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import CookieConsent from '@/components/CookieConsent'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import Chatbot from '@/components/Chatbot'
+import OrganizationJsonLd from '@/components/OrganizationJsonLd'
 // import PerformanceMonitor from '@/components/PerformanceMonitor'
 // import PreloadResources from '@/components/PreloadResources'
 // import CacheStrategy from '@/components/CacheStrategy'
@@ -84,6 +85,7 @@ export default function RootLayout({
   return (
         <html lang="nl" className="scroll-smooth dark" suppressHydrationWarning>
           <body className="dark" suppressHydrationWarning>
+            <OrganizationJsonLd />
             <ErrorBoundary>
               {/* <PerformanceMonitor />
               <PreloadResources />

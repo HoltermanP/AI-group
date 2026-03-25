@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { ArrowLeft, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react'
 import { getSiteData, getCase } from '@/lib/getData'
 import CaseIcon from '@/components/CaseIcon'
+import { pageMetadata } from '@/lib/seo'
 
 type Props = {
   params: { slug: string }
@@ -12,17 +13,19 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const caseItem = getCase(params.slug)
-  
+
   if (!caseItem) {
     return {
-      title: 'Case niet gevonden - AI-Group'
+      title: 'Case niet gevonden - AI-Group',
+      robots: { index: false, follow: false },
     }
   }
 
-  return {
+  return pageMetadata({
+    path: `/cases/${params.slug}`,
     title: `${caseItem.title} - Track Record - AI-Group`,
     description: caseItem.solution,
-  }
+  })
 }
 
 export default function CaseDetailPage({ params }: Props) {

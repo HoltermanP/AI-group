@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, CheckCircle, BookOpen, Award } from 'lucide-react'
 import { CERTIFICATE_STATEMENT, getTraining, getAllTrainingSlugs, getAverageTotal } from '@/lib/trainings'
+import { pageMetadata } from '@/lib/seo'
 import { Badge } from '@/components/ui/badge'
 import TrainingSignupForm from '@/components/TrainingSignupForm'
 
@@ -14,11 +15,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = getTraining(params.slug)
-  if (!t) return { title: 'Training niet gevonden - AI-Group' }
-  return {
+  if (!t) {
+    return { title: 'Training niet gevonden - AI-Group', robots: { index: false, follow: false } }
+  }
+  return pageMetadata({
+    path: `/trainingen/${params.slug}`,
     title: `${t.title} - AI-Group`,
     description: t.shortDescription,
-  }
+  })
 }
 
 const levelBadge: Record<string, string> = {

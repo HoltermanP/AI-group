@@ -1,12 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/terms',
   title: 'Algemene Voorwaarden - AI-Group',
-  description: 'Algemene voorwaarden van AI-Group. Versie 27 november 2025. Lees de voorwaarden voor het gebruik van onze diensten.',
-}
+  description:
+    'Algemene voorwaarden van AI-Group. Versie 27 november 2025. Lees de voorwaarden voor het gebruik van onze diensten.',
+})
 
 export default function TermsPage() {
   const data = getSiteData()

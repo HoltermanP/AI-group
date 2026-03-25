@@ -1,12 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import SolutionsGrid from '@/components/SolutionsGrid'
 import { getSiteData } from '@/lib/getData'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/oplossingen',
   title: 'Oplossingen - AI-Group',
-  description: 'Ontdek onze AI-oplossingen voor alle organisaties: Van workflow automation tot intelligente agents die 24/7 voor u werken.',
-}
+  description:
+    'Ontdek onze AI-oplossingen voor alle organisaties: Van workflow automation tot intelligente agents die 24/7 voor u werken.',
+})
 
 export default function SolutionsPage() {
   const data = getSiteData()

@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -14,12 +13,14 @@ import { trainings, CERTIFICATE_STATEMENT, getAverageTotal } from '@/lib/trainin
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/trainingen',
   title: 'AI-trainingen - AI-Group',
   description:
     'Ervaren AI-opleider: praktijkgerichte trainingen van beginner tot gevorderd. Certificaat na afronding. AI-Group Academy.',
-}
+})
 
 const levelStyles: Record<string, string> = {
   beginner: 'bg-brand-blue/15 text-brand-blueLight border-brand-blue/35',

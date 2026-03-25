@@ -18,6 +18,13 @@ export function getCase(slug: string) {
   return siteData.cases.find(caseItem => caseItem.slug === slug)
 }
 
+/** Slugs voor /oplossingen/[slug] (solutions + applications, uniek). */
+export function getAllSolutionSlugs(): string[] {
+  const fromSolutions = siteData.solutions.map((s) => s.slug)
+  const fromApps = siteData.applications.map((a) => a.slug)
+  return Array.from(new Set([...fromSolutions, ...fromApps]))
+}
+
 export type SiteData = typeof siteData
 export type Solution = typeof siteData.solutions[0]
 export type Case = typeof siteData.cases[0]

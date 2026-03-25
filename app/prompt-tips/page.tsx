@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Lightbulb,
@@ -30,12 +29,14 @@ import {
   RotateCcw,
 } from 'lucide-react'
 import { PromptBlock } from '@/components/prompt-tips/PromptBlock'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/prompt-tips',
   title: 'Prompt tips - AI-Group',
   description:
     'Uitgebreide prompt-tips voor beginners en gevorderden: GPT vs. Copilot, eerste stappen, samenvatten, notulen, e-mails, code, vertalen, FAQ, privacy en starter prompts.',
-}
+})
 
 type TipCategory = {
   icon: typeof FileText

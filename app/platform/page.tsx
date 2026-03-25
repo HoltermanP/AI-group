@@ -1,12 +1,14 @@
-import { Metadata } from 'next'
 import { Monitor, Map, AlertTriangle, CheckCircle, FileText, Zap } from 'lucide-react'
 import { getSiteData } from '@/lib/getData'
 import AIPlatformDemo from '@/components/AIPlatformDemo'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/platform',
   title: 'AI Platform & Dashboard - AI-Group',
-  description: 'Eén platform, één dashboard, één waarheid voor alle stakeholders. Ontdek ons geïntegreerde AI Platform met realtime inzicht.',
-}
+  description:
+    'Eén platform, één dashboard, één waarheid voor alle stakeholders. Ontdek ons geïntegreerde AI Platform met realtime inzicht.',
+})
 
 const moduleIcons = {
   'Kaart & Geo-lagen': Map,

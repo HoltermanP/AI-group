@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next'
-import { getSiteData } from '@/lib/getData'
+import { getSiteData, getAllSolutionSlugs } from '@/lib/getData'
 import { trainings } from '@/lib/trainings'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const data = getSiteData()
-  
+
   const baseUrl = 'https://ai-group.nl'
-  
+
   // Static pages
   const staticPages = [
     {
@@ -17,6 +17,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/cases`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/oplossingen`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/platform`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/notuleren`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/prompt-tips`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
@@ -39,6 +63,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
   ]
 
   const trainingPages = trainings.map((t) => ({
@@ -56,5 +92,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...trainingPages, ...casePages]
+  const solutionPages = getAllSolutionSlugs().map((slug) => ({
+    url: `${baseUrl}/oplossingen/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.72,
+  }))
+
+  return [...staticPages, ...trainingPages, ...casePages, ...solutionPages]
 }

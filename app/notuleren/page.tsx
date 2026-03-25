@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import {
   ClipboardList,
@@ -17,12 +16,14 @@ import {
   Shield,
 } from 'lucide-react'
 import { PromptBlock } from '@/components/prompt-tips/PromptBlock'
+import { pageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: '/notuleren',
   title: 'Notuleren met AI - AI-Group',
   description:
     'Uitgebreide instructie voor het notuleren van vergaderingen met AI: Copilot vs ChatGPT, opname, transcriptie, notulen en voorbeeldprompts.',
-}
+})
 
 const copilotVsChatGPT = {
   intro:
