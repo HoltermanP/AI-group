@@ -92,4 +92,4 @@ npm start
 
 ## 📄 Licentie
 
-© 2024 AI-Group. Alle rechten voorbehouden.
+© 2026 AI-Group. Alle rechten voorbehouden.

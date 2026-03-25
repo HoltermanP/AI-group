@@ -7,7 +7,7 @@ export const metadata = pageMetadata({
   path: '/terms',
   title: 'Algemene Voorwaarden - AI-Group',
   description:
-    'Algemene voorwaarden van AI-Group. Versie 27 november 2025. Lees de voorwaarden voor het gebruik van onze diensten.',
+    'Algemene voorwaarden van AI-Group. Versie 27 november 2026. Lees de voorwaarden voor het gebruik van onze diensten.',
 })
 
 export default function TermsPage() {
@@ -36,7 +36,7 @@ export default function TermsPage() {
                   <strong>Titel:</strong> Algemene Voorwaarden AI-Group
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  <strong>Versie:</strong> 27 november 2025
+                  <strong>Versie:</strong> 27 november 2026
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                   <strong>Geldt voor:</strong> alle maatwerkoplossingen en standaardapplicaties van AI-Group

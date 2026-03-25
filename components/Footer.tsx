@@ -75,7 +75,7 @@ export default function Footer() {
         <div className="border-t border-border py-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © 2025 {data.brand.name}. Alle rechten voorbehouden.
+              © 2026 {data.brand.name}. Alle rechten voorbehouden.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-muted-foreground hover:text-white text-sm transition-colors duration-200">
