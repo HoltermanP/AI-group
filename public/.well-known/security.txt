@@ -1,0 +1,4 @@
+Contact: mailto:info@ai-group.nl
+Expires: 2027-03-30T22:59:59.000Z
+Preferred-Languages: nl, en
+Canonical: https://ai-group.nl/.well-known/security.txt

@@ -113,10 +113,16 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
               {/* Search Input */}
               <div className="p-6 border-b border-border">
                 <div className="flex items-center space-x-4">
-                  <Search className="w-6 h-6 text-muted-foreground" />
+                  <Search className="w-6 h-6 text-muted-foreground" aria-hidden />
+                  <label htmlFor="site-search-query" className="sr-only">
+                    Zoek cases of pagina&apos;s op de site
+                  </label>
                   <input
                     ref={inputRef}
-                    type="text"
+                    id="site-search-query"
+                    type="search"
+                    name="site-search"
+                    autoComplete="off"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Zoek cases of pagina's..."

@@ -95,9 +95,13 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Naam *</label>
+          <label htmlFor="training-signup-name" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            Naam *
+          </label>
           <Input
+            id="training-signup-name"
             name="name"
+            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -105,10 +109,14 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
           />
         </div>
         <div>
-          <label className="text-sm font-medium text-slate-700 dark:text-slate-300">E-mail *</label>
+          <label htmlFor="training-signup-email" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            E-mail *
+          </label>
           <Input
+            id="training-signup-email"
             name="email"
             type="email"
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -117,18 +125,27 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Organisatie</label>
+            <label htmlFor="training-signup-organization" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+              Organisatie
+            </label>
             <Input
+              id="training-signup-organization"
               name="organization"
+              autoComplete="organization"
               value={formData.organization}
               onChange={handleChange}
               className="mt-1 bg-white dark:bg-slate-900"
             />
           </div>
           <div>
-            <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Telefoon</label>
+            <label htmlFor="training-signup-phone" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+              Telefoon
+            </label>
             <Input
+              id="training-signup-phone"
               name="phone"
+              type="tel"
+              autoComplete="tel"
               value={formData.phone}
               onChange={handleChange}
               className="mt-1 bg-white dark:bg-slate-900"
@@ -137,14 +154,16 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            <label htmlFor="training-signup-participants" className="text-sm font-medium text-slate-700 dark:text-slate-300">
               Aantal deelnemers (8–12) *
             </label>
             <Input
+              id="training-signup-participants"
               name="participants"
               type="number"
               min={8}
               max={12}
+              autoComplete="off"
               value={formData.participants}
               onChange={handleChange}
               required
@@ -152,12 +171,14 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
             />
           </div>
           <div>
-            <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            <label htmlFor="training-signup-period" className="text-sm font-medium text-slate-700 dark:text-slate-300">
               Voorkeursperiode
             </label>
             <Input
+              id="training-signup-period"
               name="preferredPeriod"
               placeholder="bijv. Q2 2025"
+              autoComplete="off"
               value={formData.preferredPeriod}
               onChange={handleChange}
               className="mt-1 bg-white dark:bg-slate-900"
@@ -165,10 +186,14 @@ export default function TrainingSignupForm({ trainingSlug, trainingTitle }: Prop
           </div>
         </div>
         <div>
-          <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Opmerkingen</label>
+          <label htmlFor="training-signup-message" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            Opmerkingen
+          </label>
           <Textarea
+            id="training-signup-message"
             name="message"
             rows={4}
+            autoComplete="off"
             value={formData.message}
             onChange={handleChange}
             placeholder="Bijv. incompany, dieetwensen, toegankelijkheid…"

@@ -6,18 +6,18 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/private/', '/admin/', '/api/', '/_next/'],
+        disallow: ['/private/', '/api/', '/_next/'],
         crawlDelay: 1,
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/private/', '/admin/'],
+        disallow: ['/private/'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/private/', '/admin/'],
+        disallow: ['/private/'],
       }
     ],
     sitemap: 'https://ai-group.nl/sitemap.xml',

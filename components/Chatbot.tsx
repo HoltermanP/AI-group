@@ -12,7 +12,7 @@ interface Message {
 
 // Avatar component voor vrouwelijke assistent
 const AssistantAvatar = ({ size = 40, className = '' }: { size?: number; className?: string }) => {
-  // URL-encode de bestandsnaam om speciale karakters en spaties te hanteren
+  // URL-encode vanwege spaties en hoofdletter in bestandsnaam
   const imagePath = encodeURI('/images/Scherm­afbeelding 2025-11-27 om 20.10.06.png')
   
   return (
@@ -281,8 +281,14 @@ export default function Chatbot() {
           {/* Input */}
           <div className="border-t border-gray-200 dark:border-gray-700 p-4">
             <div className="flex space-x-2">
+              <label htmlFor="chatbot-message-input" className="sr-only">
+                Uw vraag aan de chatassistent
+              </label>
               <input
+                id="chatbot-message-input"
                 type="text"
+                name="chat-message"
+                autoComplete="off"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}

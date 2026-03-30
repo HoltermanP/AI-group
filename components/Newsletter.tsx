@@ -50,8 +50,14 @@ export default function Newsletter() {
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1">
+                <label htmlFor="newsletter-email" className="sr-only">
+                  E-mailadres voor de nieuwsbrief
+                </label>
                 <input
+                  id="newsletter-email"
+                  name="email"
                   type="email"
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Uw e-mailadres"

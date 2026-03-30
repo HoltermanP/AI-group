@@ -21,7 +21,6 @@ export default function Hero() {
           poster="/brand-bg.svg"
         >
           <source src="/videos/ai-hero-bg.mp4" type="video/mp4" />
-          <source src="/videos/ai-hero-bg.webm" type="video/webm" />
         </video>
         <div className="absolute inset-0 bg-brand-black/58" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(9,172,232,0.18),rgba(0,0,0,0.62)_58%)]" />
